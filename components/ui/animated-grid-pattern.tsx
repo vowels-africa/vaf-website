@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useId, useRef, useState } from "react";
+import { useCallback, useEffect, useId, useRef, useState } from "react";
 
 import { cn } from "@/lib/utils";
 
@@ -15,6 +15,7 @@ interface AnimatedGridPatternProps {
   className?: string;
   maxOpacity?: number;
   duration?: number;
+  repeatDelay?: number;
 }
 
 export default function AnimatedGridPattern({
@@ -27,12 +28,12 @@ export default function AnimatedGridPattern({
   className,
   maxOpacity = 0.5,
   duration = 4,
+  repeatDelay = 1,
   ...props
 }: AnimatedGridPatternProps) {
   const id = useId();
   const containerRef = useRef(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
-  const [squares, setSquares] = useState(() => generateSquares(numSquares));
 
   function getPos() {
     return [
@@ -42,12 +43,14 @@ export default function AnimatedGridPattern({
   }
 
   // Adjust the generateSquares function to return objects with an id, x, and y
-  function generateSquares(count: number) {
+  const generateSquares = useCallback((count: number) => {
     return Array.from({ length: count }, (_, i) => ({
       id: i,
       pos: getPos(),
     }));
-  }
+  }, [dimensions.width, dimensions.height]);
+
+  const [squares, setSquares] = useState(() => generateSquares(numSquares));
 
   // Function to update a single square's position
   const updateSquarePosition = (id: number) => {
@@ -68,7 +71,7 @@ export default function AnimatedGridPattern({
     if (dimensions.width && dimensions.height) {
       setSquares(generateSquares(numSquares));
     }
-  }, [dimensions, numSquares]);
+  }, [dimensions, numSquares, generateSquares]);
 
   // Resize observer to update container dimensions
   useEffect(() => {
@@ -81,16 +84,17 @@ export default function AnimatedGridPattern({
       }
     });
 
-    if (containerRef.current) {
-      resizeObserver.observe(containerRef.current);
+    const currentContainer = containerRef.current;
+    if (currentContainer) {
+      resizeObserver.observe(currentContainer);
     }
 
     return () => {
-      if (containerRef.current) {
-        resizeObserver.unobserve(containerRef.current);
+      if (currentContainer) {
+        resizeObserver.unobserve(currentContainer);
       }
     };
-  }, [containerRef]);
+  }, []);
 
   return (
     <svg

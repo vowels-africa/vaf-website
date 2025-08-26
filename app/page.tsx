@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
-import { ArrowUpRight, BookCheck, ChartPie, CircleCheck, FolderSync, Goal, MessageCircle, StarIcon, Users, Zap } from "lucide-react";
+import { ArrowUpRight, BookCheck, ChartPie, CircleCheck, Goal, MessageCircle, StarIcon } from "lucide-react";
 import Link from "next/link";
 
 const plans = [
