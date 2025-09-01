@@ -154,7 +154,7 @@ export default function Home() {
             Are these holding your business back?
           </p>
           <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-2 gap-6">
-            <div className="flex gap-6 hover:ring rounded-lg p-2 -mx-2 sm:mx-0">
+            <div className="flex items-center gap-6 hover:ring rounded-lg p-2 -mx-2 sm:mx-0">
               <div className="h-24 aspect-square shrink-0 rounded-lg bg-muted" />
               <div>
                 <span className="font-semibold tracking-tight text-lg">
@@ -165,7 +165,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex gap-6 hover:ring rounded-lg p-2 -mx-2 sm:mx-0">
+            <div className="flex items-center gap-6 hover:ring rounded-lg p-2 -mx-2 sm:mx-0">
               <div className="h-24 aspect-square shrink-0 rounded-lg bg-muted" />
               <div>
                 <span className="font-semibold tracking-tight text-lg">
@@ -176,7 +176,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex gap-6 hover:ring rounded-lg p-2 -mx-2 sm:mx-0">
+            <div className="flex items-center gap-6 hover:ring rounded-lg p-2 -mx-2 sm:mx-0">
               <div className="h-24 aspect-square shrink-0 rounded-lg bg-muted" />
               <div>
                 <span className="font-semibold tracking-tight text-lg">
@@ -187,7 +187,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex gap-6 hover:ring rounded-lg p-2 -mx-2 sm:mx-0">
+            <div className="flex items-center gap-6 hover:ring rounded-lg p-2 -mx-2 sm:mx-0">
               <div className="h-24 aspect-square shrink-0 rounded-lg bg-muted" />
               <div>
                 <span className="font-semibold tracking-tight text-lg">
@@ -219,7 +219,7 @@ export default function Home() {
             <br className="max-sm:hidden" /> and automate the boring, time-draining work.
           </p>
           <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-2 gap-6">
-            <div className="flex gap-6 hover:ring rounded-lg p-2 -mx-2 sm:mx-0">
+            <div className="flex items-center gap-6 hover:ring rounded-lg p-2 -mx-2 sm:mx-0">
               <div className="h-24 aspect-square shrink-0 rounded-lg bg-muted" />
               <div>
                 <span className="font-semibold tracking-tight text-lg">
@@ -230,7 +230,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex gap-6 hover:ring rounded-lg p-2 -mx-2 sm:mx-0">
+            <div className="flex items-center gap-6 hover:ring rounded-lg p-2 -mx-2 sm:mx-0">
               <div className="h-24 aspect-square shrink-0 rounded-lg bg-muted" />
               <div>
                 <span className="font-semibold tracking-tight text-lg">
@@ -241,7 +241,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex gap-6 hover:ring rounded-lg p-2 -mx-2 sm:mx-0">
+            <div className="flex items-center gap-6 hover:ring rounded-lg p-2 -mx-2 sm:mx-0">
               <div className="h-24 aspect-square shrink-0 rounded-lg bg-muted" />
               <div>
                 <span className="font-semibold tracking-tight text-lg">
@@ -252,7 +252,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex gap-6 hover:ring rounded-lg p-2 -mx-2 sm:mx-0">
+            <div className="flex items-center gap-6 hover:ring rounded-lg p-2 -mx-2 sm:mx-0">
               <div className="h-24 aspect-square shrink-0 rounded-lg bg-muted" />
               <div>
                 <span className="font-semibold tracking-tight text-lg">
