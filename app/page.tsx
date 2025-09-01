@@ -146,7 +146,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="min-h-screen flex items-center justify-center">
+      <div id="problem" className="min-h-screen flex items-center justify-center">
         <div className="max-w-screen-lg w-full py-10 px-6">
           <h2 className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight max-w-xl md:text-center md:mx-auto">
             Problem
@@ -207,7 +207,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="min-h-screen flex items-center justify-center">
+      <div id="solution" className="min-h-screen flex items-center justify-center">
         <div className="max-w-screen-lg w-full py-10 px-6">
           <h2 className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight max-w-xl md:text-center md:mx-auto">
             Solution
@@ -268,7 +268,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="min-h-screen flex items-center justify-center">
+      <div id="framework" className="min-h-screen flex items-center justify-center">
         <div className="max-w-screen-lg w-full py-10 px-6">
           <h2 className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight max-w-xl md:text-center md:mx-auto">
             Framework
@@ -396,7 +396,7 @@ export default function Home() {
         </div>
       </div> */}
 
-      <div className="min-h-screen flex items-center justify-center">
+      <div id="use-cases" className="min-h-screen flex items-center justify-center">
         <div className="max-w-screen-lg w-full py-12 px-6">
           <h2 className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight max-w-lg">
             Use Cases
@@ -433,7 +433,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex justify-center items-center py-12 px-6">
+      <div id="testimonials" className="flex justify-center items-center py-12 px-6">
         <div>
           <h2 className="mb-8 sm:mb-14 text-5xl md:text-6xl font-bold text-center tracking-tight">
             Testimonials
