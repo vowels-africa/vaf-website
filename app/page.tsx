@@ -4,59 +4,58 @@ import { NavigationSheet } from "@/components/navbar-04/navigation-sheet";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
-import { ArrowUpRight, BookCheck, ChartPie, CircleCheck, Goal, MessageCircle, StarIcon } from "lucide-react";
+import { ArrowUpRight, BookCheck, ChartPie, Goal, StarIcon } from "lucide-react";
 import Link from "next/link";
 
-const plans = [
-  {
-    name: "Starter",
-    price: 5500,
-    setup_price: 2500,
-    description: "Perfect for small businesses getting started.",
-    features: [
-      "WhatsApp automation (1 workflow)",
-      "Basic CRM setup (up to 1,000 contacts)",
-      "Simple invoicing + reminders",
-      "Basic analytics dashboard",
-      "Email support",
-    ],
-    buttonText: "Start Free Trial",
-  },
-  {
-    name: "Growth",
-    price: 14500,
-    setup_price: 6500,
-    isRecommended: true,
-    description: "For scaling SMEs ready to move faster.",
-    features: [
-      "Everything in Starter",
-      "Advanced workflows (up to 5)",
-      "Multi-channel messaging (WhatsApp + SMS)",
-      "Invoicing + mobile money integration",
-      "Support chatbot (multi-language)",
-      "Priority WhatsApp support",
-    ],
-    buttonText: "Book Free Audit",
-    isPopular: true,
-  },
-  {
-    name: "Enterprise",
-    price: 35000,
-    description: "For established businesses with custom needs.",
-    features: [
-      "Unlimited workflows + contacts",
-      "Bespoke AI & system integrations",
-      "Dedicated account manager",
-      "White-label options",
-      "24/7 support + SLAs",
-    ],
-    buttonText: "Schedule Consultation",
-  },
-];
+// const plans = [
+//   {
+//     name: "Starter",
+//     price: 5500,
+//     setup_price: 2500,
+//     description: "Perfect for small businesses getting started.",
+//     features: [
+//       "WhatsApp automation (1 workflow)",
+//       "Basic CRM setup (up to 1,000 contacts)",
+//       "Simple invoicing + reminders",
+//       "Basic analytics dashboard",
+//       "Email support",
+//     ],
+//     buttonText: "Start Free Trial",
+//   },
+//   {
+//     name: "Growth",
+//     price: 14500,
+//     setup_price: 6500,
+//     isRecommended: true,
+//     description: "For scaling SMEs ready to move faster.",
+//     features: [
+//       "Everything in Starter",
+//       "Advanced workflows (up to 5)",
+//       "Multi-channel messaging (WhatsApp + SMS)",
+//       "Invoicing + mobile money integration",
+//       "Support chatbot (multi-language)",
+//       "Priority WhatsApp support",
+//     ],
+//     buttonText: "Book Free Audit",
+//     isPopular: true,
+//   },
+//   {
+//     name: "Enterprise",
+//     price: 35000,
+//     description: "For established businesses with custom needs.",
+//     features: [
+//       "Unlimited workflows + contacts",
+//       "Bespoke AI & system integrations",
+//       "Dedicated account manager",
+//       "White-label options",
+//       "24/7 support + SLAs",
+//     ],
+//     buttonText: "Schedule Consultation",
+//   },
+// ];
 
 const testimonials = [
   {
