@@ -112,7 +112,7 @@ export default function Home() {
           {/* Desktop Menu */}
           <NavMenu className="hidden md:block" />
           <div className="flex items-center gap-3">
-            <Button className="rounded-full">Get Started</Button>
+            <Button className="rounded-full">Book a Call</Button>
             {/* Mobile Menu */}
             <div className="md:hidden">
               <NavigationSheet />
@@ -133,14 +133,14 @@ export default function Home() {
         />
         <div className="relative z-10 text-center max-w-2xl">
           <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl font-bold !leading-[1.2] tracking-tight">
-            Automation Built for African SMEs
+            Automation Solutions Built for Africa
           </h1>
           <p className="mt-6 text-[17px] md:text-lg">
             Save hours, close more sales, and get paid faster — all with WhatsApp + AI tools built for how African businesses actually work.
           </p>
           <div className="mt-12 flex items-center justify-center gap-4">
             <Button size="lg" className="rounded-full text-base">
-              Get Your Free Automation Audit <ArrowUpRight className="!h-5 !w-5" />
+              Free Audit <ArrowUpRight className="!h-5 !w-5" />
             </Button>
           </div>
         </div>
@@ -162,7 +162,7 @@ export default function Home() {
                   Too much manual work
                 </span>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  spreadsheets, follow-ups, endless admin
+                  Drowning in spreadsheets, follow-ups, and endless admin tasks that steal time from growth.
                 </p>
               </div>
             </div>
@@ -173,7 +173,7 @@ export default function Home() {
                   Leads slipping away
                 </span>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  up to 67% of SME leads never contacted
+                  Up to 67% of business leads never get contacted, meaning lost revenue every single day.
                 </p>
               </div>
             </div>
@@ -184,7 +184,7 @@ export default function Home() {
                   Slow payments
                 </span>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  weeks of chasing invoices
+                  Weeks spent chasing invoices while cash flow suffers and bills pile up.
                 </p>
               </div>
             </div>
@@ -195,14 +195,14 @@ export default function Home() {
                   No tech expertise
                 </span>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  not knowing where to start with automation
+                  Wanting automation benefits but not knowing where to start or how to implement.
                 </p>
               </div>
             </div>
           </div>
           <p className="md:text-center mt-12">
-            If this sounds like your business, you’re not alone. 90% of African SMEs face the same barriers.
-            <br className="max-sm:hidden" /> That’s why we built Vowels.Africa.
+            If this sounds like your business, you're not alone. 90% of African SMEs face the same barriers.
+            <br className="max-sm:hidden" /> That's why we built Vowels.Africa.
           </p>
         </div>
       </div>
@@ -227,7 +227,7 @@ export default function Home() {
                   WhatsApp Automation
                 </span>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  respond instantly, qualify leads, book appointments
+                  Turn messages into opportunity. Instantly respond, qualify leads, and book appointments automatically.
                 </p>
               </div>
             </div>
@@ -238,7 +238,7 @@ export default function Home() {
                   Smart CRM
                 </span>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  never lose a lead, track deals, grow conversions
+                  Never lose a lead. Capture prospects, track deals, and grow customer relationships effortlessly.
                 </p>
               </div>
             </div>
@@ -249,7 +249,7 @@ export default function Home() {
                   Invoicing & Payments
                 </span>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  auto-send invoices, reminders, and collect via M-Pesa, EFT or mobile money
+                  Get paid faster. Auto-generate invoices and collect via M-Pesa, EFT, or mobile money.
                 </p>
               </div>
             </div>
@@ -260,7 +260,7 @@ export default function Home() {
                   AI Support Bots
                 </span>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  handle FAQs and escalate when needed
+                  24/7 customer support. Handle common questions and escalate complex issues when needed.
                 </p>
               </div>
             </div>
@@ -402,7 +402,7 @@ export default function Home() {
             Use Cases
           </h2>
           <p>
-            Even as a new startup, we’re already working with early adopters across Africa:
+            Even as a new startup, we're already working with early adopters across Africa:
           </p>
           <div className="mt-6 md:mt-8 w-full mx-auto grid md:grid-cols-2 gap-12">
             <div>

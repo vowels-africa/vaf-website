@@ -20,7 +20,7 @@ export const NavigationSheet = () => {
             <NavMenu orientation="vertical" className="w-full" />
           </div>
           <div className="mt-auto">
-            <Button className="w-full rounded-full">Get Started</Button>
+            <Button className="w-full rounded-full">Book a Call</Button>
           </div>
         </div>
       </SheetContent>
