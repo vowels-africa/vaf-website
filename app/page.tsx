@@ -139,7 +139,7 @@ export default function Home() {
           </p>
           <div className="mt-12 flex items-center justify-center gap-4">
             <Button size="lg" className="rounded-full text-base">
-              Free Audit <ArrowUpRight className="!h-5 !w-5" />
+              Schedule a Free Audit <ArrowUpRight className="!h-5 !w-5" />
             </Button>
           </div>
         </div>
@@ -200,8 +200,8 @@ export default function Home() {
             </div>
           </div>
           <p className="md:text-center mt-12">
-            If this sounds like your business, you're not alone. 90% of African SMEs face the same barriers.
-            <br className="max-sm:hidden" /> That's why we built Vowels.Africa.
+            If this sounds like your business, you&apos;re not alone. 90% of African SMEs face the same barriers.
+            <br className="max-sm:hidden" /> That&apos;s why we built Vowels.Africa.
           </p>
         </div>
       </div>
@@ -283,7 +283,7 @@ export default function Home() {
                   Understand
                 </h4>
                 <p className="text-muted-foreground text-[17px]">
-                  Map your workflows
+                  We dive deep into how your business actually works. Map every touchpoint, identify bottlenecks, and discover which processes drain your time and resources.
                 </p>
               </div>
             </div>
@@ -294,7 +294,7 @@ export default function Home() {
                   Optimise
                 </h4>
                 <p className="text-muted-foreground text-[17px]">
-                  Simplify processes
+                  Transform chaos into clarity. Streamline workflows, eliminate redundancies, and design automated systems that work seamlessly with your existing operations.
                 </p>
               </div>
             </div>
@@ -305,7 +305,7 @@ export default function Home() {
                   Automate
                 </h4>
                 <p className="text-muted-foreground text-[17px]">
-                  Implement proven AI + tools
+                  Deploy smart AI and proven tools that work 24/7. From WhatsApp bots to payment processing, we implement systems that handle routine tasks while you focus on growth.
                 </p>
               </div>
             </div>
@@ -316,7 +316,7 @@ export default function Home() {
                   Innovate
                 </h4>
                 <p className="text-muted-foreground text-[17px]">
-                  Build custom solutions
+                  Go beyond templates with solutions built specifically for your business. Custom integrations, unique workflows, and creative approaches that give you competitive advantage.
                 </p>
               </div>
             </div>
@@ -327,7 +327,7 @@ export default function Home() {
                   Elevate
                 </h4>
                 <p className="text-muted-foreground text-[17px]">
-                  Scale with confidence
+                  Transform from reactive to proactive. Scale operations confidently with systems that grow with you, turning automation into your biggest business multiplier.
                 </p>
               </div>
             </div>
@@ -401,7 +401,7 @@ export default function Home() {
             Use Cases
           </h2>
           <p>
-            Even as a new startup, we're already working with early adopters across Africa:
+            Even as a new startup, we&apos;re already working with early adopters across Africa:
           </p>
           <div className="mt-6 md:mt-8 w-full mx-auto grid md:grid-cols-2 gap-12">
             <div>
@@ -493,14 +493,7 @@ export default function Home() {
           </p>
           <div className="mt-12 flex items-center justify-center gap-4">
             <Button size="lg" className="rounded-full text-base">
-              Book Your Free Audit Call <ArrowUpRight className="!h-5 !w-5" />
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="rounded-full text-base shadow-none"
-            >
-              <MessageCircle className="!h-5 !w-5" /> Ask on WhatsApp
+              Schedule a Free Audit <ArrowUpRight className="!h-5 !w-5" />
             </Button>
           </div>
         </div>
