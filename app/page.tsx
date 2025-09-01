@@ -7,7 +7,7 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
-import { ArrowUpRight, BookCheck, ChartPie, Goal, StarIcon } from "lucide-react";
+import { ArrowUpRight, Goal, HandCoins, MessagesSquare, StarIcon } from "lucide-react";
 import Link from "next/link";
 
 // const plans = [
@@ -86,19 +86,19 @@ const testimonials = [
 
 const features = [
   {
+    icon: HandCoins,
+    title: "FMCG Distributor (South Africa)",
+    description: "Eliminated manual order entry, invoice chasing, and payment follow-ups → 25 hours back per week.",
+  },
+  {
     icon: Goal,
-    title: "FMCG Distributor (SA)",
-    description: "WhatsApp orders + invoicing automation → 25 hours saved per week",
-  },
-  {
-    icon: BookCheck,
     title: "Professional Services Firm (Kenya)",
-    description: "CRM + follow-up automation → lead conversion up 40%",
+    description: "Automated lead scoring, nurturing sequences, and follow-up reminders → 40% higher conversion rate.",
   },
   {
-    icon: ChartPie,
+    icon: MessagesSquare,
     title: "Alternative Health Digital Platform (Nigeria)",
-    description: "Multilingual chatbot + payments → tripled engagement in 3 months",
+    description: "Localized chatbot experience with seamless payment flows → 3x more active users in 90 days.",
   },
 ];
 
@@ -486,7 +486,7 @@ export default function Home() {
         />
         <div className="relative z-10 text-center max-w-2xl">
           <h2 className="mt-6 text-4xl sm:text-5xl md:text-6xl font-bold !leading-[1.2] tracking-tight">
-            Ready to Stop Losing Time & Money?
+            Ready to Stop <br className="max-xs:hidden" />Losing Time & Money?
           </h2>
           <p className="mt-6 text-[17px] md:text-lg">
           Get a free automation audit and discover how much you could save in 30 days.
