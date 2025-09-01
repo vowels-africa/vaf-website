@@ -341,7 +341,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="min-h-screen flex flex-col items-center justify-center py-12 px-6">
+      {/* <div className="min-h-screen flex flex-col items-center justify-center py-12 px-6">
         <h2 className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight max-w-xl text-center md:mx-auto">
           Pricing
         </h2>
@@ -394,7 +394,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       <div className="min-h-screen flex items-center justify-center">
         <div className="max-w-screen-lg w-full py-12 px-6">
