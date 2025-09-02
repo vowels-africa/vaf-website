@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { ArrowUpRight, Menu } from "lucide-react";
 import { useState } from "react";
+import Link from "next/link";
 import { Logo } from "./logo";
 import { NavMenu } from "./nav-menu";
 
@@ -30,8 +31,10 @@ export const NavigationSheet = () => {
             <NavMenu orientation="vertical" className="w-full" onItemClick={handleItemClick} />
           </div>
           <div className="mt-auto">
-            <Button className="w-full rounded-full bg-[#e8890e] hover:bg-[#f1951e] cursor-pointer">
-              Book a Call <ArrowUpRight className="!h-5 !w-5" />
+            <Button asChild className="w-full rounded-full bg-[#e8890e] hover:bg-[#f1951e] cursor-pointer">
+              <Link href="https://tally.so/r/wgExGM" target="_blank">
+                Book a Call <ArrowUpRight className="!h-5 !w-5" />
+              </Link>
             </Button>
           </div>
         </div>

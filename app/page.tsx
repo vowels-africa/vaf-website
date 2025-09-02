@@ -9,6 +9,7 @@ import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 import { ArrowUpRight, Goal, HandCoins, MessagesSquare, StarIcon } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 // const plans = [
 //   {
@@ -84,10 +85,10 @@ const testimonials = [
   },
   {
     id: 4,
-    name: "Lebo",
+    name: "Lebo Mthembu",
     designation: "Early Client",
-    company: "E-commerce",
-    testimonial: "Vowels transformed our customer support from chaos to calm. Response times dropped from hours to minutes.",
+    company: "IT Services",
+    testimonial: "Vowels handles our ticket routing automatically. What used to take our team hours now happens instantly!",
     avatar: "https://randomuser.me/api/portraits/men/3.jpg",
   },
 ];
@@ -119,8 +120,10 @@ export default function Home() {
           {/* Desktop Menu */}
           <NavMenu className="hidden md:block text-white" />
           <div className="flex items-center gap-3">
-            <Button className="rounded-full bg-[#e8890e] hover:bg-[#f1951e] cursor-pointer">
-              Book a Call <ArrowUpRight className="!h-5 !w-5" />
+            <Button asChild className="rounded-full bg-[#e8890e] hover:bg-[#f1951e] cursor-pointer">
+              <Link href="https://tally.so/r/wgExGM" target="_blank">
+                Book a Call <ArrowUpRight className="!h-5 !w-5" />
+              </Link>
             </Button>
             {/* Mobile Menu */}
             <div className="md:hidden">
@@ -149,8 +152,10 @@ export default function Home() {
             Save hours, close more sales, and get paid faster — all with WhatsApp + AI tools built for how African businesses actually work.
           </p>
           <div className="mt-12 flex items-center justify-center gap-4">
-            <Button size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e] cursor-pointer">
-              Schedule a Free Audit <ArrowUpRight className="!h-5 !w-5" />
+            <Button asChild size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e] cursor-pointer">
+              <Link href="https://tally.so/r/wgExGM" target="_blank">
+                Schedule a Free Audit <ArrowUpRight className="!h-5 !w-5" />
+              </Link>
             </Button>
           </div>
         </div>
@@ -304,7 +309,9 @@ export default function Home() {
           </p>
           <div className="mt-8 md:mt-16 w-full mx-auto space-y-20">
             <div className="flex flex-col md:flex-row items-center gap-x-20 gap-y-6 md:odd:flex-row-reverse">
-              <div className="w-full aspect-[6/4] bg-muted rounded-xl border border-border/50 basis-1/2" />
+              <div className="w-full aspect-[6/4]">
+                <Image src="/undraw_10.svg" width={350} height={350} alt="Use Cases" className="mx-auto" />
+              </div>
               <div className="basis-1/2 shrink-0 max-sm:text-center">
                 <h4 className="my-3 text-3xl font-semibold tracking-tight">
                   Understand
@@ -315,7 +322,9 @@ export default function Home() {
               </div>
             </div>
             <div className="flex flex-col md:flex-row items-center gap-x-20 gap-y-6 md:odd:flex-row-reverse">
-              <div className="w-full aspect-[6/4] bg-muted rounded-xl border border-border/50 basis-1/2" />
+              <div className="w-full aspect-[6/4]">
+                <Image src="/undraw_11.svg" width={350} height={350} alt="Use Cases" className="mx-auto" />
+              </div>
               <div className="basis-1/2 shrink-0 max-sm:text-center">
                 <h4 className="my-3 text-3xl font-semibold tracking-tight">
                   Optimise
@@ -326,7 +335,9 @@ export default function Home() {
               </div>
             </div>
             <div className="flex flex-col md:flex-row items-center gap-x-20 gap-y-6 md:odd:flex-row-reverse">
-              <div className="w-full aspect-[6/4] bg-muted rounded-xl border border-border/50 basis-1/2" />
+              <div className="w-full aspect-[6/4]">
+                <Image src="/undraw_12.svg" width={350} height={350} alt="Use Cases" className="mx-auto" />
+              </div>
               <div className="basis-1/2 shrink-0 max-sm:text-center">
                 <h4 className="my-3 text-3xl font-semibold tracking-tight">
                   Automate
@@ -337,7 +348,9 @@ export default function Home() {
               </div>
             </div>
             <div className="flex flex-col md:flex-row items-center gap-x-20 gap-y-6 md:odd:flex-row-reverse">
-              <div className="w-full aspect-[6/4] bg-muted rounded-xl border border-border/50 basis-1/2" />
+              <div className="w-full aspect-[6/4]">
+                <Image src="/undraw_13.svg" width={350} height={350} alt="Use Cases" className="mx-auto" />
+              </div>
               <div className="basis-1/2 shrink-0 max-sm:text-center">
                 <h4 className="my-3 text-3xl font-semibold tracking-tight">
                   Innovate
@@ -348,7 +361,9 @@ export default function Home() {
               </div>
             </div>
             <div className="flex flex-col md:flex-row items-center gap-x-20 gap-y-6 md:odd:flex-row-reverse">
-              <div className="w-full aspect-[6/4] bg-muted rounded-xl border border-border/50 basis-1/2" />
+              <div className="w-full aspect-[6/4]">
+                <Image src="/undraw_14.svg" width={350} height={350} alt="Use Cases" className="mx-auto" />
+              </div>
               <div className="basis-1/2 shrink-0 max-sm:text-center">
                 <h4 className="my-3 text-3xl font-semibold tracking-tight">
                   Elevate
@@ -360,8 +375,10 @@ export default function Home() {
             </div>
           </div>
           <div className="my-20 flex items-center justify-center gap-4">
-            <Button size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e]">
-              Start Your Journey <ArrowUpRight className="!h-5 !w-5" />
+            <Button asChild size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e]">
+              <Link href="https://tally.so/r/wgExGM" target="_blank">
+                Start YOUR Journey <ArrowUpRight className="!h-5 !w-5" />
+              </Link>
             </Button>
           </div>
         </div>
@@ -447,14 +464,15 @@ export default function Home() {
                     </AccordionTrigger>
                     <AccordionContent className="text-[17px] leading-relaxed text-muted-foreground">
                       {description}
-                      <div className="mt-6 mb-2 md:hidden aspect-video w-full bg-muted rounded-xl" />
                     </AccordionContent>
                   </AccordionItem>
                 ))}
               </Accordion>
             </div>
             {/* Media */}
-            <div className="hidden md:block w-full h-full bg-muted rounded-xl" />
+            <div className="hidden md:block w-full self-center">
+              <Image src="/undraw_9.svg" width={350} height={350} alt="Use Cases" className="mx-auto" />
+            </div>
           </div>
         </div>
       </div>
@@ -520,8 +538,10 @@ export default function Home() {
           Get a free automation audit and discover how much you could save in 30 days.
           </p>
           <div className="mt-12 flex items-center justify-center gap-4">
-            <Button size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e] cursor-pointer">
-              Schedule a Free Audit <ArrowUpRight className="!h-5 !w-5" />
+            <Button asChild size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e] cursor-pointer">
+              <Link href="https://tally.so/r/wgExGM" target="_blank">
+                Schedule a Free Audit <ArrowUpRight className="!h-5 !w-5" />
+              </Link>
             </Button>
           </div>
         </div>
@@ -534,10 +554,10 @@ export default function Home() {
             {/* Copyright */}
             <span className="text-muted-foreground max-sm:text-center">
               &copy; {new Date().getFullYear()}{" "}
-              Vowels Africa.<br className="md:hidden" /> All rights reserved.
+              Vowels Africa.
             </span>
             <div className="flex items-center gap-5 text-muted-foreground">
-              <Link
+              {/* <Link
                 href="#"
                 className="text-muted-foreground hover:text-foreground font-medium cursor-pointer"
               >
@@ -548,7 +568,10 @@ export default function Home() {
                 className="text-muted-foreground hover:text-foreground font-medium cursor-pointer"
               >
                 Terms and Conditions
-              </Link>
+              </Link> */}
+              <span className="text-muted-foreground max-sm:text-center">
+                All rights reserved.
+              </span>
               <img
                 src="/logo_icon_only.svg"
                 alt="Vowels"
