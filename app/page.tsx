@@ -105,13 +105,13 @@ const features = [
 export default function Home() {
   return (
     <>
-      <nav className="fixed top-6 inset-x-4 h-16 bg-background border dark:border-slate-700/70 max-w-screen-xl mx-auto rounded-full z-50">
+      <nav className="fixed top-6 inset-x-4 h-16 border border-[#69e3e3] max-w-screen-xl mx-auto rounded-full z-50 bg-[#010c23]">
         <div className="h-full flex items-center justify-between mx-auto px-4">
           <Logo />
           {/* Desktop Menu */}
-          <NavMenu className="hidden md:block" />
+          <NavMenu className="hidden md:block text-white" />
           <div className="flex items-center gap-3">
-            <Button className="rounded-full">Book a Call</Button>
+            <Button className="rounded-full bg-[#e8890e] hover:bg-[#f1951e]">Book a Call</Button>
             {/* Mobile Menu */}
             <div className="md:hidden">
               <NavigationSheet />
@@ -120,14 +120,15 @@ export default function Home() {
         </div>
       </nav>
 
-      <div className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden py-10">
+      <div className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden py-10 bg-[#010c23] text-white">
         <AnimatedGridPattern
           numSquares={30}
-          maxOpacity={0.1}
+          maxOpacity={0.4}
           duration={3}
           className={cn(
             "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
-            "inset-x-0 h-full skew-y-12"
+            "inset-x-0 h-full skew-y-12",
+            "!stroke-[#1ea3c0]/40 !text-[#f1c421]/80"
           )}
         />
         <div className="relative z-10 text-center max-w-2xl">
@@ -138,7 +139,7 @@ export default function Home() {
             Save hours, close more sales, and get paid faster — all with WhatsApp + AI tools built for how African businesses actually work.
           </p>
           <div className="mt-12 flex items-center justify-center gap-4">
-            <Button size="lg" className="rounded-full text-base">
+            <Button size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e]">
               Schedule a Free Audit <ArrowUpRight className="!h-5 !w-5" />
             </Button>
           </div>
@@ -492,7 +493,7 @@ export default function Home() {
           Get a free automation audit and discover how much you could save in 30 days.
           </p>
           <div className="mt-12 flex items-center justify-center gap-4">
-            <Button size="lg" className="rounded-full text-base">
+            <Button size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e]">
               Schedule a Free Audit <ArrowUpRight className="!h-5 !w-5" />
             </Button>
           </div>
