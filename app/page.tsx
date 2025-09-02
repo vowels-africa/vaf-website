@@ -111,7 +111,7 @@ export default function Home() {
           {/* Desktop Menu */}
           <NavMenu className="hidden md:block text-white" />
           <div className="flex items-center gap-3">
-            <Button className="rounded-full bg-[#e8890e] hover:bg-[#f1951e]">
+            <Button className="rounded-full bg-[#e8890e] hover:bg-[#f1951e] cursor-pointer">
               Book a Call <ArrowUpRight className="!h-5 !w-5" />
             </Button>
             {/* Mobile Menu */}
@@ -141,7 +141,7 @@ export default function Home() {
             Save hours, close more sales, and get paid faster — all with WhatsApp + AI tools built for how African businesses actually work.
           </p>
           <div className="mt-12 flex items-center justify-center gap-4">
-            <Button size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e]">
+            <Button size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e] cursor-pointer">
               Schedule a Free Audit <ArrowUpRight className="!h-5 !w-5" />
             </Button>
           </div>
@@ -493,7 +493,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden py-10">
+      <div className="relative min-h-[calc(100vh-64px)] flex items-center justify-center px-6 overflow-hidden py-10">
         <AnimatedGridPattern
           numSquares={30}
           maxOpacity={0.4}
@@ -512,7 +512,7 @@ export default function Home() {
           Get a free automation audit and discover how much you could save in 30 days.
           </p>
           <div className="mt-12 flex items-center justify-center gap-4">
-            <Button size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e]">
+            <Button size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e] cursor-pointer">
               Schedule a Free Audit <ArrowUpRight className="!h-5 !w-5" />
             </Button>
           </div>
@@ -531,13 +531,13 @@ export default function Home() {
             <div className="flex items-center gap-5 text-muted-foreground">
               <Link
                 href="#"
-                className="text-muted-foreground hover:text-foreground font-medium"
+                className="text-muted-foreground hover:text-foreground font-medium cursor-pointer"
               >
                 Privacy Policy
               </Link>
               <Link
                 href="#"
-                className="text-muted-foreground hover:text-foreground font-medium"
+                className="text-muted-foreground hover:text-foreground font-medium cursor-pointer"
               >
                 Terms and Conditions
               </Link>

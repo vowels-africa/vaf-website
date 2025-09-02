@@ -1,14 +1,23 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { ArrowUpRight, Menu } from "lucide-react";
+import { useState } from "react";
 import { Logo } from "./logo";
 import { NavMenu } from "./nav-menu";
 
 export const NavigationSheet = () => {
+  const [open, setOpen] = useState(false);
+
+  const handleItemClick = () => {
+    setOpen(false);
+  };
+
   return (
-    <Sheet>
+    <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
-        <Button variant="outline" size="icon" className="rounded-full">
+        <Button variant="outline" size="icon" className="rounded-full border-[#69e3e3] text-[#69e3e3] bg-transparent cursor-pointer hover:bg-[#69e3e3]">
           <Menu />
         </Button>
       </SheetTrigger>
@@ -18,10 +27,10 @@ export const NavigationSheet = () => {
         <div className="flex flex-col h-full">
           <Logo />
           <div className="flex-1 flex items-center">
-            <NavMenu orientation="vertical" className="w-full" />
+            <NavMenu orientation="vertical" className="w-full" onItemClick={handleItemClick} />
           </div>
           <div className="mt-auto">
-            <Button className="w-full rounded-full bg-[#e8890e] hover:bg-[#f1951e]">
+            <Button className="w-full rounded-full bg-[#e8890e] hover:bg-[#f1951e] cursor-pointer">
               Book a Call <ArrowUpRight className="!h-5 !w-5" />
             </Button>
           </div>
