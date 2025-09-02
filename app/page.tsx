@@ -111,7 +111,9 @@ export default function Home() {
           {/* Desktop Menu */}
           <NavMenu className="hidden md:block text-white" />
           <div className="flex items-center gap-3">
-            <Button className="rounded-full bg-[#e8890e] hover:bg-[#f1951e]">Book a Call</Button>
+            <Button className="rounded-full bg-[#e8890e] hover:bg-[#f1951e]">
+              Book a Call <ArrowUpRight className="!h-5 !w-5" />
+            </Button>
             {/* Mobile Menu */}
             <div className="md:hidden">
               <NavigationSheet />
@@ -120,7 +122,7 @@ export default function Home() {
         </div>
       </nav>
 
-      <div className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden py-10 bg-[#010c23] text-white">
+      <div className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden py-10 bg-[#010c23] text-white border-b border-[#69e3e3]">
         <AnimatedGridPattern
           numSquares={30}
           maxOpacity={0.4}
@@ -155,8 +157,10 @@ export default function Home() {
             Are these holding your business back?
           </p>
           <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-2 gap-6">
-            <div className="flex items-center gap-6 hover:ring rounded-lg p-2 -mx-2 sm:mx-0">
-              <div className="h-24 aspect-square shrink-0 rounded-lg bg-muted" />
+            <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0">
+              <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
+                <img src="/undraw_8.svg" />
+              </div>
               <div>
                 <span className="font-semibold tracking-tight text-lg">
                   Too much manual work
@@ -166,8 +170,10 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex items-center gap-6 hover:ring rounded-lg p-2 -mx-2 sm:mx-0">
-              <div className="h-24 aspect-square shrink-0 rounded-lg bg-muted" />
+            <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0">
+              <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
+                <img src="/undraw_7.svg" />
+              </div>
               <div>
                 <span className="font-semibold tracking-tight text-lg">
                   Leads slipping away
@@ -177,8 +183,10 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex items-center gap-6 hover:ring rounded-lg p-2 -mx-2 sm:mx-0">
-              <div className="h-24 aspect-square shrink-0 rounded-lg bg-muted" />
+            <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0">
+              <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
+                <img src="/undraw_6.svg" />
+              </div>
               <div>
                 <span className="font-semibold tracking-tight text-lg">
                   Slow payments
@@ -188,8 +196,10 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex items-center gap-6 hover:ring rounded-lg p-2 -mx-2 sm:mx-0">
-              <div className="h-24 aspect-square shrink-0 rounded-lg bg-muted" />
+            <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0">
+              <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
+                <img src="/undraw_5.svg" />
+              </div>
               <div>
                 <span className="font-semibold tracking-tight text-lg">
                   No tech expertise
@@ -220,8 +230,10 @@ export default function Home() {
             <br className="max-sm:hidden" /> and automate the boring, time-draining work.
           </p>
           <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-2 gap-6">
-            <div className="flex items-center gap-6 hover:ring rounded-lg p-2 -mx-2 sm:mx-0">
-              <div className="h-24 aspect-square shrink-0 rounded-lg bg-muted" />
+            <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0">
+              <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
+                <img src="/undraw_1.svg" />
+              </div>
               <div>
                 <span className="font-semibold tracking-tight text-lg">
                   WhatsApp Automation
@@ -231,8 +243,10 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex items-center gap-6 hover:ring rounded-lg p-2 -mx-2 sm:mx-0">
-              <div className="h-24 aspect-square shrink-0 rounded-lg bg-muted" />
+            <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0">
+              <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
+                <img src="/undraw_2.svg" />
+              </div>
               <div>
                 <span className="font-semibold tracking-tight text-lg">
                   Smart CRM
@@ -242,8 +256,10 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex items-center gap-6 hover:ring rounded-lg p-2 -mx-2 sm:mx-0">
-              <div className="h-24 aspect-square shrink-0 rounded-lg bg-muted" />
+            <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0">
+              <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
+                <img src="/undraw_3.svg" />
+              </div>
               <div>
                 <span className="font-semibold tracking-tight text-lg">
                   Invoicing & Payments
@@ -253,8 +269,10 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex items-center gap-6 hover:ring rounded-lg p-2 -mx-2 sm:mx-0">
-              <div className="h-24 aspect-square shrink-0 rounded-lg bg-muted" />
+            <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0">
+              <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
+                <img src="/undraw_4.svg" />
+              </div>
               <div>
                 <span className="font-semibold tracking-tight text-lg">
                   AI Support Bots

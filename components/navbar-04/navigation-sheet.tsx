@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
+import { ArrowUpRight, Menu } from "lucide-react";
 import { Logo } from "./logo";
 import { NavMenu } from "./nav-menu";
 
@@ -20,7 +20,9 @@ export const NavigationSheet = () => {
             <NavMenu orientation="vertical" className="w-full" />
           </div>
           <div className="mt-auto">
-            <Button className="w-full rounded-full bg-[#e8890e] hover:bg-[#f1951e]">Book a Call</Button>
+            <Button className="w-full rounded-full bg-[#e8890e] hover:bg-[#f1951e]">
+              Book a Call <ArrowUpRight className="!h-5 !w-5" />
+            </Button>
           </div>
         </div>
       </SheetContent>
