@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vowels Africa",
+  title: "Vowels",
   description: "Automation Solutions Built for Africa",
 };
 
