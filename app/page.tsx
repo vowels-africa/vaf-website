@@ -82,6 +82,14 @@ const testimonials = [
     testimonial: "Vowels transformed our customer support from chaos to calm. Response times dropped from hours to minutes.",
     avatar: "https://randomuser.me/api/portraits/men/3.jpg",
   },
+  {
+    id: 4,
+    name: "Lebo",
+    designation: "Early Client",
+    company: "E-commerce",
+    testimonial: "Vowels transformed our customer support from chaos to calm. Response times dropped from hours to minutes.",
+    avatar: "https://randomuser.me/api/portraits/men/3.jpg",
+  },
 ];
 
 const features = [
@@ -457,7 +465,7 @@ export default function Home() {
             Testimonials
           </h2>
           <div className="w-full max-w-screen-xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 overflow-hidden border-r border-background">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 overflow-hidden border-r border-background">
               {testimonials.map((testimonial) => (
                 <div
                   key={testimonial.id}
@@ -493,7 +501,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="relative min-h-[calc(100vh-64px)] flex items-center justify-center px-6 overflow-hidden py-10">
+      <div className="relative min-h-[calc(100vh-120px)] flex items-center justify-center px-6 overflow-hidden py-10">
         <AnimatedGridPattern
           numSquares={30}
           maxOpacity={0.4}
