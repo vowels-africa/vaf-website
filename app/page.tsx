@@ -10,6 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { ArrowUpRight, Goal, HandCoins, MessagesSquare, StarIcon, CircleCheck, MessageCircleMore, Megaphone, BadgeCent, ShoppingCart, LifeBuoy, DatabaseZap, WandSparkles, RefreshCcw, Coins, Sparkles, Fingerprint, ClockArrowUp, ClipboardCheck, HeartHandshake, Hand } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { Marquee } from "@/components/ui/marquee";
 
 const faq = [
@@ -222,7 +223,7 @@ export default function Home() {
           <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-2 gap-6">
             <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
               <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
-                <img src="/undraw_8.svg" />
+                <Image src="/undraw_8.svg" alt="" width={96} height={96} />
               </div>
               <div>
                 <span className="font-semibold tracking-tight text-lg">
@@ -235,7 +236,7 @@ export default function Home() {
             </div>
             <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
               <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
-                <img src="/undraw_7.svg" />
+                <Image src="/undraw_7.svg" alt="" width={96} height={96} />
               </div>
               <div>
                 <span className="font-semibold tracking-tight text-lg">
@@ -248,7 +249,7 @@ export default function Home() {
             </div>
             <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
               <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
-                <img src="/undraw_6.svg" />
+                <Image src="/undraw_6.svg" alt="" width={96} height={96} />
               </div>
               <div>
                 <span className="font-semibold tracking-tight text-lg">
@@ -261,7 +262,7 @@ export default function Home() {
             </div>
             <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
               <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
-                <img src="/undraw_5.svg" />
+                <Image src="/undraw_5.svg" alt="" width={96} height={96} />
               </div>
               <div>
                 <span className="font-semibold tracking-tight text-lg">
@@ -282,7 +283,7 @@ export default function Home() {
       <div className="flex items-center justify-center px-6 pt-0 pb-30">
         <div className="overflow-hidden">
           <p className="text-center text-xl font-medium">
-            Companies we're working with
+            Companies we&apos;re working with
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-14 gap-y-10 max-w-(--breakpoint-xl)">
             <Marquee
@@ -307,7 +308,7 @@ export default function Home() {
           <div className="mt-12 md:mt-16 w-full mx-auto space-y-20">
             <div className="flex flex-col md:flex-row items-center gap-x-20 gap-y-6 md:odd:flex-row-reverse">
               <div className="w-full">
-                <img src="/undraw_10.svg" alt="Understand" className="max-sm:mx-auto sm:ml-0 sm:mr-auto height-auto" />
+                <Image src="/undraw_10.svg" alt="Understand" className="max-sm:mx-auto sm:ml-0 sm:mr-auto height-auto" width={600} height={400} />
               </div>
               <div className="basis-1/2 shrink-0 max-sm:text-center w-full">
                 <h4 className="my-3 text-3xl font-semibold tracking-tight">
@@ -320,7 +321,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col md:flex-row items-center gap-x-20 gap-y-6 md:odd:flex-row-reverse">
               <div className="w-full">
-                <img src="/undraw_11.svg" alt="Optimise" className="max-sm:mx-auto sm:ml-auto sm:mr-0" />
+                <Image src="/undraw_11.svg" alt="Optimise" className="max-sm:mx-auto sm:ml-auto sm:mr-0" width={600} height={400} />
               </div>
               <div className="basis-1/2 shrink-0 max-sm:text-center sm:text-right w-full">
                 <h4 className="my-3 text-3xl font-semibold tracking-tight">
@@ -333,7 +334,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col md:flex-row items-center gap-x-20 gap-y-6 md:odd:flex-row-reverse">
               <div className="w-full">
-                <img src="/undraw_12.svg" alt="Automate" className="max-sm:mx-auto sm:ml-0 sm:mr-auto" />
+                <Image src="/undraw_12.svg" alt="Automate" className="max-sm:mx-auto sm:ml-0 sm:mr-auto" width={600} height={400} />
               </div>
               <div className="basis-1/2 shrink-0 max-sm:text-center w-full">
                 <h4 className="my-3 text-3xl font-semibold tracking-tight">
@@ -346,7 +347,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col md:flex-row items-center gap-x-20 gap-y-6 md:odd:flex-row-reverse">
               <div className="w-full">
-                <img src="/undraw_13.svg" alt="Innovate" className="max-sm:mx-auto sm:ml-auto sm:mr-0" />
+                <Image src="/undraw_13.svg" alt="Innovate" className="max-sm:mx-auto sm:ml-auto sm:mr-0" width={600} height={400} />
               </div>
               <div className="basis-1/2 shrink-0 max-sm:text-center sm:text-right w-full">
                 <h4 className="my-3 text-3xl font-semibold tracking-tight">
@@ -359,7 +360,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col md:flex-row items-center gap-x-20 gap-y-6 md:odd:flex-row-reverse">
               <div className="w-full">
-                <img src="/undraw_14.svg" alt="Elevate" className="max-sm:mx-auto sm:ml-0 sm:mr-auto" />
+                <Image src="/undraw_14.svg" alt="Elevate" className="max-sm:mx-auto sm:ml-0 sm:mr-auto" width={600} height={400} />
               </div>
               <div className="basis-1/2 shrink-0 max-sm:text-center w-full">
                 <h4 className="my-3 text-3xl font-semibold tracking-tight">
@@ -552,7 +553,7 @@ export default function Home() {
                 </Accordion>
               </div>
               <div className="hidden md:block w-full self-center">
-                <img src="/undraw_9.svg" alt="Use Cases" className="mx-auto" />
+                <Image src="/undraw_9.svg" alt="Use Cases" className="mx-auto" width={600} height={400} />
               </div>
             </div>
           </div>
@@ -574,7 +575,7 @@ export default function Home() {
           <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-2 gap-6">
             <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
               <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
-                <img src="/glunk_io.png" alt="glunk.io" className="size-20" />
+                <Image src="/glunk_io.png" alt="glunk.io" className="size-20" width={80} height={80} />
               </div>
               <div>
                 <span className="font-semibold tracking-tight text-lg">
@@ -590,7 +591,7 @@ export default function Home() {
             </div>
             <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
               <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
-                <img src="/undraw_15.svg" />
+                <Image src="/undraw_15.svg" alt="" width={96} height={96} />
               </div>
               <div>
                 <span className="font-semibold tracking-tight text-lg">
@@ -855,10 +856,12 @@ export default function Home() {
               <span className="text-muted-foreground max-sm:text-center">
                 All rights reserved.
               </span>
-              <img
+              <Image
                 src="/logo_icon_only.svg"
                 alt="Vowels"
                 className="h-10 fill-foreground"
+                width={40}
+                height={40}
               />
             </div>
           </div>
