@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
-import { ArrowUpRight, Goal, HandCoins, MessagesSquare, StarIcon, CircleCheck, MessageCircleMore, Megaphone, BadgeCent, ShoppingCart, LifeBuoy, DatabaseZap, WandSparkles, RefreshCcw, Coins, Sparkles, Fingerprint, ClockArrowUp, ClipboardCheck, HeartHandshake } from "lucide-react";
+import { ArrowUpRight, Goal, HandCoins, MessagesSquare, StarIcon, CircleCheck, MessageCircleMore, Megaphone, BadgeCent, ShoppingCart, LifeBuoy, DatabaseZap, WandSparkles, RefreshCcw, Coins, Sparkles, Fingerprint, ClockArrowUp, ClipboardCheck, HeartHandshake, Hand } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -41,6 +41,7 @@ const plans = [
       "Email support",
     ],
     buttonText: "Start Free Audit",
+    buttonUrl: "https://cal.com/vowels/audit",
   },
   {
     name: "Growth",
@@ -57,6 +58,7 @@ const plans = [
       "Priority WhatsApp support",
     ],
     buttonText: "Book Implementation Call",
+    buttonUrl: "https://cal.com/vowels/growth",
     isPopular: true,
   },
   {
@@ -73,6 +75,7 @@ const plans = [
       "24/7 support + SLAs",
     ],
     buttonText: "Schedule Enterprise Consultation",
+    buttonUrl: "https://tally.so/r/wgExGM",
   },
 ];
 
@@ -152,8 +155,10 @@ export default function Home() {
           <NavMenu className="hidden md:block text-white" />
           <div className="flex items-center gap-3">
             <Button asChild className="rounded-full bg-[#e8890e] hover:bg-[#f1951e] cursor-pointer">
-              <Link href="https://tally.so/r/wgExGM" target="_blank">
-                Book a Call <ArrowUpRight className="!h-5 !w-5" />
+              <Link href="https://tally.so/r/wgExGM" target="_blank" rel="noopener noreferrer">
+                <span className="hidden sm:inline">Book a Call</span>
+                <Hand className="h-5 w-5 sm:hidden" />
+                <ArrowUpRight className="h-5 w-5 hidden sm:inline" />
               </Link>
             </Button>
             {/* Mobile Menu */}
@@ -184,13 +189,13 @@ export default function Home() {
           </p>
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-8">
             <Button asChild size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e] cursor-pointer">
-              <Link href="https://tally.so/r/wgExGM" target="_blank">
+              <Link href="https://cal.com/vowels/audit" target="_blank" rel="noopener noreferrer">
                 Schedule a Free Audit <ArrowUpRight className="!h-5 !w-5" />
               </Link>
             </Button>
 
             <Button asChild size="lg" variant="outline" className="rounded-full text-base border-[#e8890e] text-[#e8890e] hover:bg-[#e8890e] bg-transparent hover:text-white cursor-pointer">
-              <Link href="https://wa.me/2775292408?text=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20Vowels" target="_blank">
+              <Link href="https://wa.me/2775292408?text=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20Vowels" target="_blank" rel="noopener noreferrer">
                 Chat on WhatsApp <MessageCircleMore className="!h-5 !w-5" />
               </Link>
             </Button>
@@ -348,7 +353,7 @@ export default function Home() {
           </div>
           <div className="mt-30 flex items-center justify-center gap-4">
             <Button asChild size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e]">
-              <Link href="https://tally.so/r/wgExGM" target="_blank">
+              <Link href="https://tally.so/r/wgExGM" target="_blank" rel="noopener noreferrer">
                 Start Your Vowels Journey <ArrowUpRight className="!h-5 !w-5" />
               </Link>
             </Button>
@@ -483,13 +488,13 @@ export default function Home() {
           </p>
           <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button asChild size="sm" variant="outline" className="rounded-full text-base border-[#e8890e] text-[#e8890e] hover:bg-[#e8890e] bg-transparent hover:text-white cursor-pointer text-sm">
-              <Link href="https://wa.me/2775292408?text=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20Vowels" target="_blank">
+              <Link href="https://wa.me/2775292408?text=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20Vowels" target="_blank" rel="noopener noreferrer">
                 Ask about your stack
               </Link>
             </Button>
 
             <Button asChild size="sm" variant="outline" className="rounded-full text-base border-[#e8890e] text-[#e8890e] hover:bg-[#e8890e] bg-transparent hover:text-white cursor-pointer text-sm">
-              <Link href="https://tally.so/r/wgExGM" target="_blank">
+              <Link href="https://cal.com/vowels/audit" target="_blank" rel="noopener noreferrer">
                 Schedule a Free Audit
               </Link>
             </Button>
@@ -534,7 +539,7 @@ export default function Home() {
         </div>
         <div className="mt-4 flex items-center justify-center gap-4">
           <Button asChild size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e]">
-            <Link href="https://tally.so/r/wgExGM" target="_blank">
+            <Link href="https://tally.so/r/wgExGM" target="_blank" rel="noopener noreferrer">
               See What We Could Do For You <ArrowUpRight className="!h-5 !w-5" />
             </Link>
           </Button>
@@ -549,7 +554,7 @@ export default function Home() {
           <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-2 gap-6">
             <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
               <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
-                <img src="/undraw_8.svg" />
+                <img src="/glunk_io.png" />
               </div>
               <div>
                 <span className="font-semibold tracking-tight text-lg">
@@ -559,13 +564,13 @@ export default function Home() {
                   Precision lead qualification that increases sales‑ready conversations and reduces manual screening.
                 </p>
                 <p className="mt-1 text-sm text-right">
-                  <Link href="#">View Product</Link>
+                  <Link href="https://glunk.io" target="_blank" rel="noopener noreferrer" className="text-[#E8890D] underline">View Product</Link>
                 </p>
               </div>
             </div>
             <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
               <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
-                <img src="/undraw_7.svg" />
+                <img src="/undraw_15.svg" />
               </div>
               <div>
                 <span className="font-semibold tracking-tight text-lg">
@@ -575,14 +580,14 @@ export default function Home() {
                   An AI Agent for sales teams on WhatsApp. Conversational access to compliant product, policy, and process information.
                 </p>
                 <p className="mt-1 text-sm text-right">
-                  <Link href="#">Coming Soon</Link>
+                  <span className="text-muted-foreground cursor-not-allowed">Coming Soon</span>
                 </p>
               </div>
             </div>
           </div>
           <div className="mt-12 flex items-center justify-center gap-4">
             <Button asChild size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e]">
-              <Link href="https://tally.so/r/wgExGM" target="_blank">
+              <Link href="https://cal.com/vowels/products" target="_blank" rel="noopener noreferrer">
                 Talk to us about glunk.io & V-Sure <ArrowUpRight className="!h-5 !w-5" />
               </Link>
             </Button>
@@ -679,13 +684,15 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <Button
-                variant={plan.isPopular ? "default" : "outline"}
-                size="lg"
-                className="w-full mt-6 rounded-full"
-              >
-                {plan.buttonText}
-              </Button>
+              <Link href={plan.buttonUrl} target="_blank" rel="noopener noreferrer">
+                <Button
+                  variant={plan.isPopular ? "default" : "outline"}
+                  size="lg"
+                  className="w-full mt-6 rounded-full cursor-pointer"
+                >
+                  {plan.buttonText}
+                </Button>
+              </Link>
             </div>
           ))}
         </div>
@@ -693,8 +700,8 @@ export default function Home() {
           <i className="text-muted-foreground">Need custom software or special workflows?</i>
         </p>
         <div className="mt-4 flex items-center justify-center gap-4">
-          <Button asChild size="sm" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e] text-sm">
-            <Link href="https://tally.so/r/wgExGM" target="_blank">
+          <Button asChild size="sm" variant="outline" className="rounded-full text-base border-[#e8890e] text-[#e8890e] hover:bg-[#e8890e] bg-transparent hover:text-white cursor-pointer text-sm">
+            <Link href="https://tally.so/r/wgExGM" target="_blank" rel="noopener noreferrer">
               Contact us for a tailored package
             </Link>
           </Button>
@@ -749,7 +756,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="faqs" className="flex items-center justify-center px-6 py-30">
+      <div id="faqs" className="flex items-center justify-center px-6">
         <div className="max-w-xl">
           <h2 className="text-4xl md:text-5xl leading-[1.15]! font-semibold tracking-tighter">
             FAQs
@@ -789,13 +796,13 @@ export default function Home() {
           </p>
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-8">
             <Button asChild size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e] cursor-pointer">
-              <Link href="https://tally.so/r/wgExGM" target="_blank">
+              <Link href="https://cal.com/vowels/audit" target="_blank"  rel="noopener noreferrer">
                 Schedule a Free Audit <ArrowUpRight className="!h-5 !w-5" />
               </Link>
             </Button>
 
             <Button asChild size="lg" variant="outline" className="rounded-full text-base border-[#e8890e] text-[#e8890e] hover:bg-[#e8890e] bg-transparent hover:text-white cursor-pointer">
-              <Link href="https://wa.me/2775292408?text=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20Vowels" target="_blank">
+              <Link href="https://wa.me/2775292408?text=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20Vowels" target="_blank"  rel="noopener noreferrer">
                 Chat on WhatsApp <MessageCircleMore className="!h-5 !w-5" />
               </Link>
             </Button>
