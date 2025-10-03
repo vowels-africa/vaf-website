@@ -157,7 +157,7 @@ export default function Home() {
           <div className="flex items-center gap-3">
             <Button asChild className="rounded-full bg-[#e8890e] hover:bg-[#f1951e] cursor-pointer">
               <Link href="https://tally.so/r/wgExGM" target="_blank" rel="noopener noreferrer">
-                <span className="hidden sm:inline">Book a Call</span>
+                <span className="hidden sm:inline">Request a Call</span>
                 <Hand className="h-5 w-5 sm:hidden" />
                 <ArrowUpRight className="h-5 w-5 hidden sm:inline" />
               </Link>
@@ -204,11 +204,11 @@ export default function Home() {
 
           <ul className="flex flex-wrap gap-6 mt-8 list-none justify-center">
             <li className="flex items-center text-sm text-gray-300">
-              <span className="w-2 h-2 rounded-full mr-2" style={{backgroundColor: 'rgb(105, 227, 227)'}}></span>
+              <span className="w-2 h-2 rounded-full mr-2" style={{backgroundColor: '#69e3e3'}}></span>
               ROI guaranteed
             </li>
-            <li className="flex items-center text-xs text-gray-300">
-              <span className="w-2 h-2 rounded-full mr-2" style={{backgroundColor: 'rgb(105, 227, 227)'}}></span>
+            <li className="flex items-center text-sm text-gray-300">
+              <span className="w-2 h-2 rounded-full mr-2" style={{backgroundColor: '#69e3e3'}}></span>
               Plans from R5,999/month
             </li>
           </ul>
@@ -537,7 +537,7 @@ export default function Home() {
                     <AccordionItem
                       key={index}
                       value={`item-${index}`}
-                      className="data-[state=open]:border-b-2 data-[state=open]:border-primary"
+                      className="data-[state=open]:border-b-2 data-[state=open]:border-[#69e3e3]"
                     >
                       <AccordionTrigger className="text-lg [&>svg]:hidden">
                         <div className="flex items-center gap-4">
@@ -659,7 +659,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="pricing" className="min-h-screen flex flex-col items-center justify-center py-30 px-6">
+      <div id="pricing" className="min-h-screen flex flex-col items-center justify-center pt-30 pb-20 px-6">
         <h2 className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight text-center md:mx-auto">
           Pricing
         </h2>
@@ -679,12 +679,12 @@ export default function Home() {
               className={cn(
                 "relative border p-7 rounded-xl lg:rounded-none lg:first:rounded-l-xl lg:last:rounded-r-xl",
                 {
-                  "border-[2px] border-primary py-12 !rounded-xl": plan.isPopular,
+                  "border-[2px] border-[#010c23] py-12 !rounded-xl": plan.isPopular,
                 }
               )}
             >
               {plan.isPopular && (
-                <Badge className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2">
+                <Badge className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 bg-[#010c23] border-[#69e3e3]">
                   Most Popular
                 </Badge>
               )}
@@ -709,7 +709,7 @@ export default function Home() {
                 <Button
                   variant={plan.isPopular ? "default" : "outline"}
                   size="lg"
-                  className="w-full mt-6 rounded-full cursor-pointer"
+                  className={`w-full mt-6 rounded-full cursor-pointer ${plan.isPopular ? 'bg-[#e8890e] hover:bg-[#e8890e]/90 text-white' : ''}`}
                 >
                   {plan.buttonText}
                 </Button>
@@ -762,15 +762,15 @@ export default function Home() {
           </div>
           <ul className="flex flex-wrap gap-6 mt-12 list-none justify-center">
             <li className="flex items-center text-sm text-gray-500">
-              <span className="w-2 h-2 rounded-full mr-2" style={{backgroundColor: 'rgb(105, 227, 227)'}}></span>
+              <span className="w-2 h-2 rounded-full mr-2" style={{backgroundColor: '#69e3e3'}}></span>
               Data residency options
             </li>
-            <li className="flex items-center text-xs text-gray-500">
-              <span className="w-2 h-2 rounded-full mr-2" style={{backgroundColor: 'rgb(105, 227, 227)'}}></span>
+            <li className="flex items-center text-sm text-gray-500">
+              <span className="w-2 h-2 rounded-full mr-2" style={{backgroundColor: '#69e3e3'}}></span>
               WhatsApp-first
             </li>
-            <li className="flex items-center text-xs text-gray-500">
-              <span className="w-2 h-2 rounded-full mr-2" style={{backgroundColor: 'rgb(105, 227, 227)'}}></span>
+            <li className="flex items-center text-sm text-gray-500">
+              <span className="w-2 h-2 rounded-full mr-2" style={{backgroundColor: '#69e3e3'}}></span>
               Mobile-money friendly
             </li>
           </ul>

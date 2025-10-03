@@ -33,7 +33,7 @@ export const NavigationSheet = () => {
           <div className="mt-auto">
             <Button asChild className="w-full rounded-full bg-[#e8890e] hover:bg-[#f1951e] cursor-pointer">
               <Link href="https://tally.so/r/wgExGM" target="_blank">
-                Book a Call <ArrowUpRight className="!h-5 !w-5" />
+                Request a Call <ArrowUpRight className="!h-5 !w-5" />
               </Link>
             </Button>
           </div>
