@@ -86,7 +86,7 @@ const testimonials = [
     designation: "Co-Founder, FMCG SMME",
     company: "Curtis",
     testimonial: "We saved time and money by automating customer engagement with Vowels, using <strong>WhatsApp</strong> as our primary channel.",
-    avatar: "https://randomuser.me/api/portraits/men/5.jpg",
+    avatar: "/api/image-proxy?url=" + encodeURIComponent("https://randomuser.me/api/portraits/men/5.jpg"),
   },
   {
     id: 2,
@@ -94,7 +94,7 @@ const testimonials = [
     designation: "Principal Consultant, Boutique Consulting Start-up",
     company: "Yaseen",
     testimonial: "<strong>V-Sure</strong> improved access to information and automatically triaged incoming queries to the right channels — while giving the leadership team real oversight.",
-    avatar: "https://randomuser.me/api/portraits/men/7.jpg",
+    avatar: "/api/image-proxy?url=" + encodeURIComponent("https://randomuser.me/api/portraits/men/7.jpg"),
   },
   {
     id: 3,
@@ -102,7 +102,7 @@ const testimonials = [
     designation: "Co-Founder & CTO, Alternative Health SaaS Start-up",
     company: "Sean",
     testimonial: "Forecast development went <strong>4× faster</strong>. We were online in a week, not a month.",
-    avatar: "https://randomuser.me/api/portraits/men/10.jpg",
+    avatar: "/api/image-proxy?url=" + encodeURIComponent("https://randomuser.me/api/portraits/men/10.jpg"),
   },
   {
     id: 4,
@@ -110,7 +110,7 @@ const testimonials = [
     designation: "Chairperson, Professional Services Start-up",
     company: "Carlyn",
     testimonial: "Vowels shortened our path from discovery call to onboarding — <strong>from weeks to days</strong> — and revenue followed.",
-    avatar: "https://randomuser.me/api/portraits/women/8.jpg",
+    avatar: "/api/image-proxy?url=" + encodeURIComponent("https://randomuser.me/api/portraits/women/8.jpg"),
   },
 ];
 
