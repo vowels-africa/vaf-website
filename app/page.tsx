@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils";
 import { ArrowUpRight, Goal, HandCoins, MessagesSquare, StarIcon, CircleCheck, MessageCircleMore, Megaphone, BadgeCent, ShoppingCart, LifeBuoy, DatabaseZap, WandSparkles, RefreshCcw, Coins, Sparkles, Fingerprint, ClockArrowUp, ClipboardCheck, HeartHandshake, Hand } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { Marquee } from "@/components/ui/marquee";
 
 const faq = [
   {
@@ -276,6 +277,26 @@ export default function Home() {
           <p className="text-center mt-12 px-8">
             <strong>Vowels.Africa is the missing piece</strong>. We start with your outcomes, then connect the tools you already use — and almost any you&apos;ll add next — so your business runs smoother every day.
           </p>
+        </div>
+      </div>
+
+      <div className="flex items-center justify-center px-6 pt-0 pb-30">
+        <div className="overflow-hidden">
+          <p className="text-center text-xl font-medium">
+            Companies we're working with
+          </p>
+          <div className="mt-10 flex items-center justify-center gap-x-14 gap-y-10 max-w-(--breakpoint-xl)">
+            <Marquee
+              pauseOnHover
+              className="[--duration:20s] [&_img]:mr-20 mask-x-from-70% mask-x-to-90%"
+            >
+              <img src="/samsguide.png" className="h-16" alt="Sams Guide" title="Sams Guide" />
+              <img src="/apex.png" className="h-16" alt="Apex Partner Solutions" title="Apex Partner Solutions" />
+              <img src="/sam_co.png" className="h-16" alt="Sam & Co" title="Sam & Co" />
+              <img src="/oldmutual.png" className="h-16" alt="Old Mutual" title="Old Mutual" />
+              <img src="/uzum.png" className="h-16" alt="Uzum Beverages" title="Uzum Beverages" />
+            </Marquee>
+          </div>
         </div>
       </div>
 
