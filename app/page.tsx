@@ -190,7 +190,7 @@ export default function Home() {
             </Button>
 
             <Button asChild size="lg" variant="outline" className="rounded-full text-base border-[#e8890e] text-[#e8890e] hover:bg-[#e8890e] bg-transparent hover:text-white cursor-pointer">
-              <Link href="https://wa.me/275292408?text=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20Vowels" target="_blank">
+              <Link href="https://wa.me/2775292408?text=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20Vowels" target="_blank">
                 Chat on WhatsApp <MessageCircleMore className="!h-5 !w-5" />
               </Link>
             </Button>
@@ -483,7 +483,7 @@ export default function Home() {
           </p>
           <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button asChild size="sm" variant="outline" className="rounded-full text-base border-[#e8890e] text-[#e8890e] hover:bg-[#e8890e] bg-transparent hover:text-white cursor-pointer text-sm">
-              <Link href="https://wa.me/275292408?text=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20Vowels" target="_blank">
+              <Link href="https://wa.me/2775292408?text=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20Vowels" target="_blank">
                 Ask about your stack
               </Link>
             </Button>
@@ -795,7 +795,7 @@ export default function Home() {
             </Button>
 
             <Button asChild size="lg" variant="outline" className="rounded-full text-base border-[#e8890e] text-[#e8890e] hover:bg-[#e8890e] bg-transparent hover:text-white cursor-pointer">
-              <Link href="https://wa.me/275292408?text=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20Vowels" target="_blank">
+              <Link href="https://wa.me/2775292408?text=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20Vowels" target="_blank">
                 Chat on WhatsApp <MessageCircleMore className="!h-5 !w-5" />
               </Link>
             </Button>
