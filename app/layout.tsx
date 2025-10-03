@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vowels",
-  description: "Automation Solutions Built for Africa",
+  title: "Vowels Africa",
+  description: "Automation built for African SMEs",
 };
 
 export default function RootLayout({

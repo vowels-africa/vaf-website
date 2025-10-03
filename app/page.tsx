@@ -3,111 +3,142 @@ import { NavMenu } from "@/components/navbar-04/nav-menu";
 import { NavigationSheet } from "@/components/navbar-04/navigation-sheet";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
-import { ArrowUpRight, Goal, HandCoins, MessagesSquare, StarIcon } from "lucide-react";
+import { ArrowUpRight, Goal, HandCoins, MessagesSquare, StarIcon, CircleCheck, MessageCircleMore, Megaphone, BadgeCent, ShoppingCart, LifeBuoy, DatabaseZap, WandSparkles, RefreshCcw, Coins, Sparkles, Fingerprint, ClockArrowUp, ClipboardCheck, HeartHandshake } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
-// const plans = [
-//   {
-//     name: "Starter",
-//     price: 5500,
-//     setup_price: 2500,
-//     description: "Perfect for small businesses getting started.",
-//     features: [
-//       "WhatsApp automation (1 workflow)",
-//       "Basic CRM setup (up to 1,000 contacts)",
-//       "Simple invoicing + reminders",
-//       "Basic analytics dashboard",
-//       "Email support",
-//     ],
-//     buttonText: "Start Free Trial",
-//   },
-//   {
-//     name: "Growth",
-//     price: 14500,
-//     setup_price: 6500,
-//     isRecommended: true,
-//     description: "For scaling SMEs ready to move faster.",
-//     features: [
-//       "Everything in Starter",
-//       "Advanced workflows (up to 5)",
-//       "Multi-channel messaging (WhatsApp + SMS)",
-//       "Invoicing + mobile money integration",
-//       "Support chatbot (multi-language)",
-//       "Priority WhatsApp support",
-//     ],
-//     buttonText: "Book Free Audit",
-//     isPopular: true,
-//   },
-//   {
-//     name: "Enterprise",
-//     price: 35000,
-//     description: "For established businesses with custom needs.",
-//     features: [
-//       "Unlimited workflows + contacts",
-//       "Bespoke AI & system integrations",
-//       "Dedicated account manager",
-//       "White-label options",
-//       "24/7 support + SLAs",
-//     ],
-//     buttonText: "Schedule Consultation",
-//   },
-// ];
+const faq = [
+  {
+    question: "Do you only work with WhatsApp/Xero/Pipedrive?",
+    answer: "No. We’re tool-agnostic. If a system offers an API, webhook, inbox, spreadsheet, or database — even legacy exports — we can usually integrate it. We’ll recommend the simplest path to your outcome.",
+  },
+  {
+    question: "How quickly can we go live?",
+    answer: "Most Starter/Growth setups go live in 2–4 weeks. Complex/Enterprise solutions may take longer — we’ll give you a clear roadmap after your audit.",
+  },
+  {
+    question: "Is my data safe?",
+    answer: "Yes. We use strong encryption, robust access controls, and privacy-first practices. Security and uptime are non-negotiable."
+  },
+];
+
+const plans = [
+  {
+    name: "Starter",
+    price: "R5,999",
+    setup_price: "R19,999 setup",
+    description: "Perfect for small businesses getting started.",
+    features: [
+      "WhatsApp automation (1 workflow)",
+      "Basic CRM setup (up to 1,000 contacts)",
+      "Simple invoicing + reminders",
+      "Basic analytics dashboard",
+      "Email support",
+    ],
+    buttonText: "Start Free Audit",
+  },
+  {
+    name: "Growth",
+    price: "R14,999",
+    setup_price: "R49,000 setup",
+    isRecommended: true,
+    description: "For scaling SMEs ready to move faster.",
+    features: [
+      "Everything in Starter",
+      "Advanced workflows (up to 5)",
+      "Multi-channel messaging (WhatsApp + SMS)",
+      "Invoicing + mobile money integration",
+      "Support chatbot (multi-language)",
+      "Priority WhatsApp support",
+    ],
+    buttonText: "Book Implementation Call",
+    isPopular: true,
+  },
+  {
+    name: "Enterprise",
+    price: "R39,999",
+    setup_price: "bespoke setup fee",
+    description: "For established businesses with custom needs.",
+    features: [
+      "Everything in Starter & Growth",
+      "<strong>Unlimited</strong> workflows & contacts",
+      "Bespoke AI & system integrations",
+      "Dedicated account manager",
+      "White-label options",
+      "24/7 support + SLAs",
+    ],
+    buttonText: "Schedule Enterprise Consultation",
+  },
+];
 
 const testimonials = [
   {
     id: 1,
-    name: "John Doe",
-    designation: "Early Client",
-    company: "Professional Services",
-    testimonial: "Vowels cut our admin time in half. Clients now get replies instantly — and we finally get paid on time.",
-    avatar: "https://randomuser.me/api/portraits/men/1.jpg",
+    name: "Curtis",
+    designation: "Co-Founder, FMCG SMME",
+    company: "Curtis",
+    testimonial: "We saved time and money by automating customer engagement with Vowels, using <strong>WhatsApp</strong> as our primary channel.",
+    avatar: "https://randomuser.me/api/portraits/men/5.jpg",
   },
   {
     id: 2,
-    name: "Sophia Lee",
-    designation: "Early Client",
-    company: "FMCG",
-    testimonial: "With WhatsApp automation, our retail orders doubled without adding staff.",
-    avatar: "https://randomuser.me/api/portraits/women/6.jpg",
+    name: "Yaseen",
+    designation: "Principal Consultant, Boutique Consulting Start-up",
+    company: "Yaseen",
+    testimonial: "<strong>V-Sure</strong> improved access to information and automatically triaged incoming queries to the right channels — while giving the leadership team real oversight.",
+    avatar: "https://randomuser.me/api/portraits/men/7.jpg",
   },
   {
     id: 3,
-    name: "Michael Johnson",
-    designation: "Early Client",
-    company: "E-commerce",
-    testimonial: "Vowels transformed our customer support from chaos to calm. Response times dropped from hours to minutes.",
-    avatar: "https://randomuser.me/api/portraits/men/3.jpg",
+    name: "Sean",
+    designation: "Co-Founder & CTO, Alternative Health SaaS Start-up",
+    company: "Sean",
+    testimonial: "Forecast development went <strong>4× faster</strong>. We were online in a week, not a month.",
+    avatar: "https://randomuser.me/api/portraits/men/10.jpg",
   },
   {
     id: 4,
-    name: "Lebo Mthembu",
-    designation: "Early Client",
-    company: "IT Services",
-    testimonial: "Vowels handles our ticket routing automatically. What used to take our team hours now happens instantly!",
-    avatar: "https://randomuser.me/api/portraits/men/3.jpg",
+    name: "Carlyn",
+    designation: "Chairperson, Professional Services Start-up",
+    company: "Carlyn",
+    testimonial: "Vowels shortened our path from discovery call to onboarding — <strong>from weeks to days</strong> — and revenue followed.",
+    avatar: "https://randomuser.me/api/portraits/women/8.jpg",
   },
 ];
 
 const features = [
   {
-    icon: HandCoins,
-    title: "FMCG Distributor (South Africa)",
-    description: "Eliminated manual order entry, invoice chasing, and payment follow-ups → 25 hours back per week.",
+    icon: Coins,
+    title: "FMCG SMME",
+    description: `<strong>Before:</strong> Orders were manually entered via WhatsApp were manually re-entered. Invoices are delayed; many payments late.<br /><br />
+      <strong>After:</strong> Orders captured automatically from WhatsApp → inventory checked → delivery scheduled → invoice issued → payment reminders sent.<br /><br />
+      <strong>Result: ~25 hours/week</strong> reclaimed, <strong>order volume doubled</strong>, late payments <strong><5%</strong>.`,
   },
   {
     icon: Goal,
-    title: "Professional Services Firm (Kenya)",
-    description: "Automated lead scoring, nurturing sequences, and follow-up reminders → 40% higher conversion rate.",
+    title: "Alternative Health SaaS Start-up",
+    description: `<strong>Before:</strong> Needed an integrated AI Agent to connect users with online doctors for instant tele-medicine.<br /><br />
+      <strong>After:</strong> AI Agents triage by criteria (symptoms, urgency, availability) and connect users to available doctors for immediate consults.<br /><br />
+      <strong>Result: Improved user experience</strong> and faster access to care on the platform.`,
   },
   {
     icon: MessagesSquare,
-    title: "Alternative Health Digital Platform (Nigeria)",
-    description: "Localized chatbot experience with seamless payment flows → 3x more active users in 90 days.",
+    title: "Professional Services Start-up",
+    description: `<strong>Before:</strong> Slow client engagement; long delays from needs analysis → proposal → onboarding.<br /><br />
+      <strong>After:</strong> AI Agents triage and qualify incoming leads, trigger guided intake + proposal flows, and streamline onboarding.<br /><br />
+      <strong>Result: Shorter time-to-onboarding</strong> and <strong>higher monthly revenue</strong> from better conversion.`,
+  },
+  {
+    icon: Sparkles,
+    title: "Boutique Consulting Start-up",
+    description: `<strong>Before:</strong> Oversight and response to client queries were managed ad-hoc via WhatsApp (messages & voice notes); response time and visibility were poor.<br /><br />
+      <strong>After:</strong> Incoming messages are auto-categorised and curated; responses generated; conversations synced to a <strong>priority ticket dashboard</strong>.<br /><br />
+      <strong>Result: Response time halved</strong> and <strong>~70%</strong> less manual effort.`,
   },
 ];
 
@@ -146,29 +177,43 @@ export default function Home() {
         />
         <div className="relative z-10 text-center max-w-2xl">
           <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl font-bold !leading-[1.2] tracking-tight">
-            Automation Solutions Built for Africa
+            Automation built <br className="md:hidden" />for African SMEs
           </h1>
-          <p className="mt-6 text-[17px] md:text-lg">
-            Save hours, close more sales, and get paid faster — all with WhatsApp + AI tools built for how African businesses actually work.
+          <p className="mt-6 text-[17px] md:text-lg sm:px-6 md:px-0">
+            Without vowels, language breaks. Without automation, business breaks. <br className="hidden md:block" />We give you the building blocks to save time, close more sales, and get paid faster.
           </p>
-          <div className="mt-12 flex items-center justify-center gap-4">
+          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-8">
             <Button asChild size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e] cursor-pointer">
               <Link href="https://tally.so/r/wgExGM" target="_blank">
                 Schedule a Free Audit <ArrowUpRight className="!h-5 !w-5" />
               </Link>
             </Button>
+
+            <Button asChild size="lg" variant="outline" className="rounded-full text-base border-[#e8890e] text-[#e8890e] hover:bg-[#e8890e] bg-transparent hover:text-white cursor-pointer">
+              <Link href="https://wa.me/275292408?text=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20Vowels" target="_blank">
+                Chat on WhatsApp <MessageCircleMore className="!h-5 !w-5" />
+              </Link>
+            </Button>
           </div>
+
+          <ul className="flex flex-wrap gap-6 mt-8 list-none justify-center">
+            <li className="flex items-center text-sm text-gray-300">
+              <span className="w-2 h-2 rounded-full mr-2" style={{backgroundColor: 'rgb(105, 227, 227)'}}></span>
+              ROI guaranteed
+            </li>
+            <li className="flex items-center text-xs text-gray-300">
+              <span className="w-2 h-2 rounded-full mr-2" style={{backgroundColor: 'rgb(105, 227, 227)'}}></span>
+              Plans from R5,999/month
+            </li>
+          </ul>
         </div>
       </div>
 
-      <div id="problem" className="min-h-screen flex items-center justify-center py-30">
+      <div id="why-us" className="min-h-screen flex items-center justify-center py-30">
         <div className="max-w-screen-lg w-full py-10 px-6">
-          <h2 className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight max-w-xl md:text-center md:mx-auto">
-            Problem
+          <h2 className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight text-center md:mx-auto">
+            Why SMEs choose Vowels
           </h2>
-          <p className="md:text-center">
-            Are these holding your business back?
-          </p>
           <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-2 gap-6">
             <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
               <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
@@ -176,10 +221,10 @@ export default function Home() {
               </div>
               <div>
                 <span className="font-semibold tracking-tight text-lg">
-                  Too much manual work
+                  Too much admin
                 </span>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  Drowning in spreadsheets, follow-ups, and endless admin tasks that steal time from growth.
+                  Spreadsheets, manual processing, endless follow-ups, etc.
                 </p>
               </div>
             </div>
@@ -192,7 +237,7 @@ export default function Home() {
                   Leads slipping away
                 </span>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  Up to 67% of business leads never get contacted, meaning lost revenue every single day.
+                  Slow or missed responses cost revenue
                 </p>
               </div>
             </div>
@@ -205,7 +250,7 @@ export default function Home() {
                   Slow payments
                 </span>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  Weeks spent chasing invoices while cash flow suffers and bills pile up.
+                  Invoice delays and manual chasing hurt cash flow
                 </p>
               </div>
             </div>
@@ -215,269 +260,337 @@ export default function Home() {
               </div>
               <div>
                 <span className="font-semibold tracking-tight text-lg">
-                  No tech expertise
+                  No IT team
                 </span>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  Wanting automation benefits but not knowing where to start or how to implement.
+                  You need practical automation that “just works”
                 </p>
               </div>
             </div>
           </div>
-          <p className="md:text-center mt-12">
-            If this sounds like your business, you&apos;re not alone. 90% of African SMEs face the same barriers.
-            <br className="max-sm:hidden" /> That&apos;s why we built Vowels.Africa.
+          <p className="text-center mt-12 px-8">
+            <strong>Vowels.Africa is the missing piece</strong>. We start with your outcomes, then connect the tools you already use — and almost any you&apos;ll add next — so your business runs smoother every day.
           </p>
-        </div>
-      </div>
-
-      <div id="solution" className="min-h-screen flex items-center justify-center py-30">
-        <div className="max-w-screen-lg w-full py-10 px-6">
-          <h2 className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight max-w-xl md:text-center md:mx-auto">
-            Solution
-          </h2>
-          <h3 className="md:text-center text-1xl font-bold">
-            Automation designed for Africa
-          </h3>
-          <p className="md:text-center">
-            We integrate the tools you already use — WhatsApp, mobile money, simple CRMs
-            <br className="max-sm:hidden" /> and automate the boring, time-draining work.
-          </p>
-          <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-2 gap-6">
-            <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
-              <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
-                <img src="/undraw_1.svg" />
-              </div>
-              <div>
-                <span className="font-semibold tracking-tight text-lg">
-                  WhatsApp Automation
-                </span>
-                <p className="mt-1 text-sm text-muted-foreground">
-                  Turn messages into opportunity. Instantly respond, qualify leads, and book appointments automatically.
-                </p>
-              </div>
-            </div>
-            <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
-              <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
-                <img src="/undraw_2.svg" />
-              </div>
-              <div>
-                <span className="font-semibold tracking-tight text-lg">
-                  Smart CRM
-                </span>
-                <p className="mt-1 text-sm text-muted-foreground">
-                  Never lose a lead. Capture prospects, track deals, and grow customer relationships effortlessly.
-                </p>
-              </div>
-            </div>
-            <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
-              <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
-                <img src="/undraw_3.svg" />
-              </div>
-              <div>
-                <span className="font-semibold tracking-tight text-lg">
-                  Invoicing & Payments
-                </span>
-                <p className="mt-1 text-sm text-muted-foreground">
-                  Get paid faster. Auto-generate invoices and collect via M-Pesa, EFT, or mobile money.
-                </p>
-              </div>
-            </div>
-            <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
-              <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
-                <img src="/undraw_4.svg" />
-              </div>
-              <div>
-                <span className="font-semibold tracking-tight text-lg">
-                  AI Support Bots
-                </span>
-                <p className="mt-1 text-sm text-muted-foreground">
-                  24/7 customer support. Handle common questions and escalate complex issues when needed.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
       <div id="framework" className="min-h-screen flex items-center justify-center py-30">
         <div className="max-w-screen-lg w-full py-10 px-6">
-          <h2 className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight max-w-xl md:text-center md:mx-auto">
-            Framework
+          <h2 className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight text-center md:mx-auto">
+            The VOWELS Framework
           </h2>
-          <p className="md:text-center">
-            Just like vowels connect words, we connect your business processes to make them flow.
-          </p>
-          <div className="mt-8 md:mt-16 w-full mx-auto space-y-20">
+          <div className="mt-12 md:mt-16 w-full mx-auto space-y-20">
             <div className="flex flex-col md:flex-row items-center gap-x-20 gap-y-6 md:odd:flex-row-reverse">
-              <div className="w-full aspect-[6/4]">
-                <Image src="/undraw_10.svg" width={350} height={350} alt="Use Cases" className="mx-auto" />
+              <div className="w-full">
+                <Image src="/undraw_10.svg" width={350} height={350} alt="Understand" className="max-sm:mx-auto sm:ml-0 sm:mr-auto" />
               </div>
-              <div className="basis-1/2 shrink-0 max-sm:text-center">
+              <div className="basis-1/2 shrink-0 max-sm:text-center w-full">
                 <h4 className="my-3 text-3xl font-semibold tracking-tight">
                   Understand
                 </h4>
                 <p className="text-muted-foreground text-[17px]">
-                  We dive deep into how your business actually works. Map every touchpoint, identify bottlenecks, and discover which processes drain your time and resources.
+                  Map workflows; find where time & money leak
                 </p>
               </div>
             </div>
             <div className="flex flex-col md:flex-row items-center gap-x-20 gap-y-6 md:odd:flex-row-reverse">
-              <div className="w-full aspect-[6/4]">
-                <Image src="/undraw_11.svg" width={350} height={350} alt="Use Cases" className="mx-auto" />
+              <div className="w-full">
+                <Image src="/undraw_11.svg" width={350} height={350} alt="Optimise" className="max-sm:mx-auto sm:ml-auto sm:mr-0" />
               </div>
-              <div className="basis-1/2 shrink-0 max-sm:text-center">
+              <div className="basis-1/2 shrink-0 max-sm:text-center sm:text-right w-full">
                 <h4 className="my-3 text-3xl font-semibold tracking-tight">
                   Optimise
                 </h4>
                 <p className="text-muted-foreground text-[17px]">
-                  Transform chaos into clarity. Streamline workflows, eliminate redundancies, and design automated systems that work seamlessly with your existing operations.
+                  Cut duplication; fix bottlenecks
                 </p>
               </div>
             </div>
             <div className="flex flex-col md:flex-row items-center gap-x-20 gap-y-6 md:odd:flex-row-reverse">
-              <div className="w-full aspect-[6/4]">
-                <Image src="/undraw_12.svg" width={350} height={350} alt="Use Cases" className="mx-auto" />
+              <div className="w-full">
+                <Image src="/undraw_12.svg" width={350} height={350} alt="Automate" className="max-sm:mx-auto sm:ml-0 sm:mr-auto" />
               </div>
-              <div className="basis-1/2 shrink-0 max-sm:text-center">
+              <div className="basis-1/2 shrink-0 max-sm:text-center w-full">
                 <h4 className="my-3 text-3xl font-semibold tracking-tight">
                   Automate
                 </h4>
                 <p className="text-muted-foreground text-[17px]">
-                  Deploy smart AI and proven tools that work 24/7. From WhatsApp bots to payment processing, we implement systems that handle routine tasks while you focus on growth.
+                  Deploy WhatsApp, CRM, invoicing & AI workflows
                 </p>
               </div>
             </div>
             <div className="flex flex-col md:flex-row items-center gap-x-20 gap-y-6 md:odd:flex-row-reverse">
-              <div className="w-full aspect-[6/4]">
-                <Image src="/undraw_13.svg" width={350} height={350} alt="Use Cases" className="mx-auto" />
+              <div className="w-full">
+                <Image src="/undraw_13.svg" width={350} height={350} alt="Innovate" className="max-sm:mx-auto sm:ml-auto sm:mr-0" />
               </div>
-              <div className="basis-1/2 shrink-0 max-sm:text-center">
+              <div className="basis-1/2 shrink-0 max-sm:text-center sm:text-right w-full">
                 <h4 className="my-3 text-3xl font-semibold tracking-tight">
                   Innovate
                 </h4>
                 <p className="text-muted-foreground text-[17px]">
-                  Go beyond templates with solutions built specifically for your business. Custom integrations, unique workflows, and creative approaches that give you competitive advantage.
+                  Build custom solutions where needed
                 </p>
               </div>
             </div>
             <div className="flex flex-col md:flex-row items-center gap-x-20 gap-y-6 md:odd:flex-row-reverse">
-              <div className="w-full aspect-[6/4]">
-                <Image src="/undraw_14.svg" width={350} height={350} alt="Use Cases" className="mx-auto" />
+              <div className="w-full">
+                <Image src="/undraw_14.svg" width={350} height={350} alt="Elevate" className="max-sm:mx-auto sm:ml-0 sm:mr-auto" />
               </div>
-              <div className="basis-1/2 shrink-0 max-sm:text-center">
+              <div className="basis-1/2 shrink-0 max-sm:text-center w-full">
                 <h4 className="my-3 text-3xl font-semibold tracking-tight">
                   Elevate
                 </h4>
                 <p className="text-muted-foreground text-[17px]">
-                  Transform from reactive to proactive. Scale operations confidently with systems that grow with you, turning automation into your biggest business multiplier.
+                  Monitor, report, and scale with confidence
                 </p>
               </div>
             </div>
           </div>
-          <div className="my-20 flex items-center justify-center gap-4">
+          <div className="mt-30 flex items-center justify-center gap-4">
             <Button asChild size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e]">
               <Link href="https://tally.so/r/wgExGM" target="_blank">
-                Start YOUR Journey <ArrowUpRight className="!h-5 !w-5" />
+                Start Your Vowels Journey <ArrowUpRight className="!h-5 !w-5" />
               </Link>
             </Button>
           </div>
         </div>
       </div>
 
-      {/* <div className="min-h-screen flex flex-col items-center justify-center py-12 px-6">
-        <h2 className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight max-w-xl text-center md:mx-auto">
-          Pricing
-        </h2>
-        <h3 className="md:text-center text-1xl font-bold">
-          Automation that pays for itself.
-        </h3>
-        <p className="max-w-screen-sm text-center">
-          ROI guaranteed — save more than you spend, or we work free until you do.
-        </p>
-        <div className="mt-12 max-w-screen-lg mx-auto grid grid-cols-1 lg:grid-cols-3 items-center gap-8 lg:gap-0">
-          {plans.map((plan) => (
-            <div
-              key={plan.name}
-              className={cn(
-                "relative border p-7 rounded-xl lg:rounded-none lg:first:rounded-l-xl lg:last:rounded-r-xl",
-                {
-                  "border-[2px] border-primary py-12 !rounded-xl": plan.isPopular,
-                }
-              )}
-            >
-              {plan.isPopular && (
-                <Badge className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2">
-                  Most Popular
-                </Badge>
-              )}
-              <h3 className="text-lg font-medium">{plan.name}</h3>
-              <p className="mt-2 text-4xl font-bold">R{plan.price}</p>
-              {plan.setup_price && (
-                <p className="mt-1 font-bold">+ R{plan.setup_price} (Setup)</p>
-              )}
-              <p className="mt-4 font-medium text-muted-foreground">
-                {plan.description}
-              </p>
-              <Separator className="my-6" />
-              <ul className="space-y-2">
-                {plan.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-2">
-                    <CircleCheck className="h-4 w-4 mt-1 text-green-600" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              <Button
-                variant={plan.isPopular ? "default" : "outline"}
-                size="lg"
-                className="w-full mt-6 rounded-full"
-              >
-                {plan.buttonText}
-              </Button>
-            </div>
-          ))}
-        </div>
-      </div> */}
-
-      <div id="use-cases" className="flex items-center justify-center py-30">
-        <div className="max-w-screen-lg w-full py-12 px-6">
-          <h2 className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight max-w-lg">
-            Use Cases
+      <div id="solutions" className="min-h-screen flex items-center justify-center py-30">
+        <div className="max-w-screen-lg w-full py-10 px-6">
+          <h2 className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight md:text-center md:mx-auto">
+            Integrations that fit your stack <br className="hidden md:block" />— today and tomorrow
           </h2>
-          <p>
-            Even as a new startup, we&apos;re already working with early adopters across Africa:
+          <p className="md:text-center mt-4">
+            Outcomes first. Tools second. If it has an <strong>API, webhook, inbox, spreadsheet, or database</strong>, we can usually integrate it.
           </p>
-          <div className="mt-6 md:mt-8 w-full mx-auto grid md:grid-cols-2 gap-12">
-            <div>
-              <Accordion defaultValue="item-0" type="single" className="w-full">
-                {features.map(({ title, description, icon: Icon }, index) => (
-                  <AccordionItem
-                    key={index}
-                    value={`item-${index}`}
-                    className="data-[state=open]:border-b-2 data-[state=open]:border-primary"
-                  >
-                    <AccordionTrigger className="text-lg [&>svg]:hidden">
-                      <div className="flex items-center gap-4">
-                        <Icon />
-                        {title}
-                      </div>
-                    </AccordionTrigger>
-                    <AccordionContent className="text-[17px] leading-relaxed text-muted-foreground">
-                      {description}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
+          <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-2 gap-6">
+            <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
+              {/* <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
+                <img src="/undraw_1.svg" />
+              </div> */}
+              <div>
+                <span className="font-semibold tracking-tight text-lg flex items-center gap-2">
+                  <Megaphone className="h-5 w-5" style={{color: '#F1C420'}} />
+                  Comms
+                </span>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  WhatsApp Business API, SMS, email, chat widgets
+                </p>
+              </div>
             </div>
-            {/* Media */}
-            <div className="hidden md:block w-full self-center">
-              <Image src="/undraw_9.svg" width={350} height={350} alt="Use Cases" className="mx-auto" />
+            <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
+              {/* <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
+                <img src="/undraw_2.svg" />
+              </div> */}
+              <div>
+                <span className="font-semibold tracking-tight text-lg flex items-center gap-2">
+                  <BadgeCent className="h-5 w-5" style={{color: '#F1C420'}} />
+                  CRM/Sales
+                </span>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  Pipedrive, Attio, GoHighLevel, Zoho, HubSpot, Twenty
+                </p>
+              </div>
             </div>
+            <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
+              {/* <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
+                <img src="/undraw_3.svg" />
+              </div> */}
+              <div>
+                <span className="font-semibold tracking-tight text-lg flex items-center gap-2">
+                  <HandCoins className="h-5 w-5" style={{color: '#F1C420'}} />
+                  Payments/Accounting
+                </span>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  Mobile Money, EFT, Stripe, Yoco, Xero, Sage, Invoice Ninja
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
+              {/* <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
+                <img src="/undraw_3.svg" />
+              </div> */}
+              <div>
+                <span className="font-semibold tracking-tight text-lg flex items-center gap-2">
+                  <ShoppingCart className="h-5 w-5" style={{color: '#F1C420'}} />
+                  E-commerce
+                </span>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  Shopify, WooCommerce, custom carts
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
+              {/* <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
+                <img src="/undraw_4.svg" />
+              </div> */}
+              <div>
+                <span className="font-semibold tracking-tight text-lg flex items-center gap-2">
+                  <LifeBuoy className="h-5 w-5" style={{color: '#F1C420'}} />
+                  Support
+                </span>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  Freshdesk, Zendesk, Intercom, Monday
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
+              {/* <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
+                <img src="/undraw_4.svg" />
+              </div> */}
+              <div>
+                <span className="font-semibold tracking-tight text-lg flex items-center gap-2">
+                  <DatabaseZap className="h-5 w-5" style={{color: '#F1C420'}} />
+                  Data/BI
+                </span>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  Airtable, BigQuery, Notion, Looker Studio, Metabase
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
+              {/* <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
+                <img src="/undraw_4.svg" />
+              </div> */}
+              <div>
+                <span className="font-semibold tracking-tight text-lg flex items-center gap-2">
+                  <WandSparkles className="h-5 w-5" style={{color: '#F1C420'}} />
+                  Productivity
+                </span>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  Google Workspace, Microsoft 365, Slack, Mattermost
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
+              {/* <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
+                <img src="/undraw_4.svg" />
+              </div> */}
+              <div>
+                <span className="font-semibold tracking-tight text-lg flex items-center gap-2">
+                  <RefreshCcw className="h-5 w-5" style={{color: '#F1C420'}} />
+                  Automation
+                </span>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  Zapier, Make, n8n, Flowise
+                </p>
+              </div>
+            </div>
+          </div>
+          <p className="text-center mt-12">
+            <i className="text-muted-foreground">If it&apos;s not listed, we can likely connect it.</i>
+          </p>
+          <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button asChild size="sm" variant="outline" className="rounded-full text-base border-[#e8890e] text-[#e8890e] hover:bg-[#e8890e] bg-transparent hover:text-white cursor-pointer text-sm">
+              <Link href="https://wa.me/275292408?text=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20Vowels" target="_blank">
+                Ask about your stack
+              </Link>
+            </Button>
+
+            <Button asChild size="sm" variant="outline" className="rounded-full text-base border-[#e8890e] text-[#e8890e] hover:bg-[#e8890e] bg-transparent hover:text-white cursor-pointer text-sm">
+              <Link href="https://tally.so/r/wgExGM" target="_blank">
+                Schedule a Free Audit
+              </Link>
+            </Button>
           </div>
         </div>
       </div>
 
-      <div id="testimonials" className="flex justify-center items-center pt-0 pb-6 px-6">
+      <div id="use-cases">
+        <div className="flex items-center justify-center">
+          <div className="max-w-screen-lg w-full py-12 px-6">
+            <h2 className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight max-w-lg">
+              Use Cases
+            </h2>
+            <p className="text-italic text-muted-foreground">Real Outcomes</p>
+            <div className="mt-6 md:mt-8 w-full mx-auto grid md:grid-cols-[4fr_3fr] gap-12">
+              <div className="w-full">
+                <Accordion defaultValue="item-0" type="single" className="w-full">
+                  {features.map(({ title, description, icon: Icon }, index) => (
+                    <AccordionItem
+                      key={index}
+                      value={`item-${index}`}
+                      className="data-[state=open]:border-b-2 data-[state=open]:border-primary"
+                    >
+                      <AccordionTrigger className="text-lg [&>svg]:hidden">
+                        <div className="flex items-center gap-4">
+                          <Icon />
+                          {title}
+                        </div>
+                      </AccordionTrigger>
+                      <AccordionContent className="text-[17px] leading-relaxed text-muted-foreground">
+                        <div dangerouslySetInnerHTML={{ __html: description }} />
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </div>
+              <div className="hidden md:block w-full self-center">
+                <Image src="/undraw_9.svg" width={350} height={350} alt="Use Cases" className="mx-auto" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="mt-4 flex items-center justify-center gap-4">
+          <Button asChild size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e]">
+            <Link href="https://tally.so/r/wgExGM" target="_blank">
+              See What We Could Do For You <ArrowUpRight className="!h-5 !w-5" />
+            </Link>
+          </Button>
+        </div>
+      </div>
+
+      <div id="products" className="min-h-screen flex items-center justify-center py-30">
+        <div className="max-w-screen-lg w-full py-10 px-6">
+          <h2 className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight md:text-center md:mx-auto">
+            Our Products
+          </h2>
+          <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-2 gap-6">
+            <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
+              <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
+                <img src="/undraw_8.svg" />
+              </div>
+              <div>
+                <span className="font-semibold tracking-tight text-lg">
+                  glunk.io
+                </span>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  Precision lead qualification that increases sales‑ready conversations and reduces manual screening.
+                </p>
+                <p className="mt-1 text-sm text-right">
+                  <Link href="#">View Product</Link>
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
+              <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
+                <img src="/undraw_7.svg" />
+              </div>
+              <div>
+                <span className="font-semibold tracking-tight text-lg">
+                  V-Sure
+                </span>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  An AI Agent for sales teams on WhatsApp. Conversational access to compliant product, policy, and process information.
+                </p>
+                <p className="mt-1 text-sm text-right">
+                  <Link href="#">Coming Soon</Link>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="mt-12 flex items-center justify-center gap-4">
+            <Button asChild size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e]">
+              <Link href="https://tally.so/r/wgExGM" target="_blank">
+                Talk to us about glunk.io & V-Sure <ArrowUpRight className="!h-5 !w-5" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </div>
+
+      <div id="testimonials" className="flex justify-center items-center px-6 pt-0 pb-30">
         <div>
           <h2 className="mb-8 sm:mb-14 text-5xl md:text-6xl font-bold text-center tracking-tight">
             Testimonials
@@ -497,17 +610,18 @@ export default function Home() {
                     <StarIcon className="w-6 h-6 fill-[#f1c421] stroke-[#f1c421]" />
                   </div>
                   <p className="my-6 text-[17px] text-center max-w-md">
-                    &quot;{testimonial.testimonial}&quot;
+                    &quot;<span dangerouslySetInnerHTML={{ __html: testimonial.testimonial }} />&quot;
                   </p>
                   <div className="mt-auto flex items-center justify-center gap-3">
                     <Avatar>
+                      <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
                       <AvatarFallback className="text-xl font-medium bg-primary text-primary-foreground">
                         {testimonial.name.charAt(0)}
                       </AvatarFallback>
                     </Avatar>
                     <div>
                       <p className="text-lg font-semibold">{testimonial.company}</p>
-                      <p className="text-sm text-gray-500">
+                      <p className="text-sm text-muted-foreground">
                         {testimonial.designation}
                       </p>
                     </div>
@@ -516,6 +630,142 @@ export default function Home() {
               ))}
             </div>
           </div>
+        </div>
+      </div>
+
+      <div id="pricing" className="min-h-screen flex flex-col items-center justify-center py-30 px-6">
+        <h2 className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight text-center md:mx-auto">
+          Pricing
+        </h2>
+        <h3 className="md:text-center text-1xl font-bold mt-4">
+          Automation that pays for itself.
+        </h3>
+        <p className="max-w-screen-sm text-center">
+          ROI guaranteed — save more than you spend, or we work free until you do.
+        </p>
+        <p className="max-w-screen-sm text-center">
+          We offer monthly packages <strong>including maintenance</strong> of your solutions.
+        </p>
+        <div className="mt-12 max-w-screen-lg mx-auto grid grid-cols-1 lg:grid-cols-3 items-center gap-8 lg:gap-0">
+          {plans.map((plan) => (
+            <div
+              key={plan.name}
+              className={cn(
+                "relative border p-7 rounded-xl lg:rounded-none lg:first:rounded-l-xl lg:last:rounded-r-xl",
+                {
+                  "border-[2px] border-primary py-12 !rounded-xl": plan.isPopular,
+                }
+              )}
+            >
+              {plan.isPopular && (
+                <Badge className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2">
+                  Most Popular
+                </Badge>
+              )}
+              <h3 className="text-lg font-medium">{plan.name}</h3>
+              <p className="mt-2 text-4xl font-bold">{plan.price}</p>
+              {plan.setup_price && (
+                <p className="mt-1 font-bold">+ {plan.setup_price}</p>
+              )}
+              <p className="mt-4 font-medium text-muted-foreground">
+                {plan.description}
+              </p>
+              <Separator className="my-6" />
+              <ul className="space-y-2">
+                {plan.features.map((feature) => (
+                  <li key={feature} className="flex items-start gap-2">
+                    <CircleCheck className="h-4 w-4 mt-1 text-green-600" />
+                    <span dangerouslySetInnerHTML={{ __html: feature }} />
+                  </li>
+                ))}
+              </ul>
+              <Button
+                variant={plan.isPopular ? "default" : "outline"}
+                size="lg"
+                className="w-full mt-6 rounded-full"
+              >
+                {plan.buttonText}
+              </Button>
+            </div>
+          ))}
+        </div>
+        <p className="mt-4 text-center mt-12">
+          <i className="text-muted-foreground">Need custom software or special workflows?</i>
+        </p>
+        <div className="mt-4 flex items-center justify-center gap-4">
+          <Button asChild size="sm" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e] text-sm">
+            <Link href="https://tally.so/r/wgExGM" target="_blank">
+              Contact us for a tailored package
+            </Link>
+          </Button>
+        </div>
+      </div>
+
+      <div className="flex items-center justify-center pt-0 pb-30">
+        <div className="max-w-(--breakpoint-xl) mx-auto py-12 text-center">
+          <h2 className="text-2xl md:text-3xl font-semibold tracking-tighter">
+            Trust & Reliability
+          </h2>
+          <div className="mt-8 sm:mt-24 grid sm:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-16 justify-center">
+            <div className="max-w-3xs">
+              <ClockArrowUp className="w-12 h-12 mx-auto" style={{color: '#F1C420'}} />
+              <p className="mt-6 text-lg">
+                99.9% uptime
+              </p>
+            </div>
+            <div className="max-w-3xs">
+              <Fingerprint className="w-12 h-12 mx-auto" style={{color: '#F1C420'}} />
+              <p className="mt-6 text-lg">
+                Bank-level security
+              </p>
+            </div>
+            <div className="max-w-3xs">
+              <HeartHandshake className="w-12 h-12 mx-auto" style={{color: '#F1C420'}} />
+              <p className="mt-6 text-lg">
+                Africa-ready
+              </p>
+            </div>
+            <div className="max-w-3xs">
+              <ClipboardCheck className="w-12 h-12 mx-auto" style={{color: '#F1C420'}} />
+              <p className="mt-6 text-lg">
+                GDPR-aligned
+              </p>
+            </div>
+          </div>
+          <ul className="flex flex-wrap gap-6 mt-12 list-none justify-center">
+            <li className="flex items-center text-sm text-gray-500">
+              <span className="w-2 h-2 rounded-full mr-2" style={{backgroundColor: 'rgb(105, 227, 227)'}}></span>
+              Data residency options
+            </li>
+            <li className="flex items-center text-xs text-gray-500">
+              <span className="w-2 h-2 rounded-full mr-2" style={{backgroundColor: 'rgb(105, 227, 227)'}}></span>
+              WhatsApp-first
+            </li>
+            <li className="flex items-center text-xs text-gray-500">
+              <span className="w-2 h-2 rounded-full mr-2" style={{backgroundColor: 'rgb(105, 227, 227)'}}></span>
+              Mobile-money friendly
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="faqs" className="flex items-center justify-center px-6 py-30">
+        <div className="max-w-xl">
+          <h2 className="text-4xl md:text-5xl leading-[1.15]! font-semibold tracking-tighter">
+            FAQs
+          </h2>
+          <Accordion type="single" className="mt-6" defaultValue="question-0">
+            {faq.map(({ question, answer }, index) => (
+              <AccordionItem key={question} value={`question-${index}`}>
+                <AccordionTrigger className="text-left text-lg">
+                  {question}
+                </AccordionTrigger>
+                <AccordionContent className="text-base text-muted-foreground">
+                  {answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </div>
 
@@ -532,15 +782,21 @@ export default function Home() {
         />
         <div className="relative z-10 text-center max-w-2xl">
           <h2 className="mt-6 text-4xl sm:text-5xl md:text-6xl font-bold !leading-[1.2] tracking-tight">
-            Ready to Stop <br className="max-xs:hidden" />Losing Time & Money?
+            Ready to stop losing time and money?
           </h2>
           <p className="mt-6 text-[17px] md:text-lg">
-          Get a free automation audit and discover how much you could save in 30 days.
+            Get your free automation audit and see how much you could save in 30 days.
           </p>
-          <div className="mt-12 flex items-center justify-center gap-4">
+          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-8">
             <Button asChild size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e] cursor-pointer">
               <Link href="https://tally.so/r/wgExGM" target="_blank">
                 Schedule a Free Audit <ArrowUpRight className="!h-5 !w-5" />
+              </Link>
+            </Button>
+
+            <Button asChild size="lg" variant="outline" className="rounded-full text-base border-[#e8890e] text-[#e8890e] hover:bg-[#e8890e] bg-transparent hover:text-white cursor-pointer">
+              <Link href="https://wa.me/275292408?text=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20Vowels" target="_blank">
+                Chat on WhatsApp <MessageCircleMore className="!h-5 !w-5" />
               </Link>
             </Button>
           </div>
