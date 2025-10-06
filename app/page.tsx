@@ -269,7 +269,7 @@ export default function Home() {
                   No IT team
                 </span>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  You need practical automation that "just works"
+                  You need practical automation that &ldquo;just works&rdquo;
                 </p>
               </div>
             </div>
