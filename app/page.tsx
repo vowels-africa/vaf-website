@@ -223,7 +223,7 @@ export default function Home() {
           <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-2 gap-6">
             <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
               <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
-                <Image src="/undraw_8.svg" alt="" width={96} height={96} />
+                <img src="/why-us-admin.svg" alt="" className="w-auto h-auto max-h-24" />
               </div>
               <div>
                 <span className="font-semibold tracking-tight text-lg">
@@ -236,7 +236,7 @@ export default function Home() {
             </div>
             <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
               <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
-                <Image src="/undraw_7.svg" alt="" width={96} height={96} />
+                <img src="/why-us-leads.svg" alt="" className="w-auto h-auto max-h-24" />
               </div>
               <div>
                 <span className="font-semibold tracking-tight text-lg">
@@ -249,7 +249,7 @@ export default function Home() {
             </div>
             <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
               <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
-                <Image src="/undraw_6.svg" alt="" width={96} height={96} />
+                <img src="/why-us-payments.svg" alt="" className="w-auto h-auto max-h-24" />
               </div>
               <div>
                 <span className="font-semibold tracking-tight text-lg">
@@ -262,14 +262,14 @@ export default function Home() {
             </div>
             <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
               <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
-                <Image src="/undraw_5.svg" alt="" width={96} height={96} />
+                <img src="/why-us-no-it.svg" alt="" className="w-auto h-auto max-h-24" />
               </div>
               <div>
                 <span className="font-semibold tracking-tight text-lg">
                   No IT team
                 </span>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  You need practical automation that “just works”
+                  You need practical automation that "just works"
                 </p>
               </div>
             </div>
@@ -308,7 +308,7 @@ export default function Home() {
           <div className="mt-12 md:mt-16 w-full mx-auto space-y-20">
             <div className="flex flex-col md:flex-row items-center gap-x-20 gap-y-6 md:odd:flex-row-reverse">
               <div className="w-full">
-                <Image src="/undraw_10.svg" alt="Understand" className="max-sm:mx-auto sm:ml-0 sm:mr-auto height-auto" width={600} height={400} />
+                <Image src="/framework-understand.svg" alt="Understand" className="max-sm:mx-auto sm:ml-0 sm:mr-auto height-auto" width={600} height={400} />
               </div>
               <div className="basis-1/2 shrink-0 max-sm:text-center w-full">
                 <h4 className="my-3 text-3xl font-semibold tracking-tight">
@@ -321,7 +321,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col md:flex-row items-center gap-x-20 gap-y-6 md:odd:flex-row-reverse">
               <div className="w-full">
-                <Image src="/undraw_11.svg" alt="Optimise" className="max-sm:mx-auto sm:ml-auto sm:mr-0" width={600} height={400} />
+                <Image src="/framework-optimise.svg" alt="Optimise" className="max-sm:mx-auto sm:ml-auto sm:mr-0" width={600} height={400} />
               </div>
               <div className="basis-1/2 shrink-0 max-sm:text-center sm:text-right w-full">
                 <h4 className="my-3 text-3xl font-semibold tracking-tight">
@@ -334,7 +334,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col md:flex-row items-center gap-x-20 gap-y-6 md:odd:flex-row-reverse">
               <div className="w-full">
-                <Image src="/undraw_12.svg" alt="Automate" className="max-sm:mx-auto sm:ml-0 sm:mr-auto" width={600} height={400} />
+                <Image src="/framework-automate.svg" alt="Automate" className="max-sm:mx-auto sm:ml-0 sm:mr-auto" width={600} height={400} />
               </div>
               <div className="basis-1/2 shrink-0 max-sm:text-center w-full">
                 <h4 className="my-3 text-3xl font-semibold tracking-tight">
@@ -347,7 +347,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col md:flex-row items-center gap-x-20 gap-y-6 md:odd:flex-row-reverse">
               <div className="w-full">
-                <Image src="/undraw_13.svg" alt="Innovate" className="max-sm:mx-auto sm:ml-auto sm:mr-0" width={600} height={400} />
+                <Image src="/framework-innovate.svg" alt="Innovate" className="max-sm:mx-auto sm:ml-auto sm:mr-0" width={600} height={400} />
               </div>
               <div className="basis-1/2 shrink-0 max-sm:text-center sm:text-right w-full">
                 <h4 className="my-3 text-3xl font-semibold tracking-tight">
@@ -360,7 +360,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col md:flex-row items-center gap-x-20 gap-y-6 md:odd:flex-row-reverse">
               <div className="w-full">
-                <Image src="/undraw_14.svg" alt="Elevate" className="max-sm:mx-auto sm:ml-0 sm:mr-auto" width={600} height={400} />
+                <Image src="/framework-elevate.svg" alt="Elevate" className="max-sm:mx-auto sm:ml-0 sm:mr-auto" width={600} height={400} />
               </div>
               <div className="basis-1/2 shrink-0 max-sm:text-center w-full">
                 <h4 className="my-3 text-3xl font-semibold tracking-tight">
@@ -553,7 +553,7 @@ export default function Home() {
                 </Accordion>
               </div>
               <div className="hidden md:block w-full self-center">
-                <Image src="/undraw_9.svg" alt="Use Cases" className="mx-auto" width={600} height={400} />
+                <Image src="/use-cases.svg" alt="Use Cases" className="mx-auto" width={600} height={400} />
               </div>
             </div>
           </div>
@@ -591,7 +591,7 @@ export default function Home() {
             </div>
             <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
               <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
-                <Image src="/undraw_15.svg" alt="" width={96} height={96} />
+                <img src="/products-vsure.svg" alt="" className="w-auto h-auto max-h-24" />
               </div>
               <div>
                 <span className="font-semibold tracking-tight text-lg">
