@@ -689,7 +689,7 @@ export default function Home() {
                 </Badge>
               )}
               <h3 className="text-lg font-medium">{plan.name}</h3>
-              <p className="mt-2 text-4xl font-bold">{plan.price}</p>
+              <p className="mt-2 text-4xl font-bold">{plan.price} <span className="text-xs">/month</span></p>
               {plan.setup_price && (
                 <p className="mt-1 font-bold">+ {plan.setup_price}</p>
               )}
