@@ -16,11 +16,11 @@ import { Marquee } from "@/components/ui/marquee";
 const faq = [
   {
     question: "Do you only work with WhatsApp/Xero/Pipedrive?",
-    answer: "No. We’re tool-agnostic. If a system offers an API, webhook, inbox, spreadsheet, or database — even legacy exports — we can usually integrate it. We’ll recommend the simplest path to your outcome.",
+    answer: "No. We&apos;re tool-agnostic. If a system offers an API, webhook, inbox, spreadsheet, or database — even legacy exports — we can usually integrate it. We&apos;ll recommend the simplest path to your outcome.",
   },
   {
     question: "How quickly can we go live?",
-    answer: "Most Starter/Growth setups go live in 2–4 weeks. Complex/Enterprise solutions may take longer — we’ll give you a clear roadmap after your audit.",
+    answer: "Most Starter/Growth setups go live in 2-4 weeks. Complex/Enterprise solutions may take longer — we&apos;ll give you a clear roadmap after your audit.",
   },
   {
     question: "Is my data safe?",
@@ -183,10 +183,10 @@ export default function Home() {
         />
         <div className="relative z-10 text-center max-w-2xl">
           <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl font-bold !leading-[1.2] tracking-tight">
-            Automation built <br className="md:hidden" />for African SMEs
+            Automation built for Businesses across Africa
           </h1>
           <p className="mt-6 text-[17px] md:text-lg sm:px-6 md:px-0">
-            Without vowels, language breaks. Without automation, business breaks. <br className="hidden md:block" />We give you the building blocks to save time, close more sales, and get paid faster.
+            Without vowels, language breaks. Without automation, business breaks. <br className="hidden md:block" />Turn hours of admin into minutes of automation - save time, close more sales, get paid faster, improve customer satisfaction. Affordably.
           </p>
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-8">
             <Button asChild size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e] cursor-pointer">
@@ -212,6 +212,17 @@ export default function Home() {
               Plans from R5,999/month
             </li>
           </ul>
+        </div>
+      </div>
+
+      <div className="flex items-center justify-center pt-40 pb-0">
+        <div className="max-w-screen-lg w-full pt-10 pb-0 px-6">
+          <h2 className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight text-center md:mx-auto">
+            Built for how Africa actually works
+          </h2>
+          <p className="text-center mt-12 px-8">
+            Your customers live on WhatsApp, your money moves through mobile wallets and EFT, your teams speak multiple languages, and internet isn&apos;t always perfect. Vowels connects these realities with practical automation - fast replies, clean data, quicker payments - without forcing new tools you don&apos;t need.
+          </p>
         </div>
       </div>
 
@@ -305,6 +316,9 @@ export default function Home() {
           <h2 className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight text-center md:mx-auto">
             The VOWELS Framework
           </h2>
+          <p className="text-center mt-12 px-8">
+            Just as vowels make language flow, our framework makes your business flow. <br className="hidden md:block" />Each step is designed to cut waste, unlock growth, and scale your impact.
+          </p>
           <div className="mt-12 md:mt-16 w-full mx-auto space-y-20">
             <div className="flex flex-col md:flex-row items-center gap-x-20 gap-y-6 md:odd:flex-row-reverse">
               <div className="w-full">
@@ -315,7 +329,11 @@ export default function Home() {
                   Understand
                 </h4>
                 <p className="text-muted-foreground text-[17px]">
-                  Map workflows; find where time & money leak
+                  See where you&apos;re leaking time and money.
+                  <br /><br />
+                  We map every workflow across sales, admin, finance, and support. You&apos;ll know exactly where hours are wasted, leads are lost, and payments are delayed.
+                  <br /><br />
+                  <strong>Outcome:</strong> Clear visibility into bottlenecks, backed by hard numbers.
                 </p>
               </div>
             </div>
@@ -323,12 +341,16 @@ export default function Home() {
               <div className="w-full">
                 <Image src="/framework-optimise.svg" alt="Optimise" className="max-sm:mx-auto sm:ml-auto sm:mr-0" width={600} height={400} />
               </div>
-              <div className="basis-1/2 shrink-0 max-sm:text-center sm:text-right w-full">
+              <div className="basis-1/2 shrink-0 max-sm:text-center w-full">
                 <h4 className="my-3 text-3xl font-semibold tracking-tight">
                   Optimise
                 </h4>
                 <p className="text-muted-foreground text-[17px]">
-                  Cut duplication; fix bottlenecks
+                  Simplify before you automate.
+                  <br /><br />
+                  We remove duplicate steps, standardise processes, and tighten the way information flows. This ensures your automation is built on a lean, efficient foundation.
+                  <br /><br />
+                  <strong>Outcome:</strong> Less manual effort, smoother operations, fewer errors.
                 </p>
               </div>
             </div>
@@ -341,7 +363,11 @@ export default function Home() {
                   Automate
                 </h4>
                 <p className="text-muted-foreground text-[17px]">
-                  Deploy WhatsApp, CRM, invoicing & AI workflows
+                  Let tech handle the heavy lifting.
+                  <br /><br />
+                  We set up automations that fit most business across Africa: WhatsApp replies, CRM follow-ups, invoice reminders, mobile-money collections, and AI-driven support.
+                  <br /><br />
+                  <strong>Outcome:</strong> Faster response times, more closed deals, and quicker payments.
                 </p>
               </div>
             </div>
@@ -349,12 +375,16 @@ export default function Home() {
               <div className="w-full">
                 <Image src="/framework-innovate.svg" alt="Innovate" className="max-sm:mx-auto sm:ml-auto sm:mr-0" width={600} height={400} />
               </div>
-              <div className="basis-1/2 shrink-0 max-sm:text-center sm:text-right w-full">
+              <div className="basis-1/2 shrink-0 max-sm:text-center w-full">
                 <h4 className="my-3 text-3xl font-semibold tracking-tight">
                   Innovate
                 </h4>
                 <p className="text-muted-foreground text-[17px]">
-                  Build custom solutions where needed
+                  Custom solutions for your unique challenges.
+                  <br /><br />
+                  When your needs don&apos;t fit off-the-shelf tools, we build bespoke AI agents and integrations. Whether it&apos;s lead scoring, multilingual chat, or connecting legacy systems - we make it happen.
+                  <br /><br />
+                  <strong>Outcome:</strong> Competitive edge and workflows that feel tailor-made.
                 </p>
               </div>
             </div>
@@ -367,12 +397,42 @@ export default function Home() {
                   Elevate
                 </h4>
                 <p className="text-muted-foreground text-[17px]">
-                  Monitor, report, and scale with confidence
+                  Scale with confidence.
+                  <br /><br />
+                  With monitoring, reporting, and continuous improvements, your business keeps growing - without drowning in admin. We help you adapt as you expand into new markets, teams, or tools.
+                  <br /><br />
+                  <strong>Outcome:</strong> Sustainable growth, measurable ROI, and peace of mind.
                 </p>
               </div>
             </div>
           </div>
-          <div className="mt-30 flex items-center justify-center gap-4">
+          <div className="mt-30">
+            <h3 className="text-3xl md:text-4xl md:leading-[3rem] font-bold tracking-tight md:text-center md:mx-auto">
+              Why this matters to you
+            </h3>
+            <p className="md:text-center mt-4">
+              The VOWELS Framework is simple, structured, and proven.<br /><strong>Within 90 days</strong>, most clients see:
+            </p>
+            <ul className="mt-6 space-y-2 md:mx-auto max-w-md list-none">
+              <li className="flex items-center gap-2 md:justify-center">
+                <CircleCheck className="h-4 w-4 text-green-600 shrink-0" />
+                <span>Reduction in manual work</span>
+              </li>
+              <li className="flex items-center gap-2 md:justify-center">
+                <CircleCheck className="h-4 w-4 text-green-600 shrink-0" />
+                <span>Improved customer response</span>
+              </li>
+              <li className="flex items-center gap-2 md:justify-center">
+                <CircleCheck className="h-4 w-4 text-green-600 shrink-0" />
+                <span>Increase in lead conversions</span>
+              </li>
+              <li className="flex items-center gap-2 md:justify-center">
+                <CircleCheck className="h-4 w-4 text-green-600 shrink-0" />
+                <span>Realised monthly savings</span>
+              </li>
+            </ul>
+          </div>
+          <div className="mt-8 flex items-center justify-center gap-4">
             <Button asChild size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e]">
               <Link href="https://tally.so/r/wgExGM" target="_blank" rel="noopener noreferrer">
                 Start Your Vowels Journey <ArrowUpRight className="!h-5 !w-5" />
@@ -382,12 +442,36 @@ export default function Home() {
         </div>
       </div>
 
+      <div className="flex items-center justify-center px-6 overflow-hidden pt-10 pb-30">
+        <div className="relative z-10 text-center max-w-2xl">
+          <h2 className="mt-6 text-4xl sm:text-5xl md:text-6xl font-bold !leading-[1.2] tracking-tight">
+            Ready to see how this applies to your business?
+          </h2>
+          <p className="mt-6 text-[17px] md:text-lg">
+            Book your free audit - we&apos;ll map your workflows, show you the leaks, and hand you save time and money.
+          </p>
+          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-8">
+            <Button asChild size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e] cursor-pointer">
+              <Link href="https://cal.com/vowels/audit" target="_blank"  rel="noopener noreferrer">
+                Get My Free Audit <ArrowUpRight className="!h-5 !w-5" />
+              </Link>
+            </Button>
+
+            <Button asChild size="lg" variant="outline" className="rounded-full text-base border-[#e8890e] text-[#e8890e] hover:bg-[#e8890e] bg-transparent hover:text-white cursor-pointer">
+              <Link href="https://wa.me/27715292408?text=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20Vowels" target="_blank"  rel="noopener noreferrer">
+                Chat on WhatsApp <MessageCircleMore className="!h-5 !w-5" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </div>
+
       <div id="solutions" className="min-h-screen flex items-center justify-center py-30">
         <div className="max-w-screen-lg w-full py-10 px-6">
-          <h2 className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight md:text-center md:mx-auto">
+          <h2 className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight text-center md:mx-auto">
             Integrations that fit your stack <br className="hidden md:block" />— today and tomorrow
           </h2>
-          <p className="md:text-center mt-4">
+          <p className="text-center mt-4">
             Outcomes first. Tools second. If it has an <strong>API, webhook, inbox, spreadsheet, or database</strong>, we can usually integrate it.
           </p>
           <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-2 gap-6">
@@ -810,23 +894,46 @@ export default function Home() {
         />
         <div className="relative z-10 text-center max-w-2xl">
           <h2 className="mt-6 text-4xl sm:text-5xl md:text-6xl font-bold !leading-[1.2] tracking-tight">
-            Ready to stop losing time and money?
+            Stop the manual chaos. Start saving this month.
           </h2>
           <p className="mt-6 text-[17px] md:text-lg">
-            Get your free automation audit and see how much you could save in 30 days.
+            Get a free 15-min Automation Audit which leads to a rand-based ROI estimate and a 90-day plan tailored to your tools.
           </p>
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-8">
-            <Button asChild size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e] cursor-pointer">
-              <Link href="https://cal.com/vowels/audit" target="_blank"  rel="noopener noreferrer">
-                Schedule a Free Audit <ArrowUpRight className="!h-5 !w-5" />
-              </Link>
-            </Button>
+            <div className="max-w-80 mx-auto">
+              <Button asChild size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e] cursor-pointer">
+                <Link href="https://cal.com/vowels/audit" target="_blank"  rel="noopener noreferrer">
+                  Get My Free Audit <ArrowUpRight className="!h-5 !w-5" />
+                </Link>
+              </Button>
+              <ul className="flex flex-wrap gap-y-0 gap-x-2 mt-4 list-none justify-center">
+                <li className="flex items-center text-sm text-gray-500">
+                  <span className="w-2 h-2 rounded-full mr-2" style={{backgroundColor: '#69e3e3'}}></span>
+                  Zero Cost
+                </li>
+                <li className="flex items-center text-sm text-gray-500">
+                  <span className="w-2 h-2 rounded-full mr-2" style={{backgroundColor: '#69e3e3'}}></span>
+                  15 min
+                </li>
+                <li className="flex items-center text-sm text-gray-500">
+                  <span className="w-2 h-2 rounded-full mr-2" style={{backgroundColor: '#69e3e3'}}></span>
+                  Africa/Johannesburg (CAT)
+                </li>
+              </ul>
+            </div>
 
-            <Button asChild size="lg" variant="outline" className="rounded-full text-base border-[#e8890e] text-[#e8890e] hover:bg-[#e8890e] bg-transparent hover:text-white cursor-pointer">
-              <Link href="https://wa.me/27715292408?text=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20Vowels" target="_blank"  rel="noopener noreferrer">
-                Chat on WhatsApp <MessageCircleMore className="!h-5 !w-5" />
-              </Link>
-            </Button>
+            <div className="max-w-80 mx-auto">
+              <Button asChild size="lg" variant="outline" className="rounded-full text-base border-[#e8890e] text-[#e8890e] hover:bg-[#e8890e] bg-transparent hover:text-white cursor-pointer">
+                <Link href="https://wa.me/27715292408?text=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20Vowels" target="_blank"  rel="noopener noreferrer">
+                  Chat on WhatsApp <MessageCircleMore className="!h-5 !w-5" />
+                </Link>
+              </Button>
+              <ul className="flex flex-wrap gap-y-0 gap-x-2 mt-4 list-none justify-center">
+                <li className="flex items-center text-sm text-gray-500">
+                  Quick questions?<br />We typically reply during business hours.
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
