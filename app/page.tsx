@@ -76,7 +76,7 @@ const plans = [
       "24/7 support + SLAs",
     ],
     buttonText: "Schedule Enterprise Consultation",
-    buttonUrl: "https://tally.so/r/wgExGM",
+    buttonUrl: process.env.NEXT_PUBLIC_LEAD_FORM_URL || "/",
   },
 ];
 
@@ -156,7 +156,7 @@ export default function Home() {
           <NavMenu className="hidden md:block text-white" />
           <div className="flex items-center gap-3">
             <Button asChild className="rounded-full bg-[#e8890e] hover:bg-[#f1951e] cursor-pointer">
-              <Link href="https://tally.so/r/wgExGM" target="_blank" rel="noopener noreferrer">
+              <Link href={process.env.NEXT_PUBLIC_LEAD_FORM_URL || "/"} target="_blank" rel="noopener noreferrer">
                 <span className="hidden sm:inline">Request a Call</span>
                 <Hand className="h-5 w-5 sm:hidden" />
                 <ArrowUpRight className="h-5 w-5 hidden sm:inline" />
@@ -196,7 +196,7 @@ export default function Home() {
             </Button>
 
             <Button asChild size="lg" variant="outline" className="rounded-full text-base border-[#e8890e] text-[#e8890e] hover:bg-[#e8890e] bg-transparent hover:text-white cursor-pointer">
-              <Link href="https://wa.me/27715292408?text=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20Vowels" target="_blank" rel="noopener noreferrer">
+              <Link href={process.env.NEXT_PUBLIC_WA_CHAT_MSG || "/"} target="_blank" rel="noopener noreferrer">
                 Chat on WhatsApp <MessageCircleMore className="!h-5 !w-5" />
               </Link>
             </Button>
@@ -434,7 +434,7 @@ export default function Home() {
           </div>
           <div className="mt-8 flex items-center justify-center gap-4">
             <Button asChild size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e]">
-              <Link href="https://tally.so/r/wgExGM" target="_blank" rel="noopener noreferrer">
+              <Link href={process.env.NEXT_PUBLIC_LEAD_FORM_URL || "/"} target="_blank" rel="noopener noreferrer">
                 Start Your Vowels Journey <ArrowUpRight className="!h-5 !w-5" />
               </Link>
             </Button>
@@ -458,7 +458,7 @@ export default function Home() {
             </Button>
 
             <Button asChild size="lg" variant="outline" className="rounded-full text-base border-[#e8890e] text-[#e8890e] hover:bg-[#e8890e] bg-transparent hover:text-white cursor-pointer">
-              <Link href="https://wa.me/27715292408?text=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20Vowels" target="_blank"  rel="noopener noreferrer">
+              <Link href={process.env.NEXT_PUBLIC_WA_CHAT_MSG || "/"} target="_blank"  rel="noopener noreferrer">
                 Chat on WhatsApp <MessageCircleMore className="!h-5 !w-5" />
               </Link>
             </Button>
@@ -593,7 +593,7 @@ export default function Home() {
           </p>
           <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button asChild size="sm" variant="outline" className="rounded-full text-base border-[#e8890e] text-[#e8890e] hover:bg-[#e8890e] bg-transparent hover:text-white cursor-pointer text-sm">
-              <Link href="https://wa.me/27715292408?text=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20Vowels" target="_blank" rel="noopener noreferrer">
+              <Link href={process.env.NEXT_PUBLIC_WA_CHAT_MSG || "/"} target="_blank" rel="noopener noreferrer">
                 Ask about your stack
               </Link>
             </Button>
@@ -644,7 +644,7 @@ export default function Home() {
         </div>
         <div className="mt-4 flex items-center justify-center gap-4">
           <Button asChild size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e]">
-            <Link href="https://tally.so/r/wgExGM" target="_blank" rel="noopener noreferrer">
+            <Link href={process.env.NEXT_PUBLIC_LEAD_FORM_URL || "/"} target="_blank" rel="noopener noreferrer">
               See What We Could Do For You <ArrowUpRight className="!h-5 !w-5" />
             </Link>
           </Button>
@@ -692,7 +692,7 @@ export default function Home() {
           </div>
           <div className="mt-12 flex items-center justify-center gap-4">
             <Button asChild size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e]">
-              <Link href="https://cal.com/vowels/products" target="_blank" rel="noopener noreferrer">
+              <Link href={process.env.NEXT_PUBLIC_LEAD_FORM_URL || "/"} target="_blank" rel="noopener noreferrer">
                 Talk to us about glunk.io & V-Sure <ArrowUpRight className="!h-5 !w-5" />
               </Link>
             </Button>
@@ -806,7 +806,7 @@ export default function Home() {
         </p>
         <div className="mt-4 flex items-center justify-center gap-4">
           <Button asChild size="sm" variant="outline" className="rounded-full text-base border-[#e8890e] text-[#e8890e] hover:bg-[#e8890e] bg-transparent hover:text-white cursor-pointer text-sm">
-            <Link href="https://tally.so/r/wgExGM" target="_blank" rel="noopener noreferrer">
+            <Link href={process.env.NEXT_PUBLIC_LEAD_FORM_URL || "/"} target="_blank" rel="noopener noreferrer">
               Contact us for a tailored package
             </Link>
           </Button>
@@ -924,7 +924,7 @@ export default function Home() {
 
             <div className="max-w-80 mx-auto">
               <Button asChild size="lg" variant="outline" className="rounded-full text-base border-[#e8890e] text-[#e8890e] hover:bg-[#e8890e] bg-transparent hover:text-white cursor-pointer">
-                <Link href="https://wa.me/27715292408?text=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20Vowels" target="_blank"  rel="noopener noreferrer">
+                <Link href={process.env.NEXT_PUBLIC_WA_CHAT_MSG || "/"} target="_blank"  rel="noopener noreferrer">
                   Chat on WhatsApp <MessageCircleMore className="!h-5 !w-5" />
                 </Link>
               </Button>

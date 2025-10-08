@@ -32,7 +32,7 @@ export const NavigationSheet = () => {
           </div>
           <div className="mt-auto">
             <Button asChild className="w-full rounded-full bg-[#e8890e] hover:bg-[#f1951e] cursor-pointer">
-              <Link href="https://tally.so/r/wgExGM" target="_blank">
+              <Link href={process.env.NEXT_PUBLIC_LEAD_FORM_URL || "/"} target="_blank">
                 Request a Call <ArrowUpRight className="!h-5 !w-5" />
               </Link>
             </Button>
