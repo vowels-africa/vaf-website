@@ -659,6 +659,54 @@ export default function Home() {
           <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-2 gap-6">
             <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
               <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
+                <img src="/appi.jpeg" alt="Appi" className="w-auto h-auto max-h-24 max-w-20 rounded-full" />
+              </div>
+              <div>
+                <span className="font-semibold tracking-tight text-lg">
+                  Appi
+                </span>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  WhatsApp-based virtual assistant that helps agents access real-time product knowledge, documentation, and support.
+                </p>
+                <p className="mt-1 text-sm text-right">
+                  <span className="text-muted-foreground cursor-not-allowed">Invite Only</span>
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
+              <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
+                <img src="/fnaflow.jpeg" alt="FNAFlow" className="w-auto h-auto max-h-24 max-w-20 rounded-full" />
+              </div>
+              <div>
+                <span className="font-semibold tracking-tight text-lg">
+                  FNAFlow
+                </span>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  Capture and record Financial Needs Analysis (FNA) and Record of Advice (ROA) data securely through WhatsApp.
+                </p>
+                <p className="mt-1 text-sm text-right">
+                  <span className="text-muted-foreground cursor-not-allowed">Invite Only</span>
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
+              <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
+                <img src="/products-vsure.svg" alt="V-Sure" className="w-auto h-auto max-h-24" />
+              </div>
+              <div>
+                <span className="font-semibold tracking-tight text-lg">
+                  V-Sure
+                </span>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  An AI Agent for sales teams on WhatsApp. Conversational access to compliant product, policy, and process information.
+                </p>
+                <p className="mt-1 text-sm text-right">
+                  <span className="text-muted-foreground cursor-not-allowed">Coming Soon</span>
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
+              <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
                 <Image src="/glunk_io.png" alt="glunk.io" className="size-20" width={80} height={80} />
               </div>
               <div>
@@ -673,27 +721,11 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
-              <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
-                <img src="/products-vsure.svg" alt="" className="w-auto h-auto max-h-24" />
-              </div>
-              <div>
-                <span className="font-semibold tracking-tight text-lg">
-                  V-Sure
-                </span>
-                <p className="mt-1 text-sm text-muted-foreground">
-                  An AI Agent for sales teams on WhatsApp. Conversational access to compliant product, policy, and process information.
-                </p>
-                <p className="mt-1 text-sm text-right">
-                  <span className="text-muted-foreground cursor-not-allowed">Coming Soon</span>
-                </p>
-              </div>
-            </div>
           </div>
           <div className="mt-12 flex items-center justify-center gap-4">
             <Button asChild size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e]">
               <Link href={process.env.NEXT_PUBLIC_LEAD_FORM_URL || "/"} target="_blank" rel="noopener noreferrer">
-                Talk to us about glunk.io & V-Sure <ArrowUpRight className="!h-5 !w-5" />
+                Talk to us about our products <ArrowUpRight className="!h-5 !w-5" />
               </Link>
             </Button>
           </div>
