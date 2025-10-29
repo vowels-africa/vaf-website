@@ -35,10 +35,10 @@ const plans = [
     setup_price: "R19,999 setup",
     description: "Perfect for small businesses getting started.",
     features: [
-      "WhatsApp automation (1 workflow)",
-      "Basic CRM setup (up to 1,000 contacts)",
-      "Simple invoicing + reminders",
-      "Basic analytics dashboard",
+      "1 automated workflow",
+      "2,000 AI interactions",
+      "Custom AI & systems integration",
+      "Performance tracking & evaluations",
       "Email support",
     ],
     buttonText: "Start Free Audit",
@@ -47,16 +47,16 @@ const plans = [
   {
     name: "Growth",
     price: "R14,999",
-    setup_price: "R49,000 setup",
+    setup_price: "R49,999 setup",
     isRecommended: true,
     description: "For scaling SMEs ready to move faster.",
     features: [
       "Everything in Starter",
-      "Advanced workflows (up to 5)",
-      "Multi-channel messaging (WhatsApp + SMS)",
-      "Invoicing + mobile money integration",
-      "Support chatbot (multi-language)",
-      "Priority WhatsApp support",
+      "Up to 3 automated workflows",
+      "Up to 10,000 AI interactions",
+      "Multi-channel messaging",
+      "AI-powered customer support",
+      "Priority support",
     ],
     buttonText: "Book Implementation Call",
     buttonUrl: "https://cal.com/vowels/growth",
@@ -69,11 +69,11 @@ const plans = [
     description: "For established businesses with custom needs.",
     features: [
       "Everything in Starter & Growth",
-      "<strong>Unlimited</strong> workflows & contacts",
-      "Bespoke AI & system integrations",
+      "Up to 10 automated workflows",
+      "Up to 50,000 AI interactions",
       "Dedicated account manager",
       "White-label options",
-      "24/7 support + SLAs",
+      "24/7 support",
     ],
     buttonText: "Schedule Enterprise Consultation",
     buttonUrl: process.env.NEXT_PUBLIC_LEAD_FORM_URL || "/",
@@ -102,7 +102,7 @@ const testimonials = [
     name: "Sean",
     designation: "Co-Founder & CTO, Alternative Health SaaS Start-up",
     company: "Sean",
-    testimonial: "Forecast development went <strong>4× faster</strong>. We were online in a week, not a month.",
+    testimonial: "Forecast development went <strong>4&times; faster</strong>. We were online in a week, not a month.",
     avatar: "/avatar-sean.jpg",
   },
   {
@@ -816,7 +816,7 @@ export default function Home() {
               <ul className="space-y-2">
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-2">
-                    <CircleCheck className="h-4 w-4 mt-1 text-green-600" />
+                    <CircleCheck className="h-4 w-4 mt-1 shrink-0 text-green-600" />
                     <span dangerouslySetInnerHTML={{ __html: feature }} />
                   </li>
                 ))}
