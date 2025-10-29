@@ -16,11 +16,11 @@ import { Marquee } from "@/components/ui/marquee";
 const faq = [
   {
     question: "Do you only work with WhatsApp/Xero/Pipedrive?",
-    answer: "No. We&apos;re tool-agnostic. If a system offers an API, webhook, inbox, spreadsheet, or database — even legacy exports — we can usually integrate it. We&apos;ll recommend the simplest path to your outcome.",
+    answer: "No. We're tool-agnostic. If a system offers an API, webhook, inbox, spreadsheet, or database — even legacy exports — we can usually integrate it. We'll recommend the simplest path to your outcome.",
   },
   {
     question: "How quickly can we go live?",
-    answer: "Most Starter/Growth setups go live in 2-4 weeks. Complex/Enterprise solutions may take longer — we&apos;ll give you a clear roadmap after your audit.",
+    answer: "Most Starter/Growth setups go live in 2-4 weeks. Complex/Enterprise solutions may take longer — we'll give you a clear roadmap after your audit.",
   },
   {
     question: "Is my data safe?",
