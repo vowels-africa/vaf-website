@@ -756,7 +756,7 @@ export default function Home() {
                   </p>
                   <div className="mt-auto flex items-center justify-center gap-3">
                     <Avatar>
-                      <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
+                      {/* <AvatarImage src={testimonial.avatar} alt={testimonial.name} /> */}
                       <AvatarFallback className="text-xl font-medium bg-primary text-primary-foreground">
                         {testimonial.name.charAt(0)}
                       </AvatarFallback>
