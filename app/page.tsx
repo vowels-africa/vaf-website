@@ -195,11 +195,11 @@ export default function Home() {
               </Link>
             </Button>
 
-            <Button asChild size="lg" variant="outline" className="rounded-full text-base border-[#e8890e] text-[#e8890e] hover:bg-[#e8890e] bg-transparent hover:text-white cursor-pointer">
+            {/* <Button asChild size="lg" variant="outline" className="rounded-full text-base border-[#e8890e] text-[#e8890e] hover:bg-[#e8890e] bg-transparent hover:text-white cursor-pointer">
               <Link href={process.env.NEXT_PUBLIC_WA_CHAT_MSG || "/"} target="_blank" rel="noopener noreferrer">
                 Chat on WhatsApp <MessageCircleMore className="!h-5 !w-5" />
               </Link>
-            </Button>
+            </Button> */}
           </div>
 
           <ul className="flex flex-wrap gap-6 mt-8 list-none justify-center">
@@ -457,11 +457,11 @@ export default function Home() {
               </Link>
             </Button>
 
-            <Button asChild size="lg" variant="outline" className="rounded-full text-base border-[#e8890e] text-[#e8890e] hover:bg-[#e8890e] bg-transparent hover:text-white cursor-pointer">
+            {/* <Button asChild size="lg" variant="outline" className="rounded-full text-base border-[#e8890e] text-[#e8890e] hover:bg-[#e8890e] bg-transparent hover:text-white cursor-pointer">
               <Link href={process.env.NEXT_PUBLIC_WA_CHAT_MSG || "/"} target="_blank"  rel="noopener noreferrer">
                 Chat on WhatsApp <MessageCircleMore className="!h-5 !w-5" />
               </Link>
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>
@@ -592,11 +592,11 @@ export default function Home() {
             <i className="text-muted-foreground">If it&apos;s not listed, we can likely connect it.</i>
           </p>
           <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button asChild size="sm" variant="outline" className="rounded-full text-base border-[#e8890e] text-[#e8890e] hover:bg-[#e8890e] bg-transparent hover:text-white cursor-pointer text-sm">
+            {/* <Button asChild size="sm" variant="outline" className="rounded-full text-base border-[#e8890e] text-[#e8890e] hover:bg-[#e8890e] bg-transparent hover:text-white cursor-pointer text-sm">
               <Link href={process.env.NEXT_PUBLIC_WA_CHAT_MSG || "/"} target="_blank" rel="noopener noreferrer">
                 Ask about your stack
               </Link>
-            </Button>
+            </Button> */}
 
             <Button asChild size="sm" variant="outline" className="rounded-full text-base border-[#e8890e] text-[#e8890e] hover:bg-[#e8890e] bg-transparent hover:text-white cursor-pointer text-sm">
               <Link href="https://cal.com/vowels/audit" target="_blank" rel="noopener noreferrer">
@@ -689,7 +689,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
+            {/* <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
               <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
                 <img src="/products-vsure.svg" alt="V-Sure" className="w-auto h-auto max-h-24" />
               </div>
@@ -704,8 +704,8 @@ export default function Home() {
                   <span className="text-muted-foreground cursor-not-allowed">Coming Soon</span>
                 </p>
               </div>
-            </div>
-            <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
+            </div> */}
+            {/* <div className="flex items-center gap-6 rounded-lg p-2 -mx-2 sm:mx-0 border p-5 shadow-sm">
               <div className="h-24 aspect-square shrink-0 rounded-lg flex items-center justify-center">
                 <Image src="/glunk_io.png" alt="glunk.io" className="size-20" width={80} height={80} />
               </div>
@@ -720,7 +720,7 @@ export default function Home() {
                   <Link href="https://glunk.io" target="_blank" rel="noopener noreferrer" className="text-[#E8890D] underline">View Product</Link>
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="mt-12 flex items-center justify-center gap-4">
             <Button asChild size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e]">
@@ -954,7 +954,7 @@ export default function Home() {
               </ul>
             </div>
 
-            <div className="max-w-80 mx-auto">
+            {/* <div className="max-w-80 mx-auto">
               <Button asChild size="lg" variant="outline" className="rounded-full text-base border-[#e8890e] text-[#e8890e] hover:bg-[#e8890e] bg-transparent hover:text-white cursor-pointer">
                 <Link href={process.env.NEXT_PUBLIC_WA_CHAT_MSG || "/"} target="_blank"  rel="noopener noreferrer">
                   Chat on WhatsApp <MessageCircleMore className="!h-5 !w-5" />
@@ -965,7 +965,7 @@ export default function Home() {
                   Quick questions?<br />We typically reply during business hours.
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
