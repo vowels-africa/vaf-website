@@ -83,36 +83,34 @@ const plans = [
 const testimonials = [
   {
     id: 1,
-    name: "Curtis",
-    designation: "Co-Founder, FMCG SMME",
-    company: "Curtis",
-    testimonial: "We saved time and money by automating customer engagement with Vowels, using <strong>WhatsApp</strong> as our primary channel.",
-    avatar: "/avatar-curtis.jpg",
+    name: "Dewald Heenop",
+    designation: "Head of Broker and Franchise Distribution",
+    company: "Old Mutual MFC",
+    testimonial: "Vowels was able to deliver an effective multi-channel agent engagement process that improved response rates of over 40%, providing us with valuable insights to drive our ongoing strategy. Thank you!",
   },
   {
     id: 2,
-    name: "Yaseen",
-    designation: "Principal Consultant, Boutique Consulting Start-up",
-    company: "Yaseen",
-    testimonial: "<strong>V-Sure</strong> improved access to information and automatically triaged incoming queries to the right channels — while giving the leadership team real oversight.",
-    avatar: "/avatar-yaseen.jpg",
+    name: "Faaiz Abrahams",
+    designation: "CEO",
+    company: "Starfish Solutions",
+    testimonial: "Vowels developed a bespoke lead generation tool, which helped us improve our lead qualification processing time by 50%. I would recommend Vowels.Africa for any sales call center.",
   },
-  {
-    id: 3,
-    name: "Sean",
-    designation: "Co-Founder & CTO, Alternative Health SaaS Start-up",
-    company: "Sean",
-    testimonial: "Forecast development went <strong>4&times; faster</strong>. We were online in a week, not a month.",
-    avatar: "/avatar-sean.jpg",
-  },
-  {
-    id: 4,
-    name: "Carlyn",
-    designation: "Chairperson, Professional Services Start-up",
-    company: "Carlyn",
-    testimonial: "Vowels shortened our path from discovery call to onboarding — <strong>from weeks to days</strong> — and revenue followed.",
-    avatar: "/avatar-carlyn.jpg",
-  },
+  // {
+  //   id: 3,
+  //   name: "Sean",
+  //   designation: "Co-Founder & CTO, Alternative Health SaaS Start-up",
+  //   company: "Sean",
+  //   testimonial: "Forecast development went <strong>4&times; faster</strong>. We were online in a week, not a month.",
+  //   avatar: "/avatar-sean.jpg",
+  // },
+  // {
+  //   id: 4,
+  //   name: "Carlyn",
+  //   designation: "Chairperson, Professional Services Start-up",
+  //   company: "Carlyn",
+  //   testimonial: "Vowels shortened our path from discovery call to onboarding — <strong>from weeks to days</strong> — and revenue followed.",
+  //   avatar: "/avatar-carlyn.jpg",
+  // },
 ];
 
 const features = [
@@ -738,7 +736,7 @@ export default function Home() {
             Testimonials
           </h2>
           <div className="w-full max-w-screen-xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 overflow-hidden border-r border-background">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 overflow-hidden border-r border-background">
               {testimonials.map((testimonial) => (
                 <div
                   key={testimonial.id}
@@ -751,10 +749,10 @@ export default function Home() {
                     <StarIcon className="w-6 h-6 fill-[#f1c421] stroke-[#f1c421]" />
                     <StarIcon className="w-6 h-6 fill-[#f1c421] stroke-[#f1c421]" />
                   </div>
-                  <p className="my-6 text-[17px] text-center max-w-md">
+                  <p className="my-6 text-[17px] text-center max-w-md px-2">
                     &quot;<span dangerouslySetInnerHTML={{ __html: testimonial.testimonial }} />&quot;
                   </p>
-                  <div className="mt-auto flex items-center justify-center gap-3">
+                  <div className="mx-auto my-auto flex items-center justify-center gap-3 max-w-[240px]">
                     <Avatar>
                       {/* <AvatarImage src={testimonial.avatar} alt={testimonial.name} /> */}
                       <AvatarFallback className="text-xl font-medium bg-primary text-primary-foreground">
@@ -762,9 +760,9 @@ export default function Home() {
                       </AvatarFallback>
                     </Avatar>
                     <div>
-                      <p className="text-lg font-semibold">{testimonial.company}</p>
+                      <p className="text-lg font-semibold">{testimonial.name}</p>
                       <p className="text-sm text-muted-foreground">
-                        {testimonial.designation}
+                        {testimonial.designation}, <strong>{testimonial.company}</strong>
                       </p>
                     </div>
                   </div>
