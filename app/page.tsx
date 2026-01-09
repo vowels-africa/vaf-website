@@ -42,7 +42,7 @@ const plans = [
       "Email support",
     ],
     buttonText: "Start Free Audit",
-    buttonUrl: "https://cal.com/vowels/audit",
+    buttonUrl: process.env.NEXT_PUBLIC_AUDIT_FORM_URL || '',
   },
   {
     name: "Growth",
@@ -59,7 +59,7 @@ const plans = [
       "Priority support",
     ],
     buttonText: "Book Implementation Call",
-    buttonUrl: "https://cal.com/vowels/growth",
+    buttonUrl: process.env.NEXT_PUBLIC_GROWTH_FORM_URL || '',
     isPopular: true,
   },
   {
@@ -190,7 +190,7 @@ export default function Home() {
           </p>
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-8">
             <Button asChild size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e] cursor-pointer">
-              <Link href="https://cal.com/vowels/audit" target="_blank" rel="noopener noreferrer">
+              <Link href={process.env.NEXT_PUBLIC_AUDIT_FORM_URL || ''} target="_blank" rel="noopener noreferrer">
                 Schedule a Free Audit <ArrowUpRight className="!h-5 !w-5" />
               </Link>
             </Button>
@@ -452,7 +452,7 @@ export default function Home() {
           </p>
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-8">
             <Button asChild size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e] cursor-pointer">
-              <Link href="https://cal.com/vowels/audit" target="_blank"  rel="noopener noreferrer">
+              <Link href={process.env.NEXT_PUBLIC_AUDIT_FORM_URL || ''} target="_blank"  rel="noopener noreferrer">
                 Get My Free Audit <ArrowUpRight className="!h-5 !w-5" />
               </Link>
             </Button>
@@ -599,7 +599,7 @@ export default function Home() {
             </Button> */}
 
             <Button asChild size="sm" variant="outline" className="rounded-full text-base border-[#e8890e] text-[#e8890e] hover:bg-[#e8890e] bg-transparent hover:text-white cursor-pointer text-sm">
-              <Link href="https://cal.com/vowels/audit" target="_blank" rel="noopener noreferrer">
+              <Link href={process.env.NEXT_PUBLIC_AUDIT_FORM_URL || ''} target="_blank" rel="noopener noreferrer">
                 Schedule a Free Audit
               </Link>
             </Button>
@@ -934,7 +934,7 @@ export default function Home() {
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-8">
             <div className="max-w-80 mx-auto">
               <Button asChild size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e] cursor-pointer">
-                <Link href="https://cal.com/vowels/audit" target="_blank"  rel="noopener noreferrer">
+                <Link href={process.env.NEXT_PUBLIC_AUDIT_FORM_URL || ''} target="_blank"  rel="noopener noreferrer">
                   Get My Free Audit <ArrowUpRight className="!h-5 !w-5" />
                 </Link>
               </Button>
