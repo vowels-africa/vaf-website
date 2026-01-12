@@ -292,7 +292,7 @@ export default function Home() {
       <div className="flex items-center justify-center px-6 pt-0 pb-30">
         <div className="overflow-hidden">
           <p className="text-center text-xl font-medium">
-            Companies we&apos;re working with
+            Who we&apos;re working with
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-14 gap-y-10 max-w-(--breakpoint-xl)">
             <Marquee
@@ -304,6 +304,7 @@ export default function Home() {
               <img src="/sam_co.png" className="h-16" alt="Sam & Co" title="Sam & Co" />
               <img src="/oldmutual.png" className="h-16" alt="Old Mutual" title="Old Mutual" />
               <img src="/uzum.png" className="h-16" alt="Uzum Beverages" title="Uzum Beverages" />
+              <img src="/starfish.png" className="h-16" alt="Starfish Debt Consultants" title="Starfish Debt Consultants" />
             </Marquee>
           </div>
         </div>
