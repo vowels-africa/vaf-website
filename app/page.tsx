@@ -832,8 +832,8 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <p className="mt-4 text-center mt-12">
-          <i className="text-muted-foreground">Need custom software or special workflows?</i>
+        <p className="text-center mt-12 mb-4 text-3xl font-bold">
+          Need custom software or special workflows?
         </p>
         <div className="mt-4 flex items-center justify-center gap-4">
           <Button asChild size="sm" variant="outline" className="rounded-full text-base border-[#e8890e] text-[#e8890e] hover:bg-[#e8890e] bg-transparent hover:text-white cursor-pointer text-sm">
