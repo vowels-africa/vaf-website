@@ -182,29 +182,40 @@ export default async function LandingPage({ params }: PageProps) {
         </div>
       </div>
 
+      <div className="flex items-center justify-center py-10 pb-0">
+        <div className="max-w-screen-lg w-full pt-10 py-0 px-6">
+          <h2 className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight text-center md:mx-auto">
+            Built for how Africa actually works
+          </h2>
+          <p className="text-center mt-12 px-8">
+            Your customers live on WhatsApp, your money moves through mobile wallets and EFT, your teams speak multiple languages, and internet isn&apos;t always perfect. Vowels connects these realities with practical automation - fast replies, clean data, quicker payments - without forcing new tools you don&apos;t need.
+          </p>
+        </div>
+      </div>
+
       <div id="framework" className="flex items-center justify-center py-10">
         <div className="max-w-screen-lg w-full px-6">
-          <div className="pt-20">
-            <h3 className="text-3xl md:text-4xl md:leading-[3rem] font-bold tracking-tight md:text-center md:mx-auto">
+          <div className="pt-10">
+            <h3 className="text-3xl md:text-4xl md:leading-[3rem] font-bold tracking-tight text-center mx-auto">
               Why this matters to you
             </h3>
-            <p className="md:text-center mt-4">
+            <p className="text-center mt-4">
               The VOWELS Framework is simple, structured, and proven.<br /><strong>Within 90 days</strong>, most clients see:
             </p>
-            <ul className="mt-6 space-y-2 md:mx-auto max-w-md list-none">
-              <li className="flex items-center gap-2 md:justify-center">
+            <ul className="mt-6 space-y-2 mx-auto max-w-md list-none">
+              <li className="flex items-center gap-2 justify-center">
                 <CircleCheck className="h-4 w-4 text-green-600 shrink-0" />
                 <span>Reduction in manual work</span>
               </li>
-              <li className="flex items-center gap-2 md:justify-center">
+              <li className="flex items-center gap-2 justify-center">
                 <CircleCheck className="h-4 w-4 text-green-600 shrink-0" />
                 <span>Improved customer response</span>
               </li>
-              <li className="flex items-center gap-2 md:justify-center">
+              <li className="flex items-center gap-2 justify-center">
                 <CircleCheck className="h-4 w-4 text-green-600 shrink-0" />
                 <span>Increase in lead conversions</span>
               </li>
-              <li className="flex items-center gap-2 md:justify-center">
+              <li className="flex items-center gap-2 justify-center">
                 <CircleCheck className="h-4 w-4 text-green-600 shrink-0" />
                 <span>Realised monthly savings</span>
               </li>
