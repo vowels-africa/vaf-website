@@ -353,7 +353,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="framework" className="min-h-screen flex items-center justify-center pb-30 pt-28 scroll-mt-28">
+      <div id="framework" className="min-h-screen flex items-center justify-center py-40">
         <div className="max-w-screen-lg w-full px-6">
           <h2 className="text-3xl md:text-4xl md:leading-[3rem] font-bold tracking-tight text-center mx-auto">
             How We Work
@@ -445,8 +445,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="solutions" className="pt-28 scroll-mt-28">
-        <div className="flex items-center justify-center pb-30">
+      <div id="solutions" className="py-40">
+        <div className="flex items-center justify-center">
           <div className="max-w-screen-lg w-full px-6">
             <h2 className="text-3xl md:text-4xl md:leading-[3rem] font-bold tracking-tight text-center mx-auto">
               Built for Growth-Stage Businesses
@@ -493,7 +493,7 @@ export default function Home() {
             </ul>
           </div>
         </div>
-        <div className="flex items-center justify-center pb-30">
+        <div className="flex items-center justify-center pt-30">
           <div className="max-w-screen-lg w-full px-6">
             <h2 className="text-3xl md:text-4xl md:leading-[3rem] font-bold tracking-tight text-center mx-auto">
               What Changes After Working With Us
@@ -534,7 +534,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="pricing" className="flex items-center justify-center pb-30 pt-28 scroll-mt-28">
+      <div id="pricing" className="flex items-center justify-center py-40">
         <div className="max-w-screen-lg w-full px-6">
           <h2 className="text-3xl md:text-4xl md:leading-[3rem] font-bold tracking-tight text-center mx-auto">
             We Keep It Simple
@@ -608,7 +608,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex items-center justify-center pb-30">
+      <div className="flex items-center justify-center py-40">
         <div className="max-w-screen-lg w-full px-6">
           <h2 className="text-3xl md:text-4xl md:leading-[3rem] font-bold tracking-tight text-center mx-auto">
             Integrations That Fit Your Stack
@@ -729,7 +729,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex justify-center items-center px-6 pt-0 pb-30">
+      <div className="flex justify-center items-center px-6 pt-0 py-40">
         <div>
           <h2 className="mb-8 text-3xl md:text-4xl md:leading-[3rem] font-bold tracking-tight text-center mx-auto">
             What Clients Say
@@ -782,7 +782,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="faq" className="flex items-center justify-center px-6 pb-30 pt-28 scroll-mt-28">
+      <div id="faq" className="flex items-center justify-center px-6 py-40">
         <div className="max-w-xl">
           <h2 className="mb-8 text-3xl md:text-4xl md:leading-[3rem] font-bold tracking-tight text-center mx-auto">
             Frequently Asked Questions
