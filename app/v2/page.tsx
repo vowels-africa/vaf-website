@@ -719,7 +719,7 @@ export default function Home() {
             </table>
           </div>
           <p className="text-center mt-12">
-            <i className="text-muted-foreground">If it's not listed, we can likely connect it.</i>
+            <i className="text-muted-foreground">If it&apos;s not listed, we can likely connect it.</i>
           </p>
           <p className="text-center mt-1 px-8">
             <Link href={process.env.NEXT_PUBLIC_LEAD_FORM_URL || ''} target="_blank" rel="noopener noreferrer" className="hover:underline">
@@ -805,10 +805,10 @@ export default function Home() {
       <div className="flex items-center justify-center pb-30">
         <div className="max-w-screen-lg w-full px-6">
           <h2 className="text-3xl md:text-4xl md:leading-[3rem] font-bold tracking-tight text-center mx-auto">
-            If Growth Feels Messy &mdash; Let's Fix It.
+            If Growth Feels Messy &mdash; Let&apos;s Fix It.
           </h2>
           <p className="text-center mt-4">
-            We'll identify:
+            We&apos;ll identify:
           </p>
           <ul className="mt-4 space-y-2 mx-auto max-w-md list-none">
             <li className="flex items-center gap-2 justify-center">
@@ -845,7 +845,7 @@ export default function Home() {
             </Button>
           </div>
           <p className="text-center mt-8 px-8 text-muted-foreground italic">
-            Most calls surface 2–3 immediate workflow improvements.<br />You'll leave with clarity — whether we work together or not.
+            Most calls surface 2–3 immediate workflow improvements.<br />You&apos;ll leave with clarity — whether we work together or not.
           </p>
         </div>
       </div>
