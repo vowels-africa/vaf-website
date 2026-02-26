@@ -3,80 +3,56 @@ import { NavMenu } from "@/components/navbar-04/nav-menu-02";
 import { NavigationSheet } from "@/components/navbar-04/navigation-sheet-02";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
-import { ArrowUpRight, Goal, MessagesSquare, Coins, Sparkles, Hand, CircleAlert, Server, Zap, Cable, Code2, BrainCircuit, CircleSmall, CircleArrowRight, CircleCheck } from "lucide-react";
+import { ArrowUpRight, Hand, CircleAlert, Server, Zap, Cable, Code2, BrainCircuit, CircleArrowRight, CircleCheck, StarIcon, CircleCheckBigIcon } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { Marquee } from "@/components/ui/marquee";
 
 const faq = [
   {
-    question: "Do you only work with WhatsApp/Xero/Pipedrive?",
-    answer: "No. We're tool-agnostic. If a system offers an API, webhook, inbox, spreadsheet, or database - even legacy exports - we can usually integrate it. We'll recommend the simplest path to your outcome.",
+    question: "Do you replace our internal IT team?",
+    answer: "No. We either act as your outsourced IT team or work alongside your internal team to improve structure and efficiency.",
   },
   {
-    question: "How quickly can we go live?",
-    answer: "Most Starter/Growth setups go live in 2-4 weeks. Complex/Enterprise solutions may take longer - we'll give you a clear roadmap after your audit.",
+    question: "How quickly can automation be implemented?",
+    answer: "Simple workflows can be live within weeks. More complex integrations are scoped and phased to reduce disruption.",
   },
   {
-    question: "Is my data safe?",
-    answer: "Yes. We use strong encryption, robust access controls, and privacy-first practices. Security and uptime are non-negotiable."
-  },
-];
-
-const plans = [
-  {
-    name: "Starter",
-    price: "R5,999",
-    setup_price: "R19,999 setup",
-    description: "Perfect for small businesses getting started.",
-    features: [
-      "1 automated workflow",
-      "2,000 AI interactions",
-      "Custom AI & systems integration",
-      "Performance tracking & evaluations",
-      "Email support",
-    ],
-    buttonText: "Start Free Audit",
-    buttonUrl: process.env.NEXT_PUBLIC_AUDIT_FORM_URL || '',
+    question: "Do we need to change all our current tools?",
+    answer: "No. We usually optimise and connect what you already use before recommending new systems.",
   },
   {
-    name: "Growth",
-    price: "R14,999",
-    setup_price: "R49,999 setup",
-    isRecommended: true,
-    description: "For scaling SMEs ready to move faster.",
-    features: [
-      "Everything in Starter",
-      "Up to 3 automated workflows",
-      "Up to 10,000 AI interactions",
-      "Multi-channel messaging",
-      "AI-powered customer support",
-      "Priority support",
-    ],
-    buttonText: "Book Implementation Call",
-    buttonUrl: process.env.NEXT_PUBLIC_GROWTH_FORM_URL || '',
-    isPopular: true,
+    question: "What if we don't know what needs to be automated?",
+    answer: "That's normal. We start with a clarity call to identify where time and revenue are leaking.",
   },
   {
-    name: "Enterprise",
-    price: "R39,999",
-    setup_price: "bespoke setup fee",
-    description: "For established businesses with custom needs.",
-    features: [
-      "Everything in Starter & Growth",
-      "Up to 10 automated workflows",
-      "Up to 50,000 AI interactions",
-      "Dedicated account manager",
-      "White-label options",
-      "24/7 support",
-    ],
-    buttonText: "Schedule Enterprise Consultation",
-    buttonUrl: process.env.NEXT_PUBLIC_LEAD_FORM_URL || "/",
+    question: "Do you build custom software?",
+    answer: "Yes — but only when off-the-shelf tools are insufficient. We prototype first, validate demand, then scale.",
+  },
+  {
+    question: "How do your retainers work?",
+    answer: "You choose a tier based on your operational needs. Work is prioritised monthly with full visibility and reporting.",
+  },
+  {
+    question: "What industries do you specialise in?",
+    answer: "We work across distribution, financial services, logistics, SaaS, and professional services — primarily with growth-stage businesses.",
+  },
+  {
+    question: "Is this suitable for small businesses?",
+    answer: "Yes — if growth is creating operational strain. Very early-stage businesses may not yet need structured automation.",
+  },
+  {
+    question: "How do we measure ROI?",
+    answer: "We track time saved, error reduction, response improvements, and revenue acceleration depending on the workflow.",
+  },
+  {
+    question: "What happens if we outgrow our plan?",
+    answer: "We evolve with you. Most clients move from Starter → Growth as operational complexity increases.",
   },
 ];
 
@@ -94,53 +70,6 @@ const testimonials = [
     designation: "CEO",
     company: "Starfish Solutions",
     testimonial: "Vowels developed a bespoke lead generation tool, which helped us improve our lead qualification processing time by 50%. I would recommend Vowels.Africa for any sales call center.",
-  },
-  // {
-  //   id: 3,
-  //   name: "Sean",
-  //   designation: "Co-Founder & CTO, Alternative Health SaaS Start-up",
-  //   company: "Sean",
-  //   testimonial: "Forecast development went <strong>4&times; faster</strong>. We were online in a week, not a month.",
-  //   avatar: "/avatar-sean.jpg",
-  // },
-  // {
-  //   id: 4,
-  //   name: "Carlyn",
-  //   designation: "Chairperson, Professional Services Start-up",
-  //   company: "Carlyn",
-  //   testimonial: "Vowels shortened our path from discovery call to onboarding - <strong>from weeks to days</strong> - and revenue followed.",
-  //   avatar: "/avatar-carlyn.jpg",
-  // },
-];
-
-const features = [
-  {
-    icon: Coins,
-    title: "FMCG SMME",
-    description: `<strong>Before:</strong> Orders were manually entered via WhatsApp were manually re-entered. Invoices are delayed; many payments late.<br /><br />
-      <strong>After:</strong> Orders captured automatically from WhatsApp → inventory checked → delivery scheduled → invoice issued → payment reminders sent.<br /><br />
-      <strong>Result: ~25 hours/week</strong> reclaimed, <strong>order volume doubled</strong>, late payments <strong><5%</strong>.`,
-  },
-  {
-    icon: Goal,
-    title: "Alternative Health SaaS Start-up",
-    description: `<strong>Before:</strong> Needed an integrated AI Agent to connect users with online doctors for instant tele-medicine.<br /><br />
-      <strong>After:</strong> AI Agents triage by criteria (symptoms, urgency, availability) and connect users to available doctors for immediate consults.<br /><br />
-      <strong>Result: Improved user experience</strong> and faster access to care on the platform.`,
-  },
-  {
-    icon: MessagesSquare,
-    title: "Professional Services Start-up",
-    description: `<strong>Before:</strong> Slow client engagement; long delays from needs analysis → proposal → onboarding.<br /><br />
-      <strong>After:</strong> AI Agents triage and qualify incoming leads, trigger guided intake + proposal flows, and streamline onboarding.<br /><br />
-      <strong>Result: Shorter time-to-onboarding</strong> and <strong>higher monthly revenue</strong> from better conversion.`,
-  },
-  {
-    icon: Sparkles,
-    title: "Boutique Consulting Start-up",
-    description: `<strong>Before:</strong> Oversight and response to client queries were managed ad-hoc via WhatsApp (messages & voice notes); response time and visibility were poor.<br /><br />
-      <strong>After:</strong> Incoming messages are auto-categorised and curated; responses generated; conversations synced to a <strong>priority ticket dashboard</strong>.<br /><br />
-      <strong>Result: Response time halved</strong> and <strong>~70%</strong> less manual effort.`,
   },
 ];
 
@@ -424,7 +353,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="framework" className="min-h-screen flex items-center justify-center pb-30">
+      <div id="framework" className="min-h-screen flex items-center justify-center pb-30 pt-28 scroll-mt-28">
         <div className="max-w-screen-lg w-full px-6">
           <h2 className="text-3xl md:text-4xl md:leading-[3rem] font-bold tracking-tight text-center mx-auto">
             How We Work
@@ -516,90 +445,407 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex items-center justify-center pb-30">
+      <div id="solutions" className="pt-28 scroll-mt-28">
+        <div className="flex items-center justify-center pb-30">
+          <div className="max-w-screen-lg w-full px-6">
+            <h2 className="text-3xl md:text-4xl md:leading-[3rem] font-bold tracking-tight text-center mx-auto">
+              Built for Growth-Stage Businesses
+            </h2>
+            <ul className="mt-4 space-y-2 mx-auto max-w-md list-none">
+              <li className="flex items-center gap-2 justify-center">
+                <CircleArrowRight className="h-4 w-4 text-gray-400 shrink-0" />
+                <span>Founder-led businesses</span>
+              </li>
+              <li className="flex items-center gap-2 justify-center">
+                <CircleArrowRight className="h-4 w-4 text-gray-400 shrink-0" />
+                <span>Scaling SMEs</span>
+              </li>
+              <li className="flex items-center gap-2 justify-center">
+                <CircleArrowRight className="h-4 w-4 text-gray-400 shrink-0" />
+                <span>Operationally stretched teams</span>
+              </li>
+              <li className="flex items-center gap-2 justify-center">
+                <CircleArrowRight className="h-4 w-4 text-gray-400 shrink-0" />
+                <span>Mid-market businesses without internal tech leadership</span>
+              </li>
+            </ul>
+            <ul className="flex flex-wrap gap-6 mt-12 list-none justify-center">
+              <li className="flex items-center text-sm text-gray-500">
+                <span className="w-2 h-2 rounded-full mr-2" style={{backgroundColor: '#69e3e3'}}></span>
+                Distribution
+              </li>
+              <li className="flex items-center text-sm text-gray-500">
+                <span className="w-2 h-2 rounded-full mr-2" style={{backgroundColor: '#69e3e3'}}></span>
+                Financial services
+              </li>
+              <li className="flex items-center text-sm text-gray-500">
+                <span className="w-2 h-2 rounded-full mr-2" style={{backgroundColor: '#69e3e3'}}></span>
+                Logistics
+              </li>
+              <li className="flex items-center text-sm text-gray-500">
+                <span className="w-2 h-2 rounded-full mr-2" style={{backgroundColor: '#69e3e3'}}></span>
+                Professional services
+              </li>
+              <li className="flex items-center text-sm text-gray-500">
+                <span className="w-2 h-2 rounded-full mr-2" style={{backgroundColor: '#69e3e3'}}></span>
+                SaaS
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="flex items-center justify-center pb-30">
+          <div className="max-w-screen-lg w-full px-6">
+            <h2 className="text-3xl md:text-4xl md:leading-[3rem] font-bold tracking-tight text-center mx-auto">
+              What Changes After Working With Us
+            </h2>
+            <ul className="mt-4 space-y-2 mx-auto max-w-md list-none">
+              <li className="flex items-center gap-2 justify-center">
+                <CircleCheck className="h-4 w-4 text-green-500 shrink-0" />
+                <span>Manual work drops</span>
+              </li>
+              <li className="flex items-center gap-2 justify-center">
+                <CircleCheck className="h-4 w-4 text-green-500 shrink-0" />
+                <span>Response times improve</span>
+              </li>
+              <li className="flex items-center gap-2 justify-center">
+                <CircleCheck className="h-4 w-4 text-green-500 shrink-0" />
+                <span>Teams gain clarity</span>
+              </li>
+              <li className="flex items-center gap-2 justify-center">
+                <CircleCheck className="h-4 w-4 text-green-500 shrink-0" />
+                <span>Systems become structured</span>
+              </li>
+              <li className="flex items-center gap-2 justify-center">
+                <CircleCheck className="h-4 w-4 text-green-500 shrink-0" />
+                <span>IT becomes predictable</span>
+              </li>
+              <li className="flex items-center gap-2 justify-center">
+                <CircleCheck className="h-4 w-4 text-green-500 shrink-0" />
+                <span>Growth feels controlled</span>
+              </li>
+            </ul>
+            <p className="text-center mt-12 px-8">
+              We don't just implement tools. <br />
+              <span className="relative inline-block font-semibold text-[17px]">
+                We create operational clarity.
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="pricing" className="flex items-center justify-center pb-30 pt-28 scroll-mt-28">
         <div className="max-w-screen-lg w-full px-6">
           <h2 className="text-3xl md:text-4xl md:leading-[3rem] font-bold tracking-tight text-center mx-auto">
-            Built for Growth-Stage Businesses
+            We Keep It Simple
           </h2>
-          <ul className="mt-4 space-y-2 mx-auto max-w-md list-none">
-            <li className="flex items-center gap-2 justify-center">
-              <CircleArrowRight className="h-4 w-4 text-gray-400 shrink-0" />
-              <span>Founder-led businesses</span>
-            </li>
-            <li className="flex items-center gap-2 justify-center">
-              <CircleArrowRight className="h-4 w-4 text-gray-400 shrink-0" />
-              <span>Scaling SMEs</span>
-            </li>
-            <li className="flex items-center gap-2 justify-center">
-              <CircleArrowRight className="h-4 w-4 text-gray-400 shrink-0" />
-              <span>Operationally stretched teams</span>
-            </li>
-            <li className="flex items-center gap-2 justify-center">
-              <CircleArrowRight className="h-4 w-4 text-gray-400 shrink-0" />
-              <span>Mid-market businesses without internal tech leadership</span>
-            </li>
-          </ul>
-          <ul className="flex flex-wrap gap-6 mt-12 list-none justify-center">
-            <li className="flex items-center text-sm text-gray-500">
-              <span className="w-2 h-2 rounded-full mr-2" style={{backgroundColor: '#69e3e3'}}></span>
-              Distribution
-            </li>
-            <li className="flex items-center text-sm text-gray-500">
-              <span className="w-2 h-2 rounded-full mr-2" style={{backgroundColor: '#69e3e3'}}></span>
-              Financial services
-            </li>
-            <li className="flex items-center text-sm text-gray-500">
-              <span className="w-2 h-2 rounded-full mr-2" style={{backgroundColor: '#69e3e3'}}></span>
-              Logistics
-            </li>
-            <li className="flex items-center text-sm text-gray-500">
-              <span className="w-2 h-2 rounded-full mr-2" style={{backgroundColor: '#69e3e3'}}></span>
-              Professional services
-            </li>
-            <li className="flex items-center text-sm text-gray-500">
-              <span className="w-2 h-2 rounded-full mr-2" style={{backgroundColor: '#69e3e3'}}></span>
-              SaaS
-            </li>
-          </ul>
+          <p className="text-center mt-4">
+            We don't sell hours. We remove operational friction.
+          </p>
+          <div className="mt-12 overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead>
+                <tr>
+                  <th className="text-left p-4 border border-border font-normal text-muted-foreground w-[28%]"></th>
+                  <th className="text-center p-4 border border-border w-[24%]">
+                    <span className="font-semibold text-base">Starter</span>
+                  </th>
+                  <th className="text-center p-4 border border-border bg-muted/40 w-[24%]">
+                    <span className="font-semibold text-base">Growth</span>
+                    <Badge className="ml-2 bg-[#69e3e3] hover:bg-[#69e3e3] text-white text-xs rounded-full text-[#010c23]">★ Popular</Badge>
+                  </th>
+                  <th className="text-center p-4 border border-border w-[24%]">
+                    <span className="font-semibold text-base">Enterprise</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="p-4 border border-border font-medium">Monthly retainer</td>
+                  <td className="p-4 border border-border text-center">R 5,999 / month</td>
+                  <td className="p-4 border border-border text-center bg-muted/40">R 14,999 / month</td>
+                  <td className="p-4 border border-border text-center text-muted-foreground">Custom</td>
+                </tr>
+                <tr>
+                  <td className="p-4 border border-border font-medium">Once-off setup</td>
+                  <td className="p-4 border border-border text-center">R 19,999</td>
+                  <td className="p-4 border border-border text-center bg-muted/40">R 49,999</td>
+                  <td className="p-4 border border-border text-center text-muted-foreground">Bespoke</td>
+                </tr>
+                <tr>
+                  <td className="p-4 border border-border font-medium">Best for</td>
+                  <td className="p-4 border border-border text-center text-muted-foreground">Early-stage SMEs building structure</td>
+                  <td className="p-4 border border-border text-center bg-muted/40 text-muted-foreground">Scaling businesses that need systems aligned</td>
+                  <td className="p-4 border border-border text-center text-muted-foreground">Mid-market &amp; complex environments</td>
+                </tr>
+                <tr>
+                  <td className="p-4 border border-border font-medium">Workflows</td>
+                  <td className="p-4 border border-border text-center text-muted-foreground">1–2 structured workflows</td>
+                  <td className="p-4 border border-border text-center bg-muted/40 text-muted-foreground">Advanced multi-step workflows</td>
+                  <td className="p-4 border border-border text-center text-muted-foreground">Unlimited workflow design</td>
+                </tr>
+                <tr>
+                  <td className="p-4 border border-border font-medium">Support</td>
+                  <td className="p-4 border border-border text-center text-muted-foreground">Business-hours support</td>
+                  <td className="p-4 border border-border text-center bg-muted/40 text-muted-foreground">Priority support</td>
+                  <td className="p-4 border border-border text-center text-muted-foreground">Dedicated support</td>
+                </tr>
+                <tr>
+                  <td className="p-4 border border-border font-medium">Advisory</td>
+                  <td className="p-4 border border-border text-center text-muted-foreground">—</td>
+                  <td className="p-4 border border-border text-center bg-muted/40 text-muted-foreground">Monthly optimisation call</td>
+                  <td className="p-4 border border-border text-center text-muted-foreground">Fractional CTO + developer oversight</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-center mt-8 text-sm text-muted-foreground italic">
+            * Once-off setup fee covers workflow mapping, systems audit, integration configuration, and onboarding. Charged once at project start.
+          </p>
+          <p className="text-center mt-8 text-sm">
+            Custom solutions are scoped based on complexity and impact. Clear milestones. No surprises.
+          </p>
         </div>
       </div>
 
       <div className="flex items-center justify-center pb-30">
         <div className="max-w-screen-lg w-full px-6">
           <h2 className="text-3xl md:text-4xl md:leading-[3rem] font-bold tracking-tight text-center mx-auto">
-            What Changes After Working With Us
+            Integrations That Fit Your Stack
           </h2>
+          <p className="text-center mt-4">
+            Outcomes first. Tools second.
+          </p>
+          <p className="text-center mt-2">
+            If it has an API, webhook, inbox, spreadsheet, or database — we can usually connect it.
+          </p>
+          <div className="mt-12 overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <tbody>
+                {[
+                  {
+                    category: "Comms",
+                    tools: [
+                      { name: "WhatsApp", icon: "whatsapp" },
+                      { name: "Wati", icon: null },
+                      { name: "Twilio", icon: null },
+                      { name: "Gmail", icon: "gmail" },
+                    ],
+                  },
+                  {
+                    category: "CRM / Sales",
+                    tools: [
+                      { name: "Pipedrive", icon: null },
+                      { name: "HubSpot", icon: "hubspot" },
+                      { name: "Zoho", icon: "zoho" },
+                      { name: "Attio", icon: null },
+                    ],
+                  },
+                  {
+                    category: "Payments / Accounting",
+                    tools: [
+                      { name: "Stripe", icon: "stripe" },
+                      { name: "Xero", icon: "xero" },
+                      { name: "Sage", icon: null },
+                      { name: "Yoco", icon: null },
+                    ],
+                  },
+                  {
+                    category: "E-commerce",
+                    tools: [
+                      { name: "Shopify", icon: "shopify" },
+                      { name: "WooCommerce", icon: "woocommerce" },
+                    ],
+                  },
+                  {
+                    category: "Support",
+                    tools: [
+                      { name: "Freshdesk", icon: null },
+                      { name: "Zendesk", icon: "zendesk" },
+                      { name: "Intercom", icon: "intercom" },
+                      { name: "Monday", icon: null },
+                    ],
+                  },
+                  {
+                    category: "Data / BI",
+                    tools: [
+                      { name: "Airtable", icon: "airtable" },
+                      { name: "Notion", icon: "notion" },
+                      { name: "BigQuery", icon: "googlebigquery" },
+                      { name: "Metabase", icon: "metabase" },
+                    ],
+                  },
+                  {
+                    category: "Productivity",
+                    tools: [
+                      { name: "Google Workspace", icon: "google" },
+                      { name: "Microsoft 365", icon: null },
+                      { name: "Slack", icon: null },
+                      { name: "Mattermost", icon: "mattermost" },
+                    ],
+                  },
+                  {
+                    category: "Automation",
+                    tools: [
+                      { name: "Zapier", icon: "zapier" },
+                      { name: "Make", icon: "make" },
+                      { name: "n8n", icon: "n8n" },
+                    ],
+                  },
+                ].map(({ category, tools }) => (
+                  <tr key={category}>
+                    <td className="p-4 border border-border font-medium w-[20%] align-middle whitespace-nowrap">
+                      {category}
+                    </td>
+                    <td className="p-4 border border-border">
+                      <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
+                        {tools.map(({ name, icon }) => (
+                          <div key={name} className="flex items-center gap-2">
+                            {icon && (
+                              <img
+                                src={`https://cdn.simpleicons.org/${icon}`}
+                                alt={name}
+                                className="h-5 w-5 opacity-70 dark:invert"
+                              />
+                            )}
+                            <span className="text-sm text-muted-foreground">{name}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-center mt-12">
+            <i className="text-muted-foreground">If it's not listed, we can likely connect it.</i>
+          </p>
+          <p className="text-center mt-1 px-8">
+            <Link href={process.env.NEXT_PUBLIC_LEAD_FORM_URL || ''} target="_blank" rel="noopener noreferrer" className="hover:underline">
+              Want to find out if we can connect it. <span className="whitespace-nowrap">Reach out for a call <ArrowUpRight className="!h-5 !w-5 inline -mt-0.5" /></span>
+            </Link>
+          </p>
+        </div>
+      </div>
+
+      <div className="flex justify-center items-center px-6 pt-0 pb-30">
+        <div>
+          <h2 className="mb-8 text-3xl md:text-4xl md:leading-[3rem] font-bold tracking-tight text-center mx-auto">
+            What Clients Say
+          </h2>
+          <div className="w-full max-w-screen-xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 overflow-hidden border-r border-background">
+              {testimonials.map((testimonial) => (
+                <div
+                  key={testimonial.id}
+                  className="flex flex-col outline outline-1 outline-border px-6 py-8"
+                >
+                  <div className="flex items-center justify-center gap-2">
+                    <StarIcon className="w-6 h-6 fill-[#f1c421] stroke-[#f1c421]" />
+                    <StarIcon className="w-6 h-6 fill-[#f1c421] stroke-[#f1c421]" />
+                    <StarIcon className="w-6 h-6 fill-[#f1c421] stroke-[#f1c421]" />
+                    <StarIcon className="w-6 h-6 fill-[#f1c421] stroke-[#f1c421]" />
+                    <StarIcon className="w-6 h-6 fill-[#f1c421] stroke-[#f1c421]" />
+                  </div>
+                  <p className="my-6 text-[17px] text-center max-w-md px-2">
+                    &quot;<span dangerouslySetInnerHTML={{ __html: testimonial.testimonial }} />&quot;
+                  </p>
+                  <div className="mx-auto my-auto flex items-center justify-center gap-3 max-w-[240px]">
+                    <Avatar>
+                      {/* <AvatarImage src={testimonial.avatar} alt={testimonial.name} /> */}
+                      <AvatarFallback className="text-xl font-medium bg-primary text-primary-foreground">
+                        {testimonial.name.charAt(0)}
+                      </AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <p className="text-lg font-semibold">{testimonial.name}</p>
+                      <p className="text-sm text-muted-foreground">
+                        {testimonial.designation}, <strong>{testimonial.company}</strong>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-8">
+            <Button asChild size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e] cursor-pointer">
+              <Link href={process.env.NEXT_PUBLIC_LEAD_FORM_URL || ''} target="_blank" rel="noopener noreferrer">
+                Book a 20-Minute Clarity Call <ArrowUpRight className="!h-5 !w-5" />
+              </Link>
+            </Button>
+          </div>
+          <p className="text-center mt-4">
+            <i className="text-muted-foreground">Join the businesses that have already removed the friction.</i>
+          </p>
+        </div>
+      </div>
+
+      <div id="faq" className="flex items-center justify-center px-6 pb-30 pt-28 scroll-mt-28">
+        <div className="max-w-xl">
+          <h2 className="mb-8 text-3xl md:text-4xl md:leading-[3rem] font-bold tracking-tight text-center mx-auto">
+            Frequently Asked Questions
+          </h2>
+          <Accordion type="single" className="mt-6" defaultValue="question-0">
+            {faq.map(({ question, answer }, index) => (
+              <AccordionItem key={question} value={`question-${index}`}>
+                <AccordionTrigger className="text-left text-lg">
+                  {question}
+                </AccordionTrigger>
+                <AccordionContent className="text-base text-muted-foreground">
+                  {answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </div>
+
+      <div className="flex items-center justify-center pb-30">
+        <div className="max-w-screen-lg w-full px-6">
+          <h2 className="text-3xl md:text-4xl md:leading-[3rem] font-bold tracking-tight text-center mx-auto">
+            If Growth Feels Messy &mdash; Let's Fix It.
+          </h2>
+          <p className="text-center mt-4">
+            We'll identify:
+          </p>
           <ul className="mt-4 space-y-2 mx-auto max-w-md list-none">
             <li className="flex items-center gap-2 justify-center">
-              <CircleCheck className="h-4 w-4 text-green-500 shrink-0" />
-              <span>Manual work drops</span>
+              <CircleCheckBigIcon className="h-4 w-4 text-green-500 shrink-0" />
+              <span>Where time is leaking</span>
             </li>
             <li className="flex items-center gap-2 justify-center">
-              <CircleCheck className="h-4 w-4 text-green-500 shrink-0" />
-              <span>Response times improve</span>
+              <CircleCheckBigIcon className="h-4 w-4 text-green-500 shrink-0" />
+              <span>What should be automated</span>
             </li>
             <li className="flex items-center gap-2 justify-center">
-              <CircleCheck className="h-4 w-4 text-green-500 shrink-0" />
-              <span>Teams gain clarity</span>
+              <CircleCheckBigIcon className="h-4 w-4 text-green-500 shrink-0" />
+              <span>What should stay human</span>
             </li>
             <li className="flex items-center gap-2 justify-center">
-              <CircleCheck className="h-4 w-4 text-green-500 shrink-0" />
-              <span>Systems become structured</span>
+              <CircleCheckBigIcon className="h-4 w-4 text-green-500 shrink-0" />
+              <span>What should be built</span>
             </li>
             <li className="flex items-center gap-2 justify-center">
-              <CircleCheck className="h-4 w-4 text-green-500 shrink-0" />
-              <span>IT becomes predictable</span>
-            </li>
-            <li className="flex items-center gap-2 justify-center">
-              <CircleCheck className="h-4 w-4 text-green-500 shrink-0" />
-              <span>Growth feels controlled</span>
+              <CircleCheckBigIcon className="h-4 w-4 text-green-500 shrink-0" />
+              <span>What should be ignored</span>
             </li>
           </ul>
-          <p className="text-center mt-12 px-8">
-            We don't just implement tools. <br />
-            <span className="relative inline-block font-semibold text-[17px]">
-              We create operational clarity.
+          <p className="mt-12 text-center px-8">
+            <span className="relative inline-block font-semibold text-xl">
+              Clarity first. Execution second.
             </span>
+          </p>
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-8">
+            <Button asChild size="lg" className="rounded-full text-base bg-[#e8890e] hover:bg-[#f1951e] cursor-pointer">
+              <Link href={process.env.NEXT_PUBLIC_LEAD_FORM_URL || ''} target="_blank" rel="noopener noreferrer">
+                Book a 20-Minute Clarity Call <ArrowUpRight className="!h-5 !w-5" />
+              </Link>
+            </Button>
+          </div>
+          <p className="text-center mt-8 px-8 text-muted-foreground italic">
+            Most calls surface 2–3 immediate workflow improvements.<br />You'll leave with clarity — whether we work together or not.
           </p>
         </div>
       </div>
