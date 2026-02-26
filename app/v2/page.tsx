@@ -159,7 +159,7 @@ export default function Home() {
               No obligation. No jargon.
             </li>
             <li className="items-center text-sm text-gray-300">
-              Just clarity on what's slowing your business down.
+              Just clarity on what&apos;s slowing your business down.
             </li>
           </ul>
         </div>
@@ -213,7 +213,7 @@ export default function Home() {
             </li>
             <li className="flex items-center gap-2 justify-center">
               <CircleAlert className="h-4 w-4 text-orange-400 shrink-0" />
-              <span>Tools don't speak to each other</span>
+              <span>Tools don&apos;t speak to each other</span>
             </li>
             <li className="flex items-center gap-2 justify-center">
               <CircleAlert className="h-4 w-4 text-orange-400 shrink-0" />
@@ -225,14 +225,14 @@ export default function Home() {
             </li>
           </ul>
           <p className="text-center mt-12 px-8">
-            You don't need more software. <br />
+            You don&apos;t need more software. <br />
             <span className="relative inline-block font-semibold text-[17px]">
               You need structure.
             </span>
           </p>
           <p className="text-center mt-15 px-8">
             <Link href={process.env.NEXT_PUBLIC_LEAD_FORM_URL || ''} target="_blank" rel="noopener noreferrer" className="hover:underline">
-              Sound familiar? <br className="sm:hidden block" />Let's map what's slowing <span className="whitespace-nowrap">you down <ArrowUpRight className="!h-5 !w-5 inline -mt-0.5" /></span>
+              Sound familiar? <br className="sm:hidden block" />Let&apos;s map what&apos;s slowing <span className="whitespace-nowrap">you down <ArrowUpRight className="!h-5 !w-5 inline -mt-0.5" /></span>
             </Link>
           </p>
         </div>
@@ -272,7 +272,7 @@ export default function Home() {
                   Remove Manual Work &mdash; Automation
                 </span>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  If it's repeated daily - it should be automated:
+                  If it&apos;s repeated daily - it should be automated:
                 </p>
                 <ul className="mt-1 text-sm text-muted-foreground list-disc list-inside pl-4">
                   <li>Lead capture</li>
@@ -296,7 +296,7 @@ export default function Home() {
                   WhatsApp. CRM. Accounting. Cloud storage. Internal dashboards.
                 </p>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  If your tools don't talk - we make them.
+                  If your tools don&apos;t talk - we make them.
                 </p>
                 <p className="mt-1 text-sm text-muted-foreground">
                   No more copying and pasting. Information flows automatically.
@@ -310,7 +310,7 @@ export default function Home() {
                   When Tools Break &mdash; Custom Software
                 </span>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  Sometimes off-the-shelf software almost works.<br />Almost isn't enough.
+                  Sometimes off-the-shelf software almost works.<br />Almost isn&apos;t enough.
                 </p>
                 <p className="mt-1 text-sm text-muted-foreground">
                   Validate first. Invest second. Scale third. Smarter growth.
@@ -334,7 +334,7 @@ export default function Home() {
                   <li>Oversight of developers</li>
                   <li>Strategic prioritisation</li>
                   <li>Practical system decisions</li>
-                  <li>Someone to say 'don't waste money on that'</li>
+                  <li>Someone to say &apos;don&apos;t waste money on that&apos;</li>
                 </ul>
                 <p className="mt-1 text-sm text-muted-foreground">
                   We provide fractional CTO & CPO advisory when needed.
@@ -347,7 +347,7 @@ export default function Home() {
           </p>
           <p className="text-center mt-1 px-8">
             <Link href={process.env.NEXT_PUBLIC_LEAD_FORM_URL || ''} target="_blank" rel="noopener noreferrer" className="hover:underline">
-              Book a 20-minute call - we'll tell you exactly <span className="whitespace-nowrap">where to start <ArrowUpRight className="!h-5 !w-5 inline -mt-0.5" /></span>
+              Book a 20-minute call - we&apos;ll tell you exactly <span className="whitespace-nowrap">where to start <ArrowUpRight className="!h-5 !w-5 inline -mt-0.5" /></span>
             </Link>
           </p>
         </div>
@@ -525,7 +525,7 @@ export default function Home() {
               </li>
             </ul>
             <p className="text-center mt-12 px-8">
-              We don't just implement tools. <br />
+              We don&apos;t just implement tools. <br />
               <span className="relative inline-block font-semibold text-[17px]">
                 We create operational clarity.
               </span>
@@ -540,7 +540,7 @@ export default function Home() {
             We Keep It Simple
           </h2>
           <p className="text-center mt-4">
-            We don't sell hours. We remove operational friction.
+            We don&apos;t sell hours. We remove operational friction.
           </p>
           <div className="mt-12 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
