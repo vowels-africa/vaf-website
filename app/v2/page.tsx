@@ -113,12 +113,12 @@ export default function Home() {
             Operational technology partners for growing businesses
           </h1>
           <p className="mt-6 text-[17px] md:text-lg sm:px-6 md:px-0">
-            Growth creates friction. <br className="hidden md:block" />
-            More customers.
-            More staff.
-            More tools.
-            More admin. <br className="hidden md:block" />
-            Suddenly things feel messy, slow, and reactive. <br className="hidden md:block" />
+            Growth creates friction.<br />
+            More customers.<br />
+            More staff.<br />
+            More tools.<br />
+            More admin.<br />
+            Suddenly things feel messy, slow, and reactive.<br />
             <span className="relative inline-block font-bold">
               We fix that.
               <svg
@@ -165,9 +165,9 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex items-center justify-center px-6 py-30">
+      <div className="flex items-center justify-center px-6 py-20">
         <div className="overflow-hidden">
-          <p className="text-center text-2xl font-medium px-20">
+          <p className="text-center text-2xl font-medium md:px-30">
             <strong>Trusted by growing teams</strong> across distribution, financial services, logistics, SaaS and professional services.
           </p>
           <div className="mt-15 flex items-center justify-center gap-x-14 gap-y-10 max-w-(--breakpoint-xl)">
@@ -186,51 +186,55 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex items-center justify-center pb-30">
+      <div className="flex items-center justify-center py-20 bg-[#92d1e0] mb-20">
         <div className="max-w-screen-lg w-full px-6">
           <h2 className="text-3xl md:text-4xl md:leading-[3rem] font-bold tracking-tight text-center mx-auto">
             When Businesses Grow, Systems Struggle
           </h2>
-          <p className="text-center mt-4">
+          <p className="text-center mt-4 text-xl">
             As you scale:
           </p>
-          <ul className="mt-4 space-y-2 mx-auto max-w-md list-none">
-            <li className="flex items-center gap-2 justify-center">
-              <CircleAlert className="h-4 w-4 text-orange-400 shrink-0" />
-              <span>Leads fall through the cracks</span>
-            </li>
-            <li className="flex items-center gap-2 justify-center">
-              <CircleAlert className="h-4 w-4 text-orange-400 shrink-0" />
-              <span>WhatsApp becomes chaotic</span>
-            </li>
-            <li className="flex items-center gap-2 justify-center">
-              <CircleAlert className="h-4 w-4 text-orange-400 shrink-0" />
-              <span>Reporting stays manual</span>
-            </li>
-            <li className="flex items-center gap-2 justify-center">
-              <CircleAlert className="h-4 w-4 text-orange-400 shrink-0" />
-              <span>Invoices are chased manually</span>
-            </li>
-            <li className="flex items-center gap-2 justify-center">
-              <CircleAlert className="h-4 w-4 text-orange-400 shrink-0" />
-              <span>Tools don&apos;t speak to each other</span>
-            </li>
-            <li className="flex items-center gap-2 justify-center">
-              <CircleAlert className="h-4 w-4 text-orange-400 shrink-0" />
-              <span>IT becomes reactive</span>
-            </li>
-            <li className="flex items-center gap-2 justify-center">
-              <CircleAlert className="h-4 w-4 text-orange-400 shrink-0" />
-              <span>Decisions without technical clarity</span>
-            </li>
-          </ul>
-          <p className="text-center mt-12 px-8">
+          <div className="mt-4 md:col-span-2 max-w-[390px] mx-auto w-full flex items-center gap-6 rounded-lg -mx-2 border py-5 pl-10 pr-15 shadow-sm bg-white">
+            <div>
+              <ul className="space-y-2 mx-auto max-w-md list-none">
+                <li className="flex items-center gap-2">
+                  <CircleAlert className="h-4 w-4 text-orange-400 shrink-0" />
+                  <span>Leads fall through the cracks</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CircleAlert className="h-4 w-4 text-orange-400 shrink-0" />
+                  <span>WhatsApp becomes chaotic</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CircleAlert className="h-4 w-4 text-orange-400 shrink-0" />
+                  <span>Reporting stays manual</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CircleAlert className="h-4 w-4 text-orange-400 shrink-0" />
+                  <span>Invoices are chased manually</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CircleAlert className="h-4 w-4 text-orange-400 shrink-0" />
+                  <span>Tools don&apos;t speak to each other</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CircleAlert className="h-4 w-4 text-orange-400 shrink-0" />
+                  <span>IT becomes reactive</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CircleAlert className="h-4 w-4 text-orange-400 shrink-0" />
+                  <span>Decisions without technical clarity</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <p className="text-center mt-8 px-8 text-xl">
             You don&apos;t need more software. <br />
-            <span className="relative inline-block font-semibold text-[17px]">
+            <span className="relative inline-block font-semibold">
               You need structure.
             </span>
           </p>
-          <p className="text-center mt-15 px-8">
+          <p className="text-center mt-12 px-8 font-bold">
             <Link href={process.env.NEXT_PUBLIC_LEAD_FORM_URL || ''} target="_blank" rel="noopener noreferrer" className="hover:underline">
               Sound familiar? <br className="sm:hidden block" />Let&apos;s map what&apos;s slowing <span className="whitespace-nowrap">you down <ArrowUpRight className="!h-5 !w-5 inline -mt-0.5" /></span>
             </Link>
@@ -342,10 +346,10 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <p className="text-center mt-12">
+          <p className="text-center mt-12 text-xl">
             <i className="text-muted-foreground">Not sure which of these applies to you?</i>
           </p>
-          <p className="text-center mt-1 px-8">
+          <p className="text-center mt-1 px-8 text-xl">
             <Link href={process.env.NEXT_PUBLIC_LEAD_FORM_URL || ''} target="_blank" rel="noopener noreferrer" className="hover:underline">
               Book a 20-minute call - we&apos;ll tell you exactly <span className="whitespace-nowrap">where to start <ArrowUpRight className="!h-5 !w-5 inline -mt-0.5" /></span>
             </Link>
@@ -353,7 +357,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="framework" className="min-h-screen flex items-center justify-center py-40">
+      <div id="framework" className="min-h-screen flex items-center justify-center py-30 bg-[#f7ebdc]">
         <div className="max-w-screen-lg w-full px-6">
           <h2 className="text-3xl md:text-4xl md:leading-[3rem] font-bold tracking-tight text-center mx-auto">
             How We Work
@@ -435,9 +439,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="mt-12">
+          <div className="mt-30">
             <p className="text-center px-8">
-              <span className="relative inline-block font-semibold text-xl">
+              <span className="relative inline-block font-semibold text-2xl">
                 Clarity first. Execution second.
               </span>
             </p>
@@ -445,31 +449,35 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="solutions" className="py-40">
+      <div id="solutions" className="py-30">
         <div className="flex items-center justify-center">
           <div className="max-w-screen-lg w-full px-6">
             <h2 className="text-3xl md:text-4xl md:leading-[3rem] font-bold tracking-tight text-center mx-auto">
               Built for Growth-Stage Businesses
             </h2>
-            <ul className="mt-4 space-y-2 mx-auto max-w-md list-none">
-              <li className="flex items-center gap-2 justify-center">
-                <CircleArrowRight className="h-4 w-4 text-gray-400 shrink-0" />
-                <span>Founder-led businesses</span>
-              </li>
-              <li className="flex items-center gap-2 justify-center">
-                <CircleArrowRight className="h-4 w-4 text-gray-400 shrink-0" />
-                <span>Scaling SMEs</span>
-              </li>
-              <li className="flex items-center gap-2 justify-center">
-                <CircleArrowRight className="h-4 w-4 text-gray-400 shrink-0" />
-                <span>Operationally stretched teams</span>
-              </li>
-              <li className="flex items-center gap-2 justify-center">
-                <CircleArrowRight className="h-4 w-4 text-gray-400 shrink-0" />
-                <span>Mid-market businesses without internal tech leadership</span>
-              </li>
-            </ul>
-            <ul className="flex flex-wrap gap-6 mt-12 list-none justify-center">
+            <div className="mt-8 md:col-span-2 max-w-[390px] mx-auto w-full flex items-center gap-6 rounded-lg -mx-2 border py-5 pl-10 pr-15 shadow-sm bg-white">
+              <div>
+                <ul className="space-y-2 mx-auto max-w-md list-none">
+                  <li className="flex items-center gap-2">
+                    <CircleArrowRight className="h-4 w-4 text-gray-400 shrink-0" />
+                    <span>Founder-led businesses</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CircleArrowRight className="h-4 w-4 text-gray-400 shrink-0" />
+                    <span>Scaling SMEs</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CircleArrowRight className="h-4 w-4 text-gray-400 shrink-0" />
+                    <span>Operationally stretched teams</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CircleArrowRight className="h-4 w-4 text-gray-400 shrink-0" />
+                    <span>Mid-market businesses without internal tech leadership</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <ul className="flex flex-wrap gap-x-6 gap-y-2 mt-12 list-none justify-center max-w-[390px] mx-auto">
               <li className="flex items-center text-sm text-gray-500">
                 <span className="w-2 h-2 rounded-full mr-2" style={{backgroundColor: '#69e3e3'}}></span>
                 Distribution
@@ -498,35 +506,39 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl md:leading-[3rem] font-bold tracking-tight text-center mx-auto">
               What Changes After Working With Us
             </h2>
-            <ul className="mt-4 space-y-2 mx-auto max-w-md list-none">
-              <li className="flex items-center gap-2 justify-center">
-                <CircleCheck className="h-4 w-4 text-green-500 shrink-0" />
-                <span>Manual work drops</span>
-              </li>
-              <li className="flex items-center gap-2 justify-center">
-                <CircleCheck className="h-4 w-4 text-green-500 shrink-0" />
-                <span>Response times improve</span>
-              </li>
-              <li className="flex items-center gap-2 justify-center">
-                <CircleCheck className="h-4 w-4 text-green-500 shrink-0" />
-                <span>Teams gain clarity</span>
-              </li>
-              <li className="flex items-center gap-2 justify-center">
-                <CircleCheck className="h-4 w-4 text-green-500 shrink-0" />
-                <span>Systems become structured</span>
-              </li>
-              <li className="flex items-center gap-2 justify-center">
-                <CircleCheck className="h-4 w-4 text-green-500 shrink-0" />
-                <span>IT becomes predictable</span>
-              </li>
-              <li className="flex items-center gap-2 justify-center">
-                <CircleCheck className="h-4 w-4 text-green-500 shrink-0" />
-                <span>Growth feels controlled</span>
-              </li>
-            </ul>
-            <p className="text-center mt-12 px-8">
+            <div className="mt-8 md:col-span-2 max-w-[390px] mx-auto w-full flex items-center gap-6 rounded-lg -mx-2 border py-5 pl-10 pr-15 shadow-sm bg-white">
+              <div>
+                <ul className="space-y-2 mx-auto max-w-md list-none">
+                  <li className="flex items-center gap-2">
+                    <CircleCheck className="h-4 w-4 text-green-500 shrink-0" />
+                    <span>Manual work drops</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CircleCheck className="h-4 w-4 text-green-500 shrink-0" />
+                    <span>Response times improve</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CircleCheck className="h-4 w-4 text-green-500 shrink-0" />
+                    <span>Teams gain clarity</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CircleCheck className="h-4 w-4 text-green-500 shrink-0" />
+                    <span>Systems become structured</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CircleCheck className="h-4 w-4 text-green-500 shrink-0" />
+                    <span>IT becomes predictable</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CircleCheck className="h-4 w-4 text-green-500 shrink-0" />
+                    <span>Growth feels controlled</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <p className="text-center mt-10 px-8 text-xl">
               We don&apos;t just implement tools. <br />
-              <span className="relative inline-block font-semibold text-[17px]">
+              <span className="relative inline-block font-semibold">
                 We create operational clarity.
               </span>
             </p>
@@ -534,81 +546,81 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="pricing" className="flex items-center justify-center py-40">
+      <div id="pricing" className="flex items-center justify-center py-30 bg-[#1e2b45] text-white">
         <div className="max-w-screen-lg w-full px-6">
-          <h2 className="text-3xl md:text-4xl md:leading-[3rem] font-bold tracking-tight text-center mx-auto">
+          <h2 className="text-3xl md:text-4xl md:leading-[3rem] font-bold tracking-tight text-center mx-auto text-white">
             We Keep It Simple
           </h2>
-          <p className="text-center mt-4">
+          <p className="text-center mt-4 text-white/80">
             We don&apos;t sell hours. We remove operational friction.
           </p>
           <div className="mt-12 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
               <thead>
                 <tr>
-                  <th className="text-left p-4 border border-border font-normal text-muted-foreground w-[28%]"></th>
-                  <th className="text-center p-4 border border-border w-[24%]">
-                    <span className="font-semibold text-base">Starter</span>
+                  <th className="text-left p-4 border border-white/20 font-normal text-white/50 w-[28%]"></th>
+                  <th className="text-center p-4 border border-white/20 w-[24%]">
+                    <span className="font-semibold text-base text-white">Starter</span>
                   </th>
-                  <th className="text-center p-4 border border-border bg-muted/40 w-[24%]">
-                    <span className="font-semibold text-base">Growth</span>
-                    <Badge className="ml-2 bg-[#69e3e3] hover:bg-[#69e3e3] text-white text-xs rounded-full text-[#010c23]">★ Popular</Badge>
+                  <th className="text-center p-4 border border-white/20 bg-white/10 w-[24%]">
+                    <span className="font-semibold text-base text-white">Growth</span>
+                    <Badge className="ml-2 bg-[#69e3e3] hover:bg-[#69e3e3] text-xs rounded-full text-[#010c23]">★ Popular</Badge>
                   </th>
-                  <th className="text-center p-4 border border-border w-[24%]">
-                    <span className="font-semibold text-base">Enterprise</span>
+                  <th className="text-center p-4 border border-white/20 w-[24%]">
+                    <span className="font-semibold text-base text-white">Enterprise</span>
                   </th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td className="p-4 border border-border font-medium">Monthly retainer</td>
-                  <td className="p-4 border border-border text-center">R 5,999 / month</td>
-                  <td className="p-4 border border-border text-center bg-muted/40">R 14,999 / month</td>
-                  <td className="p-4 border border-border text-center text-muted-foreground">Custom</td>
+                  <td className="p-4 border border-white/20 font-medium text-white">Monthly retainer</td>
+                  <td className="p-4 border border-white/20 text-center text-white">R 5,999 / month</td>
+                  <td className="p-4 border border-white/20 text-center bg-white/10 text-white">R 14,999 / month</td>
+                  <td className="p-4 border border-white/20 text-center text-white/60">Custom</td>
                 </tr>
                 <tr>
-                  <td className="p-4 border border-border font-medium">Once-off setup</td>
-                  <td className="p-4 border border-border text-center">R 19,999</td>
-                  <td className="p-4 border border-border text-center bg-muted/40">R 49,999</td>
-                  <td className="p-4 border border-border text-center text-muted-foreground">Bespoke</td>
+                  <td className="p-4 border border-white/20 font-medium text-white">Once-off setup</td>
+                  <td className="p-4 border border-white/20 text-center text-white">R 19,999</td>
+                  <td className="p-4 border border-white/20 text-center bg-white/10 text-white">R 49,999</td>
+                  <td className="p-4 border border-white/20 text-center text-white/60">Bespoke</td>
                 </tr>
                 <tr>
-                  <td className="p-4 border border-border font-medium">Best for</td>
-                  <td className="p-4 border border-border text-center text-muted-foreground">Early-stage SMEs building structure</td>
-                  <td className="p-4 border border-border text-center bg-muted/40 text-muted-foreground">Scaling businesses that need systems aligned</td>
-                  <td className="p-4 border border-border text-center text-muted-foreground">Mid-market &amp; complex environments</td>
+                  <td className="p-4 border border-white/20 font-medium text-white">Best for</td>
+                  <td className="p-4 border border-white/20 text-center text-white/60">Early-stage SMEs building structure</td>
+                  <td className="p-4 border border-white/20 text-center bg-white/10 text-white/60">Scaling businesses that need systems aligned</td>
+                  <td className="p-4 border border-white/20 text-center text-white/60">Mid-market &amp; complex environments</td>
                 </tr>
                 <tr>
-                  <td className="p-4 border border-border font-medium">Workflows</td>
-                  <td className="p-4 border border-border text-center text-muted-foreground">1–2 structured workflows</td>
-                  <td className="p-4 border border-border text-center bg-muted/40 text-muted-foreground">Advanced multi-step workflows</td>
-                  <td className="p-4 border border-border text-center text-muted-foreground">Unlimited workflow design</td>
+                  <td className="p-4 border border-white/20 font-medium text-white">Workflows</td>
+                  <td className="p-4 border border-white/20 text-center text-white/60">1–2 structured workflows</td>
+                  <td className="p-4 border border-white/20 text-center bg-white/10 text-white/60">Advanced multi-step workflows</td>
+                  <td className="p-4 border border-white/20 text-center text-white/60">Unlimited workflow design</td>
                 </tr>
                 <tr>
-                  <td className="p-4 border border-border font-medium">Support</td>
-                  <td className="p-4 border border-border text-center text-muted-foreground">Business-hours support</td>
-                  <td className="p-4 border border-border text-center bg-muted/40 text-muted-foreground">Priority support</td>
-                  <td className="p-4 border border-border text-center text-muted-foreground">Dedicated support</td>
+                  <td className="p-4 border border-white/20 font-medium text-white">Support</td>
+                  <td className="p-4 border border-white/20 text-center text-white/60">Business-hours support</td>
+                  <td className="p-4 border border-white/20 text-center bg-white/10 text-white/60">Priority support</td>
+                  <td className="p-4 border border-white/20 text-center text-white/60">Dedicated support</td>
                 </tr>
                 <tr>
-                  <td className="p-4 border border-border font-medium">Advisory</td>
-                  <td className="p-4 border border-border text-center text-muted-foreground">—</td>
-                  <td className="p-4 border border-border text-center bg-muted/40 text-muted-foreground">Monthly optimisation call</td>
-                  <td className="p-4 border border-border text-center text-muted-foreground">Fractional CTO + developer oversight</td>
+                  <td className="p-4 border border-white/20 font-medium text-white">Advisory</td>
+                  <td className="p-4 border border-white/20 text-center text-white/60">—</td>
+                  <td className="p-4 border border-white/20 text-center bg-white/10 text-white/60">Monthly optimisation call</td>
+                  <td className="p-4 border border-white/20 text-center text-white/60">Fractional CTO + developer oversight</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <p className="text-center mt-8 text-sm text-muted-foreground italic">
+          <p className="text-center mt-8 text-sm text-white/50 italic">
             * Once-off setup fee covers workflow mapping, systems audit, integration configuration, and onboarding. Charged once at project start.
           </p>
-          <p className="text-center mt-8 text-sm">
+          <p className="text-center mt-8 text-sm text-white/80">
             Custom solutions are scoped based on complexity and impact. Clear milestones. No surprises.
           </p>
         </div>
       </div>
 
-      <div className="flex items-center justify-center py-40">
+      <div className="flex items-center justify-center py-20">
         <div className="max-w-screen-lg w-full px-6">
           <h2 className="text-3xl md:text-4xl md:leading-[3rem] font-bold tracking-tight text-center mx-auto">
             Integrations That Fit Your Stack
@@ -617,7 +629,7 @@ export default function Home() {
             Outcomes first. Tools second.
           </p>
           <p className="text-center mt-2">
-            If it has an API, webhook, inbox, spreadsheet, or database — we can usually connect it.
+            If it has an API, webhook, inbox, spreadsheet, or database — we can connect it.
           </p>
           <div className="mt-12 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
@@ -627,18 +639,18 @@ export default function Home() {
                     category: "Comms",
                     tools: [
                       { name: "WhatsApp", icon: "whatsapp" },
-                      { name: "Wati", icon: null },
-                      { name: "Twilio", icon: null },
-                      { name: "Gmail", icon: "gmail" },
+                      { name: "Wati", local: "wati" },
+                      { name: "Twilio", local: "twilio" },
+                      { name: "Gmail", local: "gmail" },
                     ],
                   },
                   {
                     category: "CRM / Sales",
                     tools: [
-                      { name: "Pipedrive", icon: null },
+                      { name: "Pipedrive", local: "pipedrive" },
                       { name: "HubSpot", icon: "hubspot" },
                       { name: "Zoho", icon: "zoho" },
-                      { name: "Attio", icon: null },
+                      { name: "Attio", local: "attio" },
                     ],
                   },
                   {
@@ -646,24 +658,24 @@ export default function Home() {
                     tools: [
                       { name: "Stripe", icon: "stripe" },
                       { name: "Xero", icon: "xero" },
-                      { name: "Sage", icon: null },
-                      { name: "Yoco", icon: null },
+                      { name: "Sage", icon: "sage" },
+                      { name: "Yoco", local: "yoco" },
                     ],
                   },
                   {
                     category: "E-commerce",
                     tools: [
                       { name: "Shopify", icon: "shopify" },
-                      { name: "WooCommerce", icon: "woocommerce" },
+                      { name: "WooCommerce", local: "woo" },
                     ],
                   },
                   {
                     category: "Support",
                     tools: [
-                      { name: "Freshdesk", icon: null },
+                      { name: "Freshworks", local: "freshworks" },
                       { name: "Zendesk", icon: "zendesk" },
                       { name: "Intercom", icon: "intercom" },
-                      { name: "Monday", icon: null },
+                      { name: "Monday", local: "monday" },
                     ],
                   },
                   {
@@ -679,8 +691,8 @@ export default function Home() {
                     category: "Productivity",
                     tools: [
                       { name: "Google Workspace", icon: "google" },
-                      { name: "Microsoft 365", icon: null },
-                      { name: "Slack", icon: null },
+                      { name: "Microsoft 365", local: "microsoft" },
+                      { name: "Slack", local: "slack" },
                       { name: "Mattermost", icon: "mattermost" },
                     ],
                   },
@@ -699,15 +711,21 @@ export default function Home() {
                     </td>
                     <td className="p-4 border border-border">
                       <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
-                        {tools.map(({ name, icon }) => (
+                        {tools.map(({ name, icon, local }: { name: string; icon?: string | null; local?: string }) => (
                           <div key={name} className="flex items-center gap-2">
-                            {icon && (
+                            {local ? (
+                              <img
+                                src={`/icons/${local}.svg`}
+                                alt={name}
+                                className="h-5 w-5 opacity-70 dark:invert"
+                              />
+                            ) : icon ? (
                               <img
                                 src={`https://cdn.simpleicons.org/${icon}`}
                                 alt={name}
                                 className="h-5 w-5 opacity-70 dark:invert"
                               />
-                            )}
+                            ) : null}
                             <span className="text-sm text-muted-foreground">{name}</span>
                           </div>
                         ))}
@@ -718,10 +736,10 @@ export default function Home() {
               </tbody>
             </table>
           </div>
-          <p className="text-center mt-12">
+          <p className="text-center mt-12 text-xl">
             <i className="text-muted-foreground">If it&apos;s not listed, we can likely connect it.</i>
           </p>
-          <p className="text-center mt-1 px-8">
+          <p className="text-center mt-1 px-8 text-xl">
             <Link href={process.env.NEXT_PUBLIC_LEAD_FORM_URL || ''} target="_blank" rel="noopener noreferrer" className="hover:underline">
               Want to find out if we can connect it. <span className="whitespace-nowrap">Reach out for a call <ArrowUpRight className="!h-5 !w-5 inline -mt-0.5" /></span>
             </Link>
@@ -729,7 +747,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex justify-center items-center px-6 pt-0 py-40">
+      <div className="flex justify-center items-center px-6">
         <div>
           <h2 className="mb-8 text-3xl md:text-4xl md:leading-[3rem] font-bold tracking-tight text-center mx-auto">
             What Clients Say
@@ -782,7 +800,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="faq" className="flex items-center justify-center px-6 py-40">
+      <div id="faq" className="flex items-center justify-center px-6 py-30">
         <div className="max-w-xl">
           <h2 className="mb-8 text-3xl md:text-4xl md:leading-[3rem] font-bold tracking-tight text-center mx-auto">
             Frequently Asked Questions
@@ -807,32 +825,36 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl md:leading-[3rem] font-bold tracking-tight text-center mx-auto">
             If Growth Feels Messy &mdash; Let&apos;s Fix It.
           </h2>
-          <p className="text-center mt-4">
+          <p className="text-center mt-4 text-xl">
             We&apos;ll identify:
           </p>
-          <ul className="mt-4 space-y-2 mx-auto max-w-md list-none">
-            <li className="flex items-center gap-2 justify-center">
-              <CircleCheckBigIcon className="h-4 w-4 text-green-500 shrink-0" />
-              <span>Where time is leaking</span>
-            </li>
-            <li className="flex items-center gap-2 justify-center">
-              <CircleCheckBigIcon className="h-4 w-4 text-green-500 shrink-0" />
-              <span>What should be automated</span>
-            </li>
-            <li className="flex items-center gap-2 justify-center">
-              <CircleCheckBigIcon className="h-4 w-4 text-green-500 shrink-0" />
-              <span>What should stay human</span>
-            </li>
-            <li className="flex items-center gap-2 justify-center">
-              <CircleCheckBigIcon className="h-4 w-4 text-green-500 shrink-0" />
-              <span>What should be built</span>
-            </li>
-            <li className="flex items-center gap-2 justify-center">
-              <CircleCheckBigIcon className="h-4 w-4 text-green-500 shrink-0" />
-              <span>What should be ignored</span>
-            </li>
-          </ul>
-          <p className="mt-12 text-center px-8">
+          <div className="mt-4 md:col-span-2 max-w-[390px] mx-auto w-full flex items-center gap-6 rounded-lg -mx-2 border py-5 pl-10 pr-15 shadow-sm bg-white">
+            <div>
+              <ul className="space-y-2 mx-auto max-w-md list-none">
+                <li className="flex items-center gap-2">
+                  <CircleCheckBigIcon className="h-4 w-4 text-green-500 shrink-0" />
+                  <span>Where time is leaking</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CircleCheckBigIcon className="h-4 w-4 text-green-500 shrink-0" />
+                  <span>What should be automated</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CircleCheckBigIcon className="h-4 w-4 text-green-500 shrink-0" />
+                  <span>What should stay human</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CircleCheckBigIcon className="h-4 w-4 text-green-500 shrink-0" />
+                  <span>What should be built</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CircleCheckBigIcon className="h-4 w-4 text-green-500 shrink-0" />
+                  <span>What should be ignored</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <p className="mt-8 text-center px-8">
             <span className="relative inline-block font-semibold text-xl">
               Clarity first. Execution second.
             </span>
