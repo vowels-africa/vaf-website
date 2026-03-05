@@ -501,7 +501,7 @@ export default function Home() {
             </ul>
           </div>
         </div>
-        <div className="flex items-center justify-center pt-30">
+        <div className="flex items-center justify-center pt-20">
           <div className="max-w-screen-lg w-full px-6">
             <h2 className="text-3xl md:text-4xl md:leading-[3rem] font-bold tracking-tight text-center mx-auto">
               What Changes After Working With Us
@@ -542,6 +542,25 @@ export default function Home() {
                 We create operational clarity.
               </span>
             </p>
+          </div>
+        </div>
+
+        <div className="mt-20 flex items-center justify-center px-6">
+          <div className="max-w-screen-lg w-full">
+            <div className="flex flex-col sm:flex-row items-stretch justify-center divide-y sm:divide-y-0 sm:divide-x divide-gray-200 border border-gray-200 rounded-xl shadow-sm bg-white overflow-hidden">
+              <div className="flex-1 flex flex-col items-center justify-center py-8 px-10 text-center">
+                <span className="text-4xl font-extrabold text-[#27ae60]">40%+</span>
+                <p className="mt-2 text-sm text-gray-500">Response rate improvement<br /><span className="font-medium">— Old Mutual MFC</span></p>
+              </div>
+              <div className="flex-1 flex flex-col items-center justify-center py-8 px-10 text-center">
+                <span className="text-4xl font-extrabold text-[#6c3adf]">50%</span>
+                <p className="mt-2 text-sm text-gray-500">Faster lead qualification<br /><span className="font-medium">— Starfish Solutions</span></p>
+              </div>
+              <div className="flex-1 flex flex-col items-center justify-center py-8 px-10 text-center">
+                <span className="text-4xl font-extrabold text-[#e67e22]">25hrs</span>
+                <p className="mt-2 text-sm text-gray-500">Reclaimed per week<br /><span className="font-medium">average across clients</span></p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
