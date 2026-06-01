@@ -6,7 +6,6 @@ import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { ArrowUpRight, Hand, CircleAlert, Server, Zap, Cable, Code2, BrainCircuit, CircleArrowRight, CircleCheck, StarIcon, CircleCheckBigIcon } from "lucide-react";
 import Link from "next/link";
@@ -565,77 +564,194 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="pricing" className="flex items-center justify-center py-30 bg-[#1e2b45] text-white">
-        <div className="max-w-screen-lg w-full px-6">
-          <h2 className="text-3xl md:text-4xl md:leading-[3rem] font-bold tracking-tight text-center mx-auto text-white">
-            We Keep It Simple
-          </h2>
-          <p className="text-center mt-4 text-white/80">
-            We don&apos;t sell hours. We remove operational friction.
-          </p>
-          <div className="mt-12 overflow-x-auto">
-            <table className="w-full border-collapse text-sm">
-              <thead>
-                <tr>
-                  <th className="text-left p-4 border border-white/20 font-normal text-white/50 w-[28%]"></th>
-                  <th className="text-center p-4 border border-white/20 w-[24%]">
-                    <span className="font-semibold text-base text-white">Starter</span>
-                  </th>
-                  <th className="text-center p-4 border border-white/20 bg-white/10 w-[24%]">
-                    <span className="font-semibold text-base text-white">Growth</span>
-                    <Badge className="ml-2 bg-[#69e3e3] hover:bg-[#69e3e3] text-xs rounded-full text-[#010c23]">★ Popular</Badge>
-                  </th>
-                  <th className="text-center p-4 border border-white/20 w-[24%]">
-                    <span className="font-semibold text-base text-white">Enterprise</span>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="p-4 border border-white/20 font-medium text-white">Monthly retainer</td>
-                  <td className="p-4 border border-white/20 text-center text-white">R 5,999 / month</td>
-                  <td className="p-4 border border-white/20 text-center bg-white/10 text-white">R 14,999 / month</td>
-                  <td className="p-4 border border-white/20 text-center text-white/60">Custom</td>
-                </tr>
-                <tr>
-                  <td className="p-4 border border-white/20 font-medium text-white">Once-off setup</td>
-                  <td className="p-4 border border-white/20 text-center text-white">R 19,999</td>
-                  <td className="p-4 border border-white/20 text-center bg-white/10 text-white">R 49,999</td>
-                  <td className="p-4 border border-white/20 text-center text-white/60">Bespoke</td>
-                </tr>
-                <tr>
-                  <td className="p-4 border border-white/20 font-medium text-white">Best for</td>
-                  <td className="p-4 border border-white/20 text-center text-white/60">Early-stage SMEs building structure</td>
-                  <td className="p-4 border border-white/20 text-center bg-white/10 text-white/60">Scaling businesses that need systems aligned</td>
-                  <td className="p-4 border border-white/20 text-center text-white/60">Mid-market &amp; complex environments</td>
-                </tr>
-                <tr>
-                  <td className="p-4 border border-white/20 font-medium text-white">Workflows</td>
-                  <td className="p-4 border border-white/20 text-center text-white/60">1–2 structured workflows</td>
-                  <td className="p-4 border border-white/20 text-center bg-white/10 text-white/60">Advanced multi-step workflows</td>
-                  <td className="p-4 border border-white/20 text-center text-white/60">Unlimited workflow design</td>
-                </tr>
-                <tr>
-                  <td className="p-4 border border-white/20 font-medium text-white">Support</td>
-                  <td className="p-4 border border-white/20 text-center text-white/60">Business-hours support</td>
-                  <td className="p-4 border border-white/20 text-center bg-white/10 text-white/60">Priority support</td>
-                  <td className="p-4 border border-white/20 text-center text-white/60">Dedicated support</td>
-                </tr>
-                <tr>
-                  <td className="p-4 border border-white/20 font-medium text-white">Advisory</td>
-                  <td className="p-4 border border-white/20 text-center text-white/60">—</td>
-                  <td className="p-4 border border-white/20 text-center bg-white/10 text-white/60">Monthly optimisation call</td>
-                  <td className="p-4 border border-white/20 text-center text-white/60">Fractional CTO + developer oversight</td>
-                </tr>
-              </tbody>
-            </table>
+      <div id="pricing" className="bg-[#1e2b45] text-white border-t border-white/10 border-b border-white/10">
+        <div className="max-w-screen-lg w-full mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
+
+          {/* Left — copy */}
+          <div>
+            <span className="text-xs font-semibold tracking-widest uppercase text-[#69e3e3] mb-4 block">Engagement</span>
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight tracking-tight">
+              Priced for the<br /><span className="text-[#69e3e3]">problem.</span><br />Not the hours.
+            </h2>
+            <p className="mt-5 text-white/70 leading-relaxed">
+              Every engagement is scoped around what your business actually needs — not a fixed package.
+            </p>
+            <p className="mt-3 text-white/70 leading-relaxed">
+              We start with a 20-minute clarity call, identify the friction, and propose a clean path forward.
+            </p>
           </div>
-          <p className="text-center mt-8 text-sm text-white/50 italic">
-            * Once-off setup fee covers workflow mapping, systems audit, integration configuration, and onboarding. Charged once at project start.
-          </p>
-          <p className="text-center mt-8 text-sm text-white/80">
-            Custom solutions are scoped based on complexity and impact. Clear milestones. No surprises.
-          </p>
+
+          {/* Right — tiers + CTA */}
+          <div className="flex flex-col gap-4">
+            <div className="rounded-xl border border-white/10 overflow-hidden divide-y divide-white/10">
+              {[
+                { name: "Early-stage & SMEs", desc: "Foundation building · structure & core automation" },
+                { name: "Scaling businesses", desc: "Systems alignment · integrations & reporting" },
+                { name: "Mid-market & complex", desc: "Full-stack · advisory, dev oversight & custom build" },
+              ].map(({ name, desc }) => (
+                <div key={name} className="flex items-center justify-between gap-4 px-5 py-4 bg-white/5 hover:bg-white/8 transition-colors">
+                  <span className="font-semibold text-sm text-white whitespace-nowrap">{name}</span>
+                  <span className="text-sm text-white/50 text-right">{desc}</span>
+                </div>
+              ))}
+              <div className="flex items-center justify-between gap-4 px-5 py-4 bg-[#69e3e3]/10 hover:bg-[#69e3e3]/15 transition-colors">
+                <span className="font-semibold text-sm text-[#69e3e3] whitespace-nowrap">Not sure where you fit?</span>
+                <span className="text-sm text-[#69e3e3]/80 text-right">20 minutes. We&apos;ll tell you exactly where to start →</span>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-3">
+              <Button asChild className="rounded-lg bg-[#e8890e] hover:bg-[#f1951e] cursor-pointer w-full justify-center">
+                <Link href={process.env.NEXT_PUBLIC_LEAD_FORM_URL || ''} target="_blank" rel="noopener noreferrer">
+                  Book a 20-Minute Clarity Call <ArrowUpRight className="!h-4 !w-4" />
+                </Link>
+              </Button>
+<p className="text-xs text-white/30 text-center">Clear milestones. Transparent scope. No surprises.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {/* AI Transformation Section */}
+      <div className="bg-[#010c23] text-white border-t border-white/10 relative overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-30 pointer-events-none"
+          style={{
+            backgroundImage: "radial-gradient(circle, rgba(105,227,227,0.18) 1px, transparent 1px)",
+            backgroundSize: "36px 36px",
+          }}
+        />
+        <div className="absolute inset-0 pointer-events-none"
+          style={{ background: "radial-gradient(ellipse 900px 500px at 50% 0%, rgba(105,227,227,0.05) 0%, transparent 65%)" }}
+        />
+
+        <div className="relative z-10 max-w-screen-lg w-full mx-auto px-6 py-24">
+
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <div className="inline-flex items-center gap-2 border border-[#69e3e3]/30 bg-[#69e3e3]/10 text-[#69e3e3] text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#69e3e3] animate-pulse" />
+              AI Transformation
+            </div>
+            <h2 className="text-3xl md:text-4xl md:leading-tight font-bold tracking-tight">
+              We don&apos;t just advise on AI.<br />We <span className="text-[#69e3e3]">build it in.</span>
+            </h2>
+            <p className="mt-5 text-white/60 text-lg leading-relaxed">
+              Most consultancies tell you what AI could do for your business. We implement it. Agents, automations, and AI-powered systems — live in your stack, not on a slide deck.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-[1fr_auto_1fr] border border-white/10 rounded-xl overflow-hidden mb-14">
+            <div className="p-8 bg-white/5 opacity-50 md:border-r border-white/10">
+              <p className="text-xs font-bold tracking-widest uppercase text-white/40 mb-5">Most AI consultancies</p>
+              <ul className="space-y-3 text-sm text-white/60">
+                {["AI strategy workshops", "Readiness assessments", "Slide decks and roadmaps", "Capability training sessions", "Hand you back to your team"].map(item => (
+                  <li key={item} className="flex items-start gap-2"><span className="mt-0.5 text-white/20">✕</span>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="flex items-center justify-center px-6 py-4 bg-[#010c23] border-t border-b md:border-t-0 md:border-b-0 md:border-r border-white/10">
+              <span className="text-xs font-bold tracking-widest uppercase text-white/15">vs</span>
+            </div>
+            <div className="p-8 bg-[#69e3e3]/5 border-t md:border-t-0 border-[#69e3e3]/20">
+              <p className="text-xs font-bold tracking-widest uppercase text-[#69e3e3] mb-5">Vowels Africa</p>
+              <ul className="space-y-3 text-sm text-white/90">
+                {["AI agents built and deployed", "Live automations in your stack", "Real integrations, not concepts", "Systems that run independently", "We run it until you're ready"].map(item => (
+                  <li key={item} className="flex items-start gap-2"><span className="mt-0.5 text-[#69e3e3]">✓</span>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 border border-white/10 rounded-xl overflow-hidden mb-10"
+            style={{ background: "rgba(255,255,255,0.02)" }}>
+            {[
+              {
+                num: "01", icon: "🤖", title: "AI Agent Deployment",
+                desc: "Custom AI agents built and deployed into your existing workflows. WhatsApp, CRM, support, internal ops — autonomous, accurate, always on.",
+                tags: ["n8n", "Flowise", "WhatsApp", "Custom LLMs"],
+                highlight: false,
+              },
+              {
+                num: "02", icon: "⚡", title: "Intelligent Process Automation",
+                desc: "AI-powered workflows that don't just automate — they decide. Triage, route, respond, escalate, and report without human intervention.",
+                tags: ["Make", "n8n", "AI routing", "Smart triggers"],
+                highlight: true,
+              },
+              {
+                num: "03", icon: "📊", title: "AI-Powered Dashboards",
+                desc: "Intelligence that surfaces the right insight at the right time. Natural language queries. Anomaly detection. Automated reporting.",
+                tags: ["Metabase", "BigQuery", "NLP queries"],
+                highlight: false,
+              },
+              {
+                num: "04", icon: "💬", title: "Conversational AI",
+                desc: "AI-first customer and internal communication. WhatsApp bots, support agents, onboarding flows — trained on your business data.",
+                tags: ["RAG", "Fine-tuning", "Knowledge bases"],
+                highlight: false,
+              },
+              {
+                num: "05", icon: "🎯", title: "AI Readiness & Strategy",
+                desc: "Before we build, we assess. We map your processes, identify the highest-value AI opportunities, and sequence implementation for maximum ROI.",
+                tags: ["Process audit", "Use case map", "ROI modelling"],
+                highlight: false,
+              },
+              {
+                num: "06", icon: "🛡️", title: "Responsible AI Governance",
+                desc: "Policy, data privacy, human-in-the-loop safeguards, and POPIA compliance built into every AI system we deploy. Safe by design.",
+                tags: ["POPIA", "Data governance", "Human oversight"],
+                highlight: false,
+              },
+            ].map(({ num, icon, title, desc, tags, highlight }) => (
+              <div
+                key={num}
+                className={`p-7 border-b border-r border-white/8 last:border-b-0 ${highlight ? "bg-[#69e3e3]/5 border-[#69e3e3]/20" : "bg-[#010c23]/40"}`}
+              >
+                <p className={`text-xs font-bold tracking-widest uppercase mb-3 ${highlight ? "text-[#69e3e3]" : "text-white/30"}`}>{num}</p>
+                <span className="text-2xl mb-3 block">{icon}</span>
+                <h3 className="font-semibold text-base text-white mb-2 leading-snug">{title}</h3>
+                <p className="text-sm text-white/50 leading-relaxed mb-4">{desc}</p>
+                <div className="flex flex-wrap gap-1.5">
+                  {tags.map(tag => (
+                    <span
+                      key={tag}
+                      className={`text-xs px-2.5 py-0.5 rounded-full border ${highlight ? "bg-[#69e3e3]/10 text-[#69e3e3] border-[#69e3e3]/30" : "bg-white/5 text-white/40 border-white/10"}`}
+                    >{tag}</span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 border border-white/10 rounded-xl overflow-hidden mb-12">
+            {[
+              { num: "01", title: "Assess", desc: "Map your processes. Find where AI delivers the most value, fastest." },
+              { num: "02", title: "Prototype", desc: "Build a working proof of concept in days, not months." },
+              { num: "03", title: "Deploy", desc: "Integrate into your live stack. Real systems, real users, real results." },
+              { num: "04", title: "Sustain", desc: "Monitor, improve, and hand over when you're ready to run it independently." },
+            ].map(({ num, title, desc }) => (
+              <div key={num} className="p-6 text-center bg-[#010c23]/40 border-b border-r border-white/8 last:border-r-0">
+                <div className="text-4xl font-bold text-[#69e3e3]/10 mb-2">{num}</div>
+                <h4 className="text-xs font-bold uppercase tracking-widest text-white mb-2">{title}</h4>
+                <p className="text-xs text-white/40 leading-relaxed">{desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8 p-9 rounded-xl border border-[#69e3e3]/20 bg-[#69e3e3]/5">
+            <div>
+              <h3 className="text-xl font-bold text-white mb-2 leading-snug">Ready to put AI to work — not just on paper?</h3>
+              <p className="text-sm text-white/50 leading-relaxed max-w-md">
+                Book a 20-minute call. We&apos;ll identify the one AI implementation that would have the biggest impact on your business right now.
+              </p>
+            </div>
+            <Button asChild className="rounded-lg bg-[#e8890e] hover:bg-[#f1951e] cursor-pointer shrink-0">
+              <Link href={process.env.NEXT_PUBLIC_LEAD_FORM_URL || ''} target="_blank" rel="noopener noreferrer">
+                Book an AI Discovery Call <ArrowUpRight className="!h-4 !w-4" />
+              </Link>
+            </Button>
+          </div>
+
         </div>
       </div>
 
