@@ -174,6 +174,8 @@ export default function Home() {
               pauseOnHover
               className="[--duration:20s] [&_img]:mr-20 mask-x-from-70% mask-x-to-90%"
             >
+              <img src="/invnt.png" className="h-16" alt="INVNT Group" title="INVNT Group" />
+              <img src="/ryyva.png" className="h-16" alt="Ryyva AI" title="Ryyva AI" />
               <img src="/samsguide.png" className="h-16" alt="Sams Guide" title="Sams Guide" />
               <img src="/apex.png" className="h-16" alt="Apex Partner Solutions" title="Apex Partner Solutions" />
               <img src="/sam_co.png" className="h-16" alt="Sam & Co" title="Sam & Co" />
@@ -723,7 +725,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 border border-white/10 rounded-xl overflow-hidden mb-12">
+          {/* <div className="grid sm:grid-cols-2 lg:grid-cols-4 border border-white/10 rounded-xl overflow-hidden mb-12">
             {[
               { num: "01", title: "Assess", desc: "Map your processes. Find where AI delivers the most value, fastest." },
               { num: "02", title: "Prototype", desc: "Build a working proof of concept in days, not months." },
@@ -736,7 +738,7 @@ export default function Home() {
                 <p className="text-xs text-white/40 leading-relaxed">{desc}</p>
               </div>
             ))}
-          </div>
+          </div> */}
 
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 p-9 rounded-xl border border-[#69e3e3]/20 bg-[#69e3e3]/5">
             <div>
