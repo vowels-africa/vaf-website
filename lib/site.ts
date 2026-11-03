@@ -12,9 +12,31 @@ export const SITE_URL = (() => {
 /** Every "Book a 20-min call" button points here. */
 export const BOOK_PATH = "/book";
 
-/** The live booking form (Tally). The Book page sends visitors here. */
+/** The live booking form (Tally) on its own page. Used as the no-JavaScript fallback. */
 export const LEAD_FORM_URL =
   process.env.NEXT_PUBLIC_LEAD_FORM_URL || "https://discover.vowels.africa/";
+
+/**
+ * The same Tally form, embedded on the Book page. It must be the tally.so address:
+ * Tally's embed script only follows the form's "redirect on completion" to
+ * /thank-you (where the Google Ads / GA4 lead conversion fires) for tally.so embeds.
+ */
+export const TALLY_FORM_ID = "wgExGM";
+
+/**
+ * Contact details shown in the footer. Leave a value empty ("") to show a yellow
+ * placeholder instead. Fill these in once confirmed.
+ */
+export const CONTACT = {
+  email: "", // e.g. "hello@vowels.africa"
+  phone: "", // shown as written, e.g. "+27 21 000 0000"
+  whatsapp: "", // international digits only, e.g. "27210000000"; adds a WhatsApp link
+  linkedin: "", // full URL, e.g. "https://www.linkedin.com/company/vowels-africa"
+  location: "", // e.g. "Cape Town, South Africa"
+};
+
+/** Time zone shown on the Book page. Carried over from the previous site. */
+export const CALL_TIMEZONE = "Johannesburg time (SAST, UTC+2)";
 
 export const NAV = [
   { href: "/services", label: "Services" },

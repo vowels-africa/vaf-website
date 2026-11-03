@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Testimonial } from "@/components/site/testimonial";
-import { LEAD_FORM_URL } from "@/lib/site";
+import { TallyForm } from "@/components/site/tally-form";
+import { CALL_TIMEZONE, LEAD_FORM_URL, TALLY_FORM_ID } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Book a 20-min Call | Vowels Africa",
@@ -27,13 +28,13 @@ export default function BookPage() {
               20 minutes to clarity.
             </h1>
             <p className="lead">
-              Pick a time that suits you. We come prepared to find where time and revenue are
-              leaking. You leave with 2–3 concrete improvements, whether we work together
-              or&nbsp;not.
+              Tell us a little about your business and we’ll set a time that suits you. We come
+              prepared to find where time and revenue are leaking. You leave with 2–3 concrete
+              improvements, whether we work together or&nbsp;not.
             </p>
             <ul className="plist" style={{ marginTop: "32px" }}>
               <li>
-                <span>01</span>Pick a time
+                <span>01</span>Tell us what’s slowing you down
               </li>
               <li>
                 <span>02</span>We look at your setup before we talk
@@ -44,35 +45,33 @@ export default function BookPage() {
             </ul>
           </div>
           {/*
-            The design's calendar was a mock. Until Cal.com or Calendly is connected,
-            this card sends visitors to the live Tally booking form (NEXT_PUBLIC_LEAD_FORM_URL).
+            The design's calendar was a mock. This card embeds the live Tally form
+            (TALLY_FORM_ID in lib/site.ts). Its look inside the frame is set in Tally:
+            see docs/tally-form-styling.md.
           */}
-          <div className="sched book-card">
+          <div className="sched form-card">
             <div className="sched-h">
               <div>
                 <b>20-min clarity call</b>
                 <br />
-                Video call · <span className="ph">[Timezone]</span>
+                Video call · {CALL_TIMEZONE}
               </div>
             </div>
-            <div className="book-card-b">
-              <p>
-                Tell us a little about your business and choose a time that suits you. It takes
-                about two minutes.
-              </p>
-              <ul className="ticks">
-                <li>Free, with no obligation</li>
-                <li>We review your setup before the call</li>
-                <li>You leave with 2–3 concrete improvements</li>
-              </ul>
-              <a className="btn btn-p" href={LEAD_FORM_URL}>
-                Choose a time <span className="arr" aria-hidden="true">→</span>
-              </a>
-              <p className="book-card-fine">
-                We only use your details to arrange the call. See our{" "}
-                <Link href="/privacy">privacy policy</Link>.
-              </p>
+            <div className="form-card-b">
+              <TallyForm formId={TALLY_FORM_ID} title="Request a call" />
+              <noscript>
+                <a className="btn btn-p" href={LEAD_FORM_URL}>
+                  Open the booking form{" "}
+                  <span className="arr" aria-hidden="true">
+                    →
+                  </span>
+                </a>
+              </noscript>
             </div>
+            <p className="form-card-fine">
+              We only use your details to arrange the call. See our{" "}
+              <Link href="/privacy">privacy policy</Link>.
+            </p>
           </div>
         </div>
       </section>

@@ -33,12 +33,18 @@
 .article-cta .kicker{color:var(--orange)}
 .article-cta p{font-family:var(--serif);font-size:clamp(24px,2.4vw,30px);line-height:1.2}
 
-/* Book page: card that links to the live booking form */
-.book-card-b{padding:clamp(22px,3vw,30px);display:grid;gap:20px}
-.book-card-b>p:first-child{color:var(--muted);font-size:17px}
-.book-card-b .ticks{grid-template-columns:1fr}
-.book-card-b .btn{justify-self:start}
-.book-card-fine{font-size:13px;color:var(--muted)}
+
+/* Footer: give plain-text contact rows the same rhythm as links */
+.ftr li>span{display:inline-block;padding:10px 0}
+
+/* Book page: dark card holding the embedded Tally form */
+.form-card{background:var(--ink);border-color:var(--ink-3);color:#fff;box-shadow:0 30px 60px -40px rgba(2,13,36,.6)}
+.form-card .sched-h{border-color:var(--line-d);color:var(--muted-d)}
+.form-card .sched-h b{color:#fff}
+.form-card-b{padding:clamp(18px,2.6vw,28px) clamp(18px,2.6vw,28px) 12px}
+.form-card iframe{display:block;width:100%;border:0;min-height:560px;color-scheme:normal}
+.form-card-fine{padding:0 clamp(18px,2.6vw,28px) 22px;font-size:13px;color:var(--muted-d)}
+.form-card-fine a{color:#fff}
 
 /* Simple centred message pages (thank you, not found) */
 .msg{min-height:calc(100vh - 72px - 160px);display:flex;align-items:center}

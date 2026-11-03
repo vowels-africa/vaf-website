@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BOOK_PATH, NAV, SERVICES } from "@/lib/site";
+import { BOOK_PATH, CONTACT, NAV, SERVICES } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -17,7 +17,10 @@ export function Footer() {
             />
             <p className="tag">Clarity first. Execution second.</p>
             <Link className="btn btn-p" href={BOOK_PATH}>
-              Book a 20-min call <span className="arr" aria-hidden="true">→</span>
+              Book a 20-min call{" "}
+              <span className="arr" aria-hidden="true">
+                →
+              </span>
             </Link>
           </div>
           <div>
@@ -45,25 +48,46 @@ export function Footer() {
           </div>
           <div>
             <h4>Contact</h4>
-            {/* TODO: replace placeholders with confirmed contact details */}
+            {/* Contact details are set in CONTACT in lib/site.ts */}
             <ul>
               <li>
-                <a href="#">
-                  <span className="ph">[hello@vowels.africa – confirm]</span>
-                </a>
+                {CONTACT.email ? (
+                  <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
+                ) : (
+                  <span className="ph">[Email]</span>
+                )}
               </li>
               <li>
-                <a href="#">
-                  <span className="ph">[Phone / WhatsApp]</span>
-                </a>
+                {CONTACT.phone ? (
+                  <a href={`tel:${CONTACT.phone.replace(/[^\d+]/g, "")}`}>{CONTACT.phone}</a>
+                ) : (
+                  <span className="ph">[Phone]</span>
+                )}
+              </li>
+              {CONTACT.whatsapp && (
+                <li>
+                  <a href={`https://wa.me/${CONTACT.whatsapp}`} target="_blank" rel="noopener">
+                    WhatsApp
+                  </a>
+                </li>
+              )}
+              <li>
+                {CONTACT.linkedin ? (
+                  <a href={CONTACT.linkedin} target="_blank" rel="noopener">
+                    LinkedIn
+                  </a>
+                ) : (
+                  <span>
+                    LinkedIn <span className="ph">[URL]</span>
+                  </span>
+                )}
               </li>
               <li>
-                <a href="#">
-                  LinkedIn <span className="ph">[URL]</span>
-                </a>
-              </li>
-              <li>
-                <span className="ph">[City, Country]</span>
+                {CONTACT.location ? (
+                  <span>{CONTACT.location}</span>
+                ) : (
+                  <span className="ph">[City, Country]</span>
+                )}
               </li>
             </ul>
           </div>
@@ -87,7 +111,8 @@ export function LandingFooter() {
         <div className="ftr-b" style={{ marginTop: 0, borderTop: 0, paddingTop: 0 }}>
           <span>© {new Date().getFullYear()} Vowels Africa. All rights reserved.</span>
           <span>
-            <Link href="/">vowels.africa</Link> · <Link href="/privacy">Privacy policy (POPIA)</Link>
+            <Link href="/">vowels.africa</Link> ·{" "}
+            <Link href="/privacy">Privacy policy (POPIA)</Link>
           </span>
         </div>
       </div>
