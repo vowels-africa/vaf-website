@@ -36,44 +36,20 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-      <section className="sec">
-        {/* No team photo by design: heading on the left, story on the right. */}
-        <div className="wrap two">
-          <div className="rv">
-            <span className="kicker">Our story</span>
-            <h2 className="h2" style={{ marginTop: "20px" }}>
-              Built for the moment growth gets messy.
-            </h2>
-          </div>
-          <div className="rv">
-            <p className="lead" style={{ color: "var(--muted)", maxWidth: "none" }}>
+      <section className="sec white">
+        <div className="wrap">
+          <div className="sec-head split">
+            <div>
+              <span className="kicker">Who we work with</span>
+              <h2 className="h2" style={{ marginTop: "20px" }}>
+                Built for growth-stage businesses
+              </h2>
+            </div>
+            <p className="lead" style={{ maxWidth: "46ch" }}>
               More customers, more staff, more tools, more admin. Suddenly everything feels slow and
               reactive. Vowels Africa exists to fix that: the outsourced IT, automation and
               technical leadership growing businesses rarely have in-house.
             </p>
-            <div style={{ marginTop: "28px", display: "grid", gap: "10px", fontSize: "16px" }}>
-              <p>
-                Founded <span className="ph">[Year]</span> in <span className="ph">[City]</span> by{" "}
-                <span className="ph">[Founder name]</span>,{" "}
-                <span className="ph">[Founder role]</span>.
-              </p>
-              <p>
-                <span className="ph">[2–3 line founder bio and relevant experience]</span>
-              </p>
-              <p>
-                Team: <span className="ph">[Team size / key people]</span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="sec white" style={{ borderTop: "1px solid var(--line)" }}>
-        <div className="wrap">
-          <div className="sec-head">
-            <span className="kicker">Who we work with</span>
-            <h2 className="h2" style={{ marginTop: "20px" }}>
-              Built for growth-stage businesses
-            </h2>
           </div>
           <div className="values">
             <div className="rv">

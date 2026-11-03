@@ -22,6 +22,16 @@ body[data-iframe-size] .tally-form-logo {
   font-weight: 600 !important;
   color: #ffffff !important;
 }
+/* Question titles (e.g. the careers CV upload) styled and spaced like labels, so fields line up */
+.tally-block-title .title-content {
+  padding: 10px 0 8px !important;
+}
+.tally-block-title h3 {
+  font-size: 14px !important;
+  line-height: 22.652px !important;
+  font-weight: 600 !important;
+  color: #ffffff !important;
+}
 .tally-required-indicator {
   background: transparent !important;
   color: #f59a23 !important;
