@@ -78,7 +78,7 @@ const CASE_NOTES: {
     id: "case-appi",
     label: "Product · Appi",
     title: "Appi · WhatsApp AI teammate",
-    note: "One WhatsApp number your field team can ask anything. It answers, files requests, keeps records and coaches every week. R299 per field agent a month.",
+    note: "One WhatsApp number your field team can ask anything. It answers, files requests, keeps records and coaches every week.",
     built: [
       "Four specialists behind one number: knowledge, action, records and coaching",
       "An industry switcher and live demo, so every buyer sees their own version",
