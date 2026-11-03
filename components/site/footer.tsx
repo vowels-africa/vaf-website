@@ -42,6 +42,9 @@ export function Footer() {
                 </li>
               ))}
               <li>
+                <Link href="/careers">Careers</Link>
+              </li>
+              <li>
                 <Link href={BOOK_PATH}>Book a 20-min call</Link>
               </li>
             </ul>

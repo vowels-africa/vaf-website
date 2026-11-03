@@ -3,9 +3,7 @@
 /** Public site URL, used for canonical links, sitemap and social previews. */
 export const SITE_URL = (() => {
   const raw =
-    process.env.NEXT_PUBLIC_APP_URL ||
-    process.env.VERCEL_PROJECT_PRODUCTION_URL ||
-    "vowels.africa";
+    process.env.NEXT_PUBLIC_APP_URL || process.env.VERCEL_PROJECT_PRODUCTION_URL || "vowels.africa";
   return raw.startsWith("http") ? raw : `https://${raw}`;
 })();
 
@@ -24,11 +22,19 @@ export const LEAD_FORM_URL =
 export const TALLY_FORM_ID = "wgExGM";
 
 /**
+ * Tally form for job applications (CV upload), embedded on /careers.
+ * It must NOT redirect to a URL containing "thank-you": that fires the sales-lead
+ * conversion in Google Tag Manager. Notifications go to discover@vowels.africa with the
+ * subject "New job application".
+ */
+export const CAREERS_FORM_ID = "WJ2bPP";
+
+/**
  * Contact details shown in the footer. Leave a value empty ("") to show a yellow
  * placeholder instead. Fill these in once confirmed.
  */
 export const CONTACT = {
-  email: "", // e.g. "hello@vowels.africa"
+  email: "discover@vowels.africa", // the reply-to address on the Tally lead forms
   phone: "", // shown as written, e.g. "+27 21 000 0000"
   whatsapp: "", // international digits only, e.g. "27210000000"; adds a WhatsApp link
   linkedin: "", // full URL, e.g. "https://www.linkedin.com/company/vowels-africa"

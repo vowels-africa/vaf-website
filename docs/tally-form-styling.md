@@ -51,3 +51,17 @@ with the six on the new site:
 
 Submissions from before that date still carry the old names. If anything downstream filters on
 the service value (email rules, a CRM, a sheet), make sure it handles the new names.
+
+## Careers form (job applications)
+
+`/careers` embeds a second Tally form, **Job application** (form ID `WJ2bPP`, set as
+`CAREERS_FORM_ID` in `lib/site.ts`). It was duplicated from the lead form on 3 Nov 2026, so it
+has the same styling, consent box and captcha.
+
+- Fields: name, email, phone, CV upload (required), years of experience, LinkedIn or portfolio
+  link, role (required), why this role (required), consent.
+- **No redirect on completion.** Keep it that way: redirecting to `/thank-you` would fire the
+  sales-lead conversion in Tag Manager. Applicants see Tally's own thank-you message instead.
+- Notifications go to discover@vowels.africa with the subject "New job application".
+  The automatic email to the applicant is switched off.
+- Role options must match the role titles in `lib/careers.ts`.
