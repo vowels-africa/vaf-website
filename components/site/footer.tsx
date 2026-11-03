@@ -60,13 +60,12 @@ export function Footer() {
                   <span className="ph">[Email]</span>
                 )}
               </li>
-              <li>
-                {CONTACT.phone ? (
+              {/* Phone is hidden until a number is set in CONTACT */}
+              {CONTACT.phone && (
+                <li>
                   <a href={`tel:${CONTACT.phone.replace(/[^\d+]/g, "")}`}>{CONTACT.phone}</a>
-                ) : (
-                  <span className="ph">[Phone]</span>
-                )}
-              </li>
+                </li>
+              )}
               {CONTACT.whatsapp && (
                 <li>
                   <a href={`https://wa.me/${CONTACT.whatsapp}`} target="_blank" rel="noopener">
