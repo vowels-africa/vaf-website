@@ -36,10 +36,11 @@ button border radius `24`, button height `48`.
 **Custom CSS:** paste the contents of [`tally-form.css`](tally-form.css). It sets the font, fields,
 button and consent tick to the site's style, and hides the large logo only inside the website embed.
 
-## Content worth updating
+## Services dropdown
 
-The **Services** dropdown still lists the old services (Cloud & Data Platforms, AI & Advanced
-Analytics, Business Applications, Modernisation Services, Resourcing & Support). The new site offers:
+Updated and published on 3 Nov 2026. It replaced the old services (Cloud & Data Platforms,
+AI & Advanced Analytics, Business Applications, Modernisation Services, Resourcing & Support)
+with the six on the new site:
 
 - Managed IT
 - Automation
@@ -48,5 +49,5 @@ Analytics, Business Applications, Modernisation Services, Resourcing & Support).
 - Fractional CTO & CPO
 - Private AI agents
 
-If anything downstream filters on the old values (email rules, a CRM, a sheet), update it at the
-same time.
+Submissions from before that date still carry the old names. If anything downstream filters on
+the service value (email rules, a CRM, a sheet), make sure it handles the new names.
