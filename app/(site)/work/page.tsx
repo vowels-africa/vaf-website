@@ -18,6 +18,76 @@ export const metadata: Metadata = {
   },
 };
 
+/**
+ * Case notes. Keep them light and outcome-first: one or two sentences on what changed
+ * for the client, then up to four short "What we built" bullets.
+ */
+const CASE_NOTES: {
+  id?: string;
+  label: string;
+  title: string;
+  note: string;
+  built?: string[];
+  cta?: boolean;
+}[] = [
+  {
+    id: "case-cafe",
+    label: "WhatsApp concierge",
+    title: "Café & bistro brand · WhatsApp concierge",
+    note: "Customers get instant, on-brand answers on WhatsApp, day and night. Anything sensitive, like allergens, goes straight to a person.",
+    built: [
+      "A warm concierge persona that’s honest about being AI",
+      "Answers drawn only from the brand’s own handbooks",
+      "Clear hand-offs to staff for allergen and sensitive questions",
+      "A plan to add orders, payments, delivery and reservations",
+    ],
+  },
+  {
+    id: "case-ryyva",
+    label: "Strategy, product & brand",
+    title: "Ryyva · Product suite & brand",
+    note: "We turned a complex AI engine into three products a buyer understands in one read.",
+    built: [
+      "Three products, one brand: Loom, Thread and Weave",
+      "Positioning as the intelligence layer above existing systems",
+      "A phased blueprint for its first luxury deployment",
+    ],
+  },
+  {
+    label: "Lead generation tool",
+    title: "Starfish Solutions · Lead qualification",
+    note: "Their sales team now qualifies leads in half the time, using a tool built around how they actually work.",
+  },
+  {
+    id: "case-leadforms",
+    label: "Lead generation platform",
+    title: "Leadforms · Opted-in leads",
+    note: "Leads that chose to hear from you, arrive scored for warmth and come with consent on record. A proof of concept is agreed in principle with a major SA life insurer.",
+    built: [
+      "Short, engaging surveys across 10 verticals",
+      "Four-signal scoring, so the warmest leads get called first",
+      "Sandy, a WhatsApp agent that brings respondents in",
+    ],
+  },
+  {
+    label: "Engagement process",
+    title: "Old Mutual MFC · Broker engagement",
+    note: "Response rates across Old Mutual MFC’s broker and franchise network rose by more than 40%, through one joined-up, multi-channel process.",
+  },
+  {
+    id: "case-appi",
+    label: "Product · Appi",
+    title: "Appi · WhatsApp AI teammate",
+    note: "One WhatsApp number your field team can ask anything. It answers, files requests, keeps records and coaches every week. R299 per field agent a month.",
+    built: [
+      "Four specialists behind one number: knowledge, action, records and coaching",
+      "An industry switcher and live demo, so every buyer sees their own version",
+      "A complete brand, from mascot to WhatsApp profile",
+    ],
+    cta: true,
+  },
+];
+
 export default function WorkPage() {
   return (
     <>
@@ -75,15 +145,14 @@ export default function WorkPage() {
                   <circle cx="41" cy="16" r="3" fill="var(--orange)" stroke="var(--orange)" />
                 </svg>
                 <span className="clabel">
-                  <span className="nw">WhatsApp concierge ·</span>{" "}
-                  <span className="nw">In production</span>
+                  <span className="nw">WhatsApp concierge</span>
                 </span>
               </div>
               <div className="cbody">
                 <h3 className="ctitle">A WhatsApp concierge for a global café brand</h3>
                 <p className="csum">
-                  A WhatsApp concierge for a premium global café and bistro brand’s SA operation,
-                  live and grounded in its handbooks.
+                  Instant, on-brand answers for customers, day and night, with a person for anything
+                  sensitive.
                 </p>
                 <a className="tlink cmore" href="#case-cafe">
                   Read the case →
@@ -115,8 +184,7 @@ export default function WorkPage() {
               <div className="cbody">
                 <h3 className="ctitle">Product suite and brand for Ryyva</h3>
                 <p className="csum">
-                  Strategy, product architecture and brand for Ryyva, an SA agentic platform, from
-                  positioning to its first luxury deployment.
+                  A complex AI engine turned into three products a buyer understands in one read.
                 </p>
                 <a className="tlink cmore" href="#case-ryyva">
                   Read the case →
@@ -146,12 +214,7 @@ export default function WorkPage() {
               <div className="cbody">
                 <h3 className="ctitle">Opted-in leads, scored for warmth</h3>
                 <p className="csum">
-                  A survey-led lead platform (leadforms.co.za) with a WhatsApp agent, four-signal
-                  scoring and SA consent rules built in.
-                </p>
-                <p className="cblurb">
-                  Delivered end to end, with a PoC secured in principle with a major SA life
-                  insurer’s distribution channel.
+                  Leads that asked to hear from you, scored for warmth and consent-ready.
                 </p>
                 <a className="tlink cmore" href="#case-leadforms">
                   Read the case →
@@ -184,12 +247,7 @@ export default function WorkPage() {
               <div className="cbody">
                 <h3 className="ctitle">Appi, a WhatsApp AI teammate for field teams</h3>
                 <p className="csum">
-                  A white-label WhatsApp AI teammate for field forces, taken from one client’s bot
-                  to a product with its own brand and pricing.
-                </p>
-                <p className="cblurb">
-                  Appi: one WhatsApp number that answers, files, records and coaches your field
-                  team. R299 per field agent a&nbsp;month.
+                  One WhatsApp number that answers, files, records and coaches your field team.
                 </p>
                 <a className="tlink cmore" href="#case-appi">
                   Read the case →
@@ -230,339 +288,38 @@ export default function WorkPage() {
             </h2>
           </div>
           <div className="cnotes">
-            <article className="cn rv" id="case-cafe">
-              <div className="cn-h">
-                <span className="clabel">WhatsApp concierge · In production</span>
-                <h3 className="h3">Café &amp; bistro brand (unnamed) · WhatsApp concierge</h3>
-              </div>
-              <div className="cn-b">
-                <p className="cn-note">
-                  A production WhatsApp concierge for a premium global café and bistro brand’s SA
-                  operation that escalates allergen and sensitive queries to staff.
-                </p>
-                <details className="cd">
-                  <summary>Full case: challenge, build, result</summary>
-                  <div className="cd-in">
-                    <p className="cd-hl">
-                      A concierge that knows the menu, speaks in the brand’s voice and knows when to
-                      hand&nbsp;over.
+            {CASE_NOTES.map((c) => (
+              <article className="cn rv" id={c.id} key={c.title}>
+                <div className="cn-h">
+                  <span className="clabel">{c.label}</span>
+                  <h3 className="h3">{c.title}</h3>
+                </div>
+                <div className="cn-b">
+                  <p className="cn-note">{c.note}</p>
+                  {c.built && (
+                    <details className="cd">
+                      <summary>What we built</summary>
+                      <div className="cd-in">
+                        <div className="cd-g">
+                          <ul>
+                            {c.built.map((item) => (
+                              <li key={item}>{item}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    </details>
+                  )}
+                  {c.cta && (
+                    <p className="cd-cta">
+                      <Link className="tlink" href="/book">
+                        Book a 20-min call →
+                      </Link>
                     </p>
-                    <div className="cd-g">
-                      <div>
-                        <h4>Challenge</h4>
-                        <ul>
-                          <li>The brand’s WhatsApp line was staffed by hand.</li>
-                          <li>
-                            Customers asked the same menu, allergen, order, delivery and reservation
-                            questions at all hours, and every reply had to meet a luxury standard.
-                          </li>
-                          <li>
-                            The brand needed a front door that never guesses about the menu, never
-                            breaks voice and never answers an allergen question it isn’t sure of.
-                          </li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h4>What we built</h4>
-                        <ul>
-                          <li>
-                            <b>A concierge persona.</b> Warm and unhurried: no exclamation marks, no
-                            emoji, honest about being AI when asked.
-                          </li>
-                          <li>
-                            <b>A knowledge base from the brand’s own handbooks.</b> The SA handbooks
-                            are the authority on menu and allergens. International material covers
-                            voice and procedure only.
-                          </li>
-                          <li>
-                            <b>A two-number model.</b> The human line routes customers to the
-                            concierge, and the concierge hands allergen and sensitive queries back
-                            to the team.
-                          </li>
-                          <li>
-                            <b>A seven-layer integration design</b> covering the WhatsApp Business
-                            API, orchestration, commerce (draft orders, payment links), courier
-                            dispatch and reservations.
-                          </li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h4>Where it landed</h4>
-                        <ul>
-                          <li>Live in production for the brand’s SA operation.</li>
-                          <li>
-                            The architecture extends to six specialist agents (inventory, demand,
-                            quality, concierge, staff and anomaly detection), a path from WhatsApp
-                            front desk to operating intelligence layer.
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </details>
-              </div>
-            </article>
-            <article className="cn rv" id="case-ryyva">
-              <div className="cn-h">
-                <span className="clabel">Strategy, product &amp; brand · Ryyva</span>
-                <h3 className="h3">Ryyva · Product suite &amp; brand</h3>
-              </div>
-              <div className="cn-b">
-                <p className="cn-note">
-                  Positioning, a three-product structure (Loom, Thread, Weave) and the blueprint for
-                  its first luxury deployment, now in production.
-                </p>
-                <details className="cd">
-                  <summary>Full case: challenge, build, result</summary>
-                  <div className="cd-in">
-                    <p className="cd-hl">
-                      Three threads, one weave. Turning an orchestration engine into a product suite
-                      a buyer can&nbsp;understand.
-                    </p>
-                    <div className="cd-g">
-                      <div>
-                        <h4>Challenge</h4>
-                        <ul>
-                          <li>Ryyva had a strong engineering core and a hard story to tell.</li>
-                          <li>
-                            “Agentic workflow intelligence” means little to an operator deciding
-                            where to spend.
-                          </li>
-                          <li>
-                            It needed a product structure, positioning that set it apart from
-                            workflow tools and systems integrators, and a first deployment that
-                            proved the model.
-                          </li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h4>What we built</h4>
-                        <ul>
-                          <li>
-                            <b>Three products, one brand.</b> Loom: workflow orchestration. Thread:
-                            data intelligence and a single customer view. Weave: an agentic
-                            concierge across WhatsApp, voice, app and web.
-                          </li>
-                          <li>
-                            <b>Positioning and website narrative.</b> Ryyva is the intelligence
-                            layer above existing systems, not a replacement for them. One rule: act
-                            when certain, escalate when not.
-                          </li>
-                          <li>
-                            <b>A platform blueprint</b> for the first full deployment: a luxury
-                            brand’s store, lab and production connected through six specialist
-                            agents, with an 18-month phased roadmap from pilot store to fully
-                            agentic operation.
-                          </li>
-                          <li>
-                            <b>The Weave concierge build</b> that became the café concierge above.
-                          </li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h4>Where it landed</h4>
-                        <ul>
-                          <li>
-                            Ryyva has a product suite, a public narrative and a production anchor
-                            client.
-                          </li>
-                          <li>
-                            The same fabric now underpins further concierge and lead-generation
-                            products.
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </details>
-              </div>
-            </article>
-            <article className="cn rv">
-              <div className="cn-h">
-                <span className="clabel">Lead generation tool</span>
-                <h3 className="h3">Starfish Solutions · Bespoke lead generation tool</h3>
-              </div>
-              <div className="cn-b">
-                <p className="cn-note">
-                  A bespoke lead generation tool for a sales call centre, which cut lead
-                  qualification processing time by 50%.
-                </p>
-                <p>
-                  <span className="ph">[Add: timeline, stack, before/after]</span>
-                </p>
-              </div>
-            </article>
-            <article className="cn rv" id="case-leadforms">
-              <div className="cn-h">
-                <span className="clabel">Lead generation platform</span>
-                <h3 className="h3">Leadforms · Lead generation platform</h3>
-              </div>
-              <div className="cn-b">
-                <p className="cn-note">
-                  Opted-in, scored leads via surveys and a WhatsApp agent. PoC secured in principle
-                  with a major SA life insurer’s channel. Agreed PoC terms: 3 months, 20 leads a
-                  day, 6% minimum conversion target.
-                </p>
-                <details className="cd">
-                  <summary>Full case: challenge, build, result</summary>
-                  <div className="cd-in">
-                    <p className="cd-hl">
-                      Leads that opted in, answered a short survey and told you how warm
-                      they&nbsp;are.
-                    </p>
-                    <div className="cd-g">
-                      <div>
-                        <h4>Challenge</h4>
-                        <ul>
-                          <li>
-                            Bought lead lists are cold, unconsented and increasingly unlawful under
-                            POPIA.
-                          </li>
-                          <li>
-                            Advisers and sales teams needed leads that had engaged, consented to
-                            contact and arrived with enough signal to prioritise.
-                          </li>
-                          <li>It also had to be cheap enough per lead to work at volume.</li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h4>What we built</h4>
-                        <ul>
-                          <li>
-                            <b>A gamified survey portal</b> (“Stand a chance to win…”) across 10
-                            verticals, from life and funeral cover to property and trading, each
-                            with the right risk and consent notices.
-                          </li>
-                          <li>
-                            <b>Four-signal lead scoring,</b> so every lead arrives with a warmth
-                            score, not just a name and number.
-                          </li>
-                          <li>
-                            <b>Sandy, a WhatsApp agent,</b> which engages respondents and sends
-                            survey links, keeping completion on the web, where consent is captured
-                            cleanly.
-                          </li>
-                          <li>
-                            <b>The legal stack:</b> terms, a POPIA notice and a privacy policy built
-                            around a revised consent model, plus the commercial agreements with the
-                            distribution partner.
-                          </li>
-                          <li>Voice-agent outreach and automated workflows feeding the surveys.</li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h4>Where it landed</h4>
-                        <ul>
-                          <li>
-                            The platform is delivered: portal, scoring, WhatsApp agent, legal stack
-                            and funnel.
-                          </li>
-                          <li>
-                            A proof of concept was secured in principle with the mass-market
-                            distribution channel of a major South African life insurer.
-                          </li>
-                        </ul>
-                        <p className="terms">
-                          <b>Agreed PoC terms</b>Three months, 20 life leads a day, minimum 6%
-                          conversion target.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </details>
-              </div>
-            </article>
-            <article className="cn rv">
-              <div className="cn-h">
-                <span className="clabel">Survey project</span>
-                <h3 className="h3">Old Mutual MFC · Multi-channel agent engagement</h3>
-              </div>
-              <div className="cn-b">
-                <p className="cn-note">
-                  A multi-channel engagement process for Old Mutual MFC’s broker and franchise
-                  distribution. Response rates rose by more than 40%.
-                </p>
-                <p>
-                  <span className="ph">[Add: timeline, channels, tools used]</span>
-                </p>
-              </div>
-            </article>
-            <article className="cn rv" id="case-appi">
-              <div className="cn-h">
-                <span className="clabel">Product · Appi</span>
-                <h3 className="h3">Appi · Product</h3>
-              </div>
-              <div className="cn-b">
-                <p className="cn-note">
-                  A white-label WhatsApp AI teammate for field forces: four specialists behind one
-                  number. R299 per field agent per month, R20,000 once-off implementation.
-                </p>
-                <details className="cd">
-                  <summary>Full case: challenge, build, result</summary>
-                  <div className="cd-in">
-                    <p className="cd-hl">
-                      One WhatsApp number that answers your agents, files their requests, keeps
-                      their records and trains them every&nbsp;week.
-                    </p>
-                    <div className="cd-g">
-                      <div>
-                        <h4>Challenge</h4>
-                        <ul>
-                          <li>
-                            Field and sales agents live on WhatsApp and lean on head office for the
-                            same things every day: product answers, status queries, document
-                            requests and “how do I” questions.
-                          </li>
-                          <li>
-                            Appi started as a routing bot for one insurance broker network. The
-                            brief was to make it work for any industry and sell it as a product.
-                          </li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h4>What we built</h4>
-                        <ul>
-                          <li>
-                            <b>Four specialists behind one number.</b> Knowledge: answers from the
-                            company’s own material. Action: files and tracks requests. Records:
-                            keeps each agent’s workforce record current. Coach: weekly
-                            micro-training in the brand’s voice.
-                          </li>
-                          <li>
-                            <b>Positioning for any industry.</b> An industry switcher on the site
-                            drives a live routing-console demo, so a broker, property operator or
-                            dealership sees its own version.
-                          </li>
-                          <li>
-                            <b>Simple pricing:</b> R299 per field agent per month plus a R20,000
-                            once-off implementation, with a live calculator.
-                          </li>
-                          <li>
-                            <b>The full brand:</b> a recoloured mascot with the three-dot routing
-                            motif, logo mark and lockups, favicon and PWA assets, a WhatsApp profile
-                            image and a Google Business Profile.
-                          </li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h4>Where it landed</h4>
-                        <ul>
-                          <li>
-                            Appi is a productised Vowels offer, ready to deploy white-label for any
-                            field team.
-                          </li>
-                        </ul>
-                        <p className="cd-cta">
-                          <Link className="tlink" href="/book">
-                            Book a 20-min call →
-                          </Link>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </details>
-              </div>
-            </article>
+                  )}
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>

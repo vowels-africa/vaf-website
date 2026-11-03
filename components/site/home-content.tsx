@@ -468,15 +468,14 @@ export function HomeContent() {
                   <circle cx="41" cy="16" r="3" fill="var(--orange)" stroke="var(--orange)" />
                 </svg>
                 <span className="clabel">
-                  <span className="nw">WhatsApp concierge ·</span>{" "}
-                  <span className="nw">In production</span>
+                  <span className="nw">WhatsApp concierge</span>
                 </span>
               </div>
               <div className="cbody">
                 <h3 className="ctitle">A WhatsApp concierge for a global café brand</h3>
                 <p className="csum">
-                  A WhatsApp concierge for a premium global café and bistro brand’s SA operation,
-                  live and grounded in its handbooks.
+                  Instant, on-brand answers for customers, day and night, with a person for anything
+                  sensitive.
                 </p>
                 <Link className="tlink cmore" href="/work#case-cafe">
                   Read the case →
