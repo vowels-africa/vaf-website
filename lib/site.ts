@@ -22,12 +22,10 @@ export const LEAD_FORM_URL =
 export const TALLY_FORM_ID = "wgExGM";
 
 /**
- * Tally form for job applications (CV upload), embedded on /careers.
- * It must NOT redirect to a URL containing "thank-you": that fires the sales-lead
- * conversion in Google Tag Manager. Notifications go to discover@vowels.africa with the
- * subject "New job application".
+ * Where job applicants email their CV. Each "Apply" link opens an email with the role in
+ * the subject ("Job application: <role>").
  */
-export const CAREERS_FORM_ID = "WJ2bPP";
+export const CAREERS_EMAIL = "careers@vowels.africa";
 
 /**
  * Contact details shown in the footer. Leave a value empty ("") to show a yellow

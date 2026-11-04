@@ -61,6 +61,12 @@
 /* Careers */
 .role-meta{font-size:12px;color:var(--muted);letter-spacing:.04em}
 .cn .ctitle{font-size:clamp(26px,2.6vw,32px)}
+.apply-card{display:grid;gap:18px;padding-bottom:28px}
+.apply-card p{color:var(--muted-d)}
+.apply-email{font-family:var(--serif);font-size:clamp(24px,2.6vw,32px);line-height:1.1;overflow-wrap:anywhere}
+.apply-email a{color:#fff;text-decoration:none;border-bottom:1px solid var(--orange)}
+.apply-roles{display:grid;gap:10px;justify-items:start}
+.apply-roles .btn{white-space:normal;text-align:left}
 
 /* Simple centred message pages (thank you, not found) */
 .msg{min-height:calc(100vh - 72px - 160px);display:flex;align-items:center}

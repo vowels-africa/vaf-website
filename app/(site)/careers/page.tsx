@@ -1,8 +1,23 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { TallyForm } from "@/components/site/tally-form";
 import { ROLES } from "@/lib/careers";
-import { CAREERS_FORM_ID } from "@/lib/site";
+import { CAREERS_EMAIL } from "@/lib/site";
+
+/** Opens the applicant’s email app with the role in the subject and a short template. */
+function applyHref(role?: string) {
+  const subject = role ? `Job application: ${role}` : "Job application";
+  const body = [
+    `Role: ${role ?? ""}`,
+    "Name:",
+    "Phone:",
+    "LinkedIn or portfolio link:",
+    "Years of experience:",
+    "Why this role:",
+    "",
+    "(Please attach your CV as a PDF or Word file.)",
+  ].join("\n");
+  return `mailto:${CAREERS_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
 
 const TITLE = "Careers | Vowels Africa";
 const DESCRIPTION =
@@ -47,7 +62,7 @@ export default function CareersPage() {
             </p>
             <div className="ctas">
               <a className="btn btn-p" href="#apply">
-                Send your CV{" "}
+                How to apply{" "}
                 <span className="arr" aria-hidden="true">
                   →
                 </span>
@@ -86,9 +101,7 @@ export default function CareersPage() {
                     {role.type} · {role.team}
                   </span>
                   <h3 className="ctitle">{role.title}</h3>
-                  <p className="role-meta mono">
-                    Hybrid · Cape Town, South Africa
-                  </p>
+                  <p className="role-meta mono">Hybrid · Cape Town, South Africa</p>
                 </div>
                 <div className="cn-b">
                   <p className="cn-note">{role.summary}</p>
@@ -124,7 +137,7 @@ export default function CareersPage() {
                     </div>
                   </details>
                   <p className="cd-cta">
-                    <a className="tlink" href="#apply">
+                    <a className="tlink" href={applyHref(role.title)}>
                       Apply for this role →
                     </a>
                   </p>
@@ -167,12 +180,12 @@ export default function CareersPage() {
               Send us your CV.
             </h2>
             <p className="lead">
-              Choose the role, upload your CV and tell us briefly why it fits. We read every
-              application.
+              Email your CV with the role in the subject line and a few lines on why it fits you. We
+              read every application.
             </p>
             <ul className="plist" style={{ marginTop: "32px" }}>
               <li>
-                <span>01</span>Send your CV and a short note
+                <span>01</span>Email your CV and a short note
               </li>
               <li>
                 <span>02</span>If there’s a fit, we’ll set up a call
@@ -185,19 +198,28 @@ export default function CareersPage() {
           <div className="sched form-card">
             <div className="sched-h">
               <div>
-                <b>Job application</b>
+                <b>Apply by email</b>
                 <br />
                 CV in PDF or Word
               </div>
             </div>
-            <div className="form-card-b">
-              {CAREERS_FORM_ID ? (
-                <TallyForm formId={CAREERS_FORM_ID} title="Job application" />
-              ) : (
-                <div className="phbox" style={{ minHeight: "320px" }}>
-                  [Careers form: set CAREERS_FORM_ID in lib/site.ts]
-                </div>
-              )}
+            <div className="form-card-b apply-card">
+              <p className="apply-email">
+                <a href={applyHref()}>{CAREERS_EMAIL}</a>
+              </p>
+              <p>
+                Choose a role to start an email with the subject and a short template filled in.
+              </p>
+              <div className="apply-roles">
+                {ROLES.map((role) => (
+                  <a className="btn btn-p" href={applyHref(role.title)} key={role.id}>
+                    {role.title}{" "}
+                    <span className="arr" aria-hidden="true">
+                      →
+                    </span>
+                  </a>
+                ))}
+              </div>
             </div>
             <p className="form-card-fine">
               We use your details only to assess your application. See our{" "}
