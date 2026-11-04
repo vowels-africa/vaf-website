@@ -591,7 +591,7 @@ export default function ServicesPage() {
           </div>
           <p style={{ marginTop: "40px" }}>
             <Link className="tlink" href="/enterprise">
-              Enterprise or technical team? See how we work with you →
+              Enterprise team? Validate an idea in 12 weeks →
             </Link>
           </p>
         </div>

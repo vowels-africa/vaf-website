@@ -4,9 +4,9 @@ import { CtaSection } from "@/components/site/cta-section";
 import { Testimonial } from "@/components/site/testimonial";
 import { BOOK_PATH } from "@/lib/site";
 
-const TITLE = "Enterprise AI, Automation & Integration | Vowels Africa";
+const TITLE = "12-Week Enterprise AI Validation | Vowels Africa";
 const DESCRIPTION =
-  "Private AI agents, deep systems integration and technical leadership for enterprise teams. Hosted on your infrastructure, with data kept in South Africa.";
+  "Know if your AI or automation idea is worth investing in, in 12 weeks. A working pilot inside your systems, measured against agreed targets, ending in a clear recommendation: scale, adjust or stop.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -14,6 +14,64 @@ export const metadata: Metadata = {
   alternates: { canonical: "/enterprise" },
   openGraph: { title: TITLE, description: DESCRIPTION, url: "/enterprise" },
 };
+
+const WHY = [
+  {
+    title: "A decision, not a deck",
+    text: "You end with evidence from a working pilot, not a roadmap that still has to be proven.",
+  },
+  {
+    title: "Capped risk",
+    text: "A fixed fee and fixed scope, agreed upfront. You know the cost before you start.",
+  },
+  {
+    title: "“Stop” is a good answer",
+    text: "If the numbers don’t hold up, you find out in 12 weeks, before the big budget is spent.",
+  },
+];
+
+const PHASES = [
+  {
+    n: "Weeks 1–2",
+    title: "Frame",
+    text: "We agree the decision to be made, the target, the baseline, and what result would mean stop. System and data access is set up.",
+    out: "Success and stop criteria, signed off.",
+  },
+  {
+    n: "Weeks 3–6",
+    title: "Build",
+    text: "We build the smallest working version, inside your systems and on your infrastructure if you need it.",
+    out: "A working pilot.",
+  },
+  {
+    n: "Weeks 7–10",
+    title: "Prove",
+    text: "It runs live with one team, channel or workflow, measured weekly against the target.",
+    out: "Real results, not projections.",
+  },
+  {
+    n: "Weeks 11–12",
+    title: "Decide",
+    text: "Results against target, the cost to scale, an ROI model and the risks, in a pack ready for your board.",
+    out: "Scale, adjust or stop.",
+  },
+];
+
+const DELIVERABLES = [
+  "Results measured against the target agreed in week one",
+  "A working pilot, running in your systems",
+  "The cost and plan to scale it",
+  "An ROI model built on real numbers",
+  "Risks, dependencies and compliance notes",
+  "A clear recommendation: scale, adjust or stop",
+];
+
+const NEEDS = [
+  "A named sponsor who owns the decision",
+  "Access to the relevant systems and data within the first 10 days",
+  "One team, channel or workflow for the pilot",
+  "A 30-minute check-in each week",
+];
 
 const CAPABILITIES = [
   {
@@ -42,33 +100,6 @@ const CAPABILITIES = [
   },
 ];
 
-const STEPS = [
-  {
-    n: "01",
-    title: "Scope",
-    text: "A short discovery to map the process, the systems involved and what success looks like.",
-    out: "A fixed-scope proposal.",
-  },
-  {
-    n: "02",
-    title: "Prove",
-    text: "A pilot on one team, one channel or one workflow, measured against the agreed target.",
-    out: "Evidence before you scale.",
-  },
-  {
-    n: "03",
-    title: "Roll out",
-    text: "Production build, integration and hand-over, with your IT and security teams involved throughout.",
-    out: "Live in your stack.",
-  },
-  {
-    n: "04",
-    title: "Run",
-    text: "Monitoring, reporting and improvement, until your team is ready to own it, or for as long as you need us.",
-    out: "Results that hold.",
-  },
-];
-
 const PROCUREMENT = [
   "Supplier onboarding documents on request, including B-BBEE certificate and tax clearance",
   "Professional indemnity cover",
@@ -87,15 +118,15 @@ export default function EnterprisePage() {
         </div>
         <div className="wrap phw has-a" style={{ position: "relative" }}>
           <div>
-            <span className="kicker">Enterprise</span>
-            <h1 className="display">Enterprise AI that ships, not just strategy.</h1>
+            <span className="kicker">Enterprise · 12-week validation</span>
+            <h1 className="display">Know if it’s worth investing in. In 12&nbsp;weeks.</h1>
             <p className="lead">
-              For enterprise and technical teams that need private AI, deep integration and a
-              partner who builds it, runs it and hands it over properly.
+              We test your idea with a working pilot inside your systems, then give you a clear
+              recommendation: scale it, adjust it or stop.
             </p>
             <div className="ctas">
               <Link className="btn btn-p" href={BOOK_PATH}>
-                Discuss a project{" "}
+                Scope a 12-week validation{" "}
                 <span className="arr" aria-hidden="true">
                   →
                 </span>
@@ -108,6 +139,11 @@ export default function EnterprisePage() {
           <aside className="paside">
             <div className="stats vstats">
               <div className="stat">
+                <b>12</b>
+                <span>Weeks from idea to decision</span>
+                <small>Fixed fee, fixed scope</small>
+              </div>
+              <div className="stat">
                 <b>40%+</b>
                 <span>Higher response rates</span>
                 <small>Old Mutual MFC</small>
@@ -116,11 +152,6 @@ export default function EnterprisePage() {
                 <b>SA</b>
                 <span>Data kept in South Africa</span>
                 <small>Private hosting</small>
-              </div>
-              <div className="stat">
-                <b>NDA</b>
-                <span>Multi-agent systems delivered</span>
-                <small>For enterprise clients</small>
               </div>
             </div>
           </aside>
@@ -131,7 +162,93 @@ export default function EnterprisePage() {
         <div className="wrap">
           <div className="sec-head split">
             <div>
-              <span className="kicker">What we do</span>
+              <span className="kicker">Why validate first</span>
+              <h2 className="h2" style={{ marginTop: "20px" }}>
+                Most enterprise AI stalls between the workshop and the budget.
+              </h2>
+            </div>
+            <p className="lead">
+              A strategy deck can’t tell you whether it works with your data, your systems and your
+              people. A live pilot can.
+            </p>
+          </div>
+          <div className="values">
+            {WHY.map((w) => (
+              <div className="rv" key={w.title}>
+                <h3>{w.title}</h3>
+                <p>{w.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="sec white light" style={{ borderTop: "1px solid var(--line)" }}>
+        <div className="wrap">
+          <div className="sec-head split">
+            <div>
+              <span className="kicker">How the 12 weeks run</span>
+              <h2 className="h2" style={{ marginTop: "20px" }}>
+                Frame. Build. Prove. Decide.
+              </h2>
+            </div>
+            <p className="lead">
+              One focused use case, measured from week one, with the stop criteria agreed before
+              anything is built.
+            </p>
+          </div>
+          <ol className="steps steps-4">
+            {PHASES.map((p) => (
+              <li className="rv" key={p.title}>
+                <span className="dot"></span>
+                <span className="n">{p.n}</span>
+                <h3>{p.title}</h3>
+                <p>{p.text}</p>
+                <div className="out">
+                  <b>Outcome</b>
+                  {p.out}
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section className="sec">
+        <div className="wrap two">
+          <div className="rv">
+            <span className="kicker">At week 12</span>
+            <h2 className="h2" style={{ margin: "20px 0 24px" }}>
+              What you walk away with
+            </h2>
+            <ul className="ticks one-col">
+              {DELIVERABLES.map((d) => (
+                <li key={d}>{d}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="rv">
+            <span className="kicker">What we need from you</span>
+            <h2 className="h2" style={{ margin: "20px 0 24px" }}>
+              To keep it to 12 weeks
+            </h2>
+            <ul className="ticks one-col">
+              {NEEDS.map((n) => (
+                <li key={n}>{n}</li>
+              ))}
+            </ul>
+            <p className="note" style={{ marginTop: "28px" }}>
+              Fixed fee and fixed scope, quoted after a scoping call.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="sec white" style={{ borderTop: "1px solid var(--line)" }}>
+        <div className="wrap">
+          <div className="sec-head split">
+            <div>
+              <span className="kicker">What we can test</span>
               <h2 className="h2" style={{ marginTop: "20px" }}>
                 Built into your systems, not bolted on.
               </h2>
@@ -151,34 +268,6 @@ export default function EnterprisePage() {
         </div>
       </section>
 
-      <section className="sec white light" style={{ borderTop: "1px solid var(--line)" }}>
-        <div className="wrap">
-          <div className="sec-head split">
-            <div>
-              <span className="kicker">How we deliver</span>
-              <h2 className="h2" style={{ marginTop: "20px" }}>
-                Prove it small. Then scale it.
-              </h2>
-            </div>
-            <p className="lead">Every engagement is fixed in scope, with a measurable target.</p>
-          </div>
-          <ol className="steps steps-4">
-            {STEPS.map((s) => (
-              <li className="rv" key={s.n}>
-                <span className="dot"></span>
-                <span className="n">{s.n}</span>
-                <h3>{s.title}</h3>
-                <p>{s.text}</p>
-                <div className="out">
-                  <b>Outcome</b>
-                  {s.out}
-                </div>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
       <section className="sec">
         <div className="wrap two">
           <div className="rv">
@@ -186,7 +275,7 @@ export default function EnterprisePage() {
             <h2 className="h2" style={{ margin: "20px 0 24px" }}>
               Easy to onboard as a supplier.
             </h2>
-            <ul className="ticks" style={{ gridTemplateColumns: "1fr" }}>
+            <ul className="ticks one-col">
               {PROCUREMENT.map((p) => (
                 <li key={p}>{p}</li>
               ))}
@@ -198,7 +287,7 @@ export default function EnterprisePage() {
         </div>
       </section>
 
-      <CtaSection title="Have an enterprise project in mind?" />
+      <CtaSection title="Have an idea worth testing?" />
     </>
   );
 }

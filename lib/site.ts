@@ -51,8 +51,8 @@ export const COMPANY = {
   regulatorRegistration: "2026-063725",
 };
 
-/** Where privacy and POPIA requests go. Switch to a dedicated privacy@ mailbox when it exists. */
-export const PRIVACY_EMAIL = "discover@vowels.africa";
+/** Where privacy and POPIA requests go. */
+export const PRIVACY_EMAIL = "privacy@vowels.africa";
 
 /** Time zone shown on the Book page. Carried over from the previous site. */
 export const CALL_TIMEZONE = "Johannesburg time (SAST, UTC+2)";

@@ -57,6 +57,7 @@
 /* Enterprise */
 @media(min-width:981px){.steps.steps-4{grid-template-columns:repeat(4,1fr)}}
 .ent-grid h3{font-size:26px}
+.ticks.one-col{grid-template-columns:1fr}
 
 /* Privacy policy */
 .legal h2{font-size:clamp(26px,2.6vw,32px)}
