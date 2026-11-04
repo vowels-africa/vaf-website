@@ -58,6 +58,12 @@
 @media(min-width:981px){.steps.steps-4{grid-template-columns:repeat(4,1fr)}}
 .ent-grid h3{font-size:26px}
 
+/* Privacy policy */
+.legal h2{font-size:clamp(26px,2.6vw,32px)}
+.legal h3{font-size:18px}
+.legal p,.legal li{overflow-wrap:anywhere}
+.legal-foot{margin-top:48px !important;padding-top:18px;border-top:1px solid var(--line);font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--muted)}
+
 /* Careers */
 .role-meta{font-size:12px;color:var(--muted);letter-spacing:.04em}
 .cn .ctitle{font-size:clamp(26px,2.6vw,32px)}

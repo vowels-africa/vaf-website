@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BOOK_PATH, CONTACT, NAV, SERVICES } from "@/lib/site";
+import { BOOK_PATH, COMPANY, CONTACT, NAV, SERVICES } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -98,7 +98,9 @@ export function Footer() {
           </div>
         </div>
         <div className="ftr-b">
-          <span>© {new Date().getFullYear()} Vowels Africa. All rights reserved.</span>
+          <span>
+            © {new Date().getFullYear()} {COMPANY.legalName} · Reg. {COMPANY.registrationNumber}
+          </span>
           <span>
             <Link href="/privacy">Privacy policy (POPIA)</Link>
           </span>
@@ -114,7 +116,9 @@ export function LandingFooter() {
     <footer className="ftr" style={{ paddingTop: "32px" }}>
       <div className="wrap">
         <div className="ftr-b" style={{ marginTop: 0, borderTop: 0, paddingTop: 0 }}>
-          <span>© {new Date().getFullYear()} Vowels Africa. All rights reserved.</span>
+          <span>
+            © {new Date().getFullYear()} {COMPANY.legalName} · Reg. {COMPANY.registrationNumber}
+          </span>
           <span>
             <Link href="/">vowels.africa</Link> ·{" "}
             <Link href="/privacy">Privacy policy (POPIA)</Link>

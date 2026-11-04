@@ -39,6 +39,21 @@ export const CONTACT = {
   location: "Cape Town, South Africa", // headquarters; more locations can be added later
 };
 
+/**
+ * Legal entity details, used on the privacy policy and in the footer.
+ * Source: company registration (CIPC) and the PAIA manual of Vowels Africa (Pty) Ltd.
+ */
+export const COMPANY = {
+  legalName: "Vowels Africa (Pty) Ltd",
+  registrationNumber: "2025/722562/07",
+  registeredOffice: "57 Innis Road, Wynberg, Cape Town, Western Cape, 7800",
+  informationOfficer: "Yaseen Samsodien",
+  regulatorRegistration: "2026-063725",
+};
+
+/** Where privacy and POPIA requests go. Switch to a dedicated privacy@ mailbox when it exists. */
+export const PRIVACY_EMAIL = "discover@vowels.africa";
+
 /** Time zone shown on the Book page. Carried over from the previous site. */
 export const CALL_TIMEZONE = "Johannesburg time (SAST, UTC+2)";
 
