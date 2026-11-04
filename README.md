@@ -1,6 +1,6 @@
 # Vowels Africa website
 
-Marketing site for [Vowels Africa](https://vowels.africa): managed IT, automation, integration and AI agents for growing businesses. Built with Next.js and deployed on Vercel.
+Marketing site for [Vowels Africa](https://vowels.africa): managed IT, automation, integration and AI agents for growing businesses. Built with Next.js and deployed on Netlify.
 
 ## Run it locally
 
@@ -14,7 +14,7 @@ Then open http://localhost:3000. Copy the team's `.env` file into the project ro
 | Variable | What it does |
 |---|---|
 | `NEXT_PUBLIC_LEAD_FORM_URL` | The standalone booking form, used if the embedded form can't load |
-| `NEXT_PUBLIC_GTM_ID` | Google Tag Manager container (`GTM-5FHWNB7K` in production on Vercel). Analytics stay off when empty |
+| `NEXT_PUBLIC_GTM_ID` | Google Tag Manager container (`GTM-5FHWNB7K`, set in Netlify environment variables). Analytics stay off when empty |
 | `NEXT_PUBLIC_APP_URL` | Public site URL for social previews and the sitemap. Defaults to vowels.africa |
 
 ## Where things live
