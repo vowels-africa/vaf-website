@@ -47,6 +47,13 @@
 .form-card-fine{padding:0 clamp(18px,2.6vw,28px) 22px;font-size:13px;color:var(--muted-d)}
 .form-card-fine a{color:#fff}
 
+/* Services: let the AI agents chips wrap on very narrow phones (was 10px too wide at 360px) */
+.svc>*{min-width:0}
+@media(max-width:400px){.agents .host .nw,.agents .human .nw{white-space:normal}}
+/* Work: case-card labels wrap on the smallest phones (was 9px too wide at 320px) */
+.cases>*{min-width:0}
+@media(max-width:400px){.clabel .nw{white-space:normal}}
+
 /* Careers */
 .role-meta{font-size:12px;color:var(--muted);letter-spacing:.04em}
 .cn .ctitle{font-size:clamp(26px,2.6vw,32px)}
