@@ -54,6 +54,10 @@
 .cases>*{min-width:0}
 @media(max-width:400px){.clabel .nw{white-space:normal}}
 
+/* Enterprise */
+@media(min-width:981px){.steps.steps-4{grid-template-columns:repeat(4,1fr)}}
+.ent-grid h3{font-size:26px}
+
 /* Careers */
 .role-meta{font-size:12px;color:var(--muted);letter-spacing:.04em}
 .cn .ctitle{font-size:clamp(26px,2.6vw,32px)}

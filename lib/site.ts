@@ -66,7 +66,6 @@ export const SERVICES = [
 export const LANDING_SLUGS = [
   "workflow-automation-agency",
   "workflow-automation-company",
-  "enterprise-workflow-automation-services",
   "business-automation",
   "business-automation-software",
   "workflow-automation",

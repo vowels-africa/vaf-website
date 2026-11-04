@@ -42,6 +42,9 @@ export function Footer() {
                 </li>
               ))}
               <li>
+                <Link href="/enterprise">Enterprise</Link>
+              </li>
+              <li>
                 <Link href="/careers">Careers</Link>
               </li>
               <li>
