@@ -1,7 +1,7 @@
 ---
 title: "The IT basics growing teams forget"
 category: "Managed IT"
-date: ""
+date: "2026-10-21"
 readTime: "4 min"
 excerpt: "Onboarding, offboarding, access and devices: the quiet work that stops quiet breakages."
 description: "The IT basics growing businesses forget: onboarding, offboarding, access, devices and vendors. A checklist to keep your systems stable as you scale."

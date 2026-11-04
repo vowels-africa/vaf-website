@@ -70,6 +70,7 @@ export default async function InsightPage({ params }: Props) {
             className="article"
             dangerouslySetInnerHTML={{ __html: renderMarkdown(post.body) }}
           />
+          <p className="article-byline mono">Moderated by the co-founders</p>
           {post.cta && (
             <div className="article-cta">
               <span className="kicker">Next step</span>

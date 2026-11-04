@@ -1,7 +1,7 @@
 ---
 title: "Build or buy: when custom software earns its keep"
 category: "Custom software"
-date: ""
+date: "2026-09-10"
 readTime: "5 min"
 excerpt: "Off-the-shelf almost works. Here's how to tell when \"almost\" is costing you."
 description: "When should a growing business build custom software instead of buying it? A practical test, the hidden costs, and how to build with less risk."

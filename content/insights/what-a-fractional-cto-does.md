@@ -1,7 +1,7 @@
 ---
 title: "What a fractional CTO actually does"
 category: "Fractional CTO"
-date: ""
+date: "2026-10-08"
 readTime: "4 min"
 excerpt: "Senior technology judgement, part-time. What that looks like week to week."
 description: "A fractional CTO gives growing businesses senior tech leadership without a full-time hire. What the role covers, when you need one, how to use it."

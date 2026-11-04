@@ -59,7 +59,12 @@ export function getInsights(): Insight[] {
     .readdirSync(DIR)
     .filter((f) => f.endsWith(".md"))
     .map(parseFile)
-    .sort((a, b) => a.order - b.order);
+    // Newest first; undated drafts go to the end, in `order`.
+    .sort((a, b) => {
+      if (a.date && b.date) return b.date.localeCompare(a.date);
+      if (a.date || b.date) return a.date ? -1 : 1;
+      return a.order - b.order;
+    });
 }
 
 export function getInsight(slug: string): Insight | undefined {
@@ -73,7 +78,8 @@ export function renderMarkdown(md: string): string {
 /** "2026-11-04" -> "4 Nov 2026". Empty string means not dated yet. */
 export function formatDate(date: string): string {
   if (!date) return "";
-  const d = new Date(`${date}T00:00:00`);
-  if (Number.isNaN(d.getTime())) return date;
-  return d.toLocaleDateString("en-ZA", { day: "numeric", month: "short", year: "numeric" });
+  const m = date.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (!m) return date;
+  const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  return `${Number(m[3])} ${MONTHS[Number(m[2]) - 1]} ${m[1]}`;
 }

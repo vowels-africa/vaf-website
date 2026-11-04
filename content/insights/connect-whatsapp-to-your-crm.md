@@ -1,7 +1,7 @@
 ---
 title: "When WhatsApp gets chaotic: connect it to your CRM"
 category: "Integration"
-date: ""
+date: "2026-07-01"
 readTime: "5 min"
 excerpt: "WhatsApp is where customers talk. Your CRM is where you track them. Connect the two."
 description: "WhatsApp is where SA customers talk, but the conversations rarely reach your CRM. How to connect the two so no enquiry, quote or follow-up gets lost."

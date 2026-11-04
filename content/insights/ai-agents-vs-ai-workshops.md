@@ -1,7 +1,7 @@
 ---
 title: "AI agents vs. AI workshops: what actually ships"
 category: "AI"
-date: ""
+date: "2026-07-22"
 readTime: "5 min"
 excerpt: "A workshop gives you a roadmap. An agent gives you answered leads on Monday morning."
 description: "AI workshops produce slide decks. AI agents produce answered leads and fewer manual hours. How to tell the difference and get AI running in your business."

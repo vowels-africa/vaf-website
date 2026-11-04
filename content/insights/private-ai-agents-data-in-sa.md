@@ -1,7 +1,7 @@
 ---
 title: "Private AI agents: keeping your data in SA"
 category: "AI"
-date: ""
+date: "2026-08-05"
 readTime: "5 min"
 excerpt: "AI that runs on your own infrastructure, with your data kept in South Africa."
 description: "Private AI agents run on your own infrastructure with your data kept in South Africa. What that means, who needs it and what to ask before you build."

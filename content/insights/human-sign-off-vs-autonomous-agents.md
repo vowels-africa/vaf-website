@@ -1,7 +1,7 @@
 ---
 title: "Human sign-off vs. autonomous agents: how to choose"
 category: "AI"
-date: ""
+date: "2026-09-24"
 readTime: "5 min"
 excerpt: "Not every task should run alone. A simple test for what waits for approval."
 description: "Should your AI agents act alone or wait for approval? A practical test for deciding, task by task, where human sign-off matters and where autonomy is safe."

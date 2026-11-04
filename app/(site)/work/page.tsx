@@ -40,6 +40,7 @@ const CASE_NOTES: {
       "Answers drawn only from the brand’s own handbooks",
       "Clear hand-offs to staff for allergen and sensitive questions",
       "A plan to add orders, payments, delivery and reservations",
+      "A decentralised agent design to oversee the shopfront, R&D and production",
     ],
   },
   {

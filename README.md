@@ -38,7 +38,7 @@ readTime: "5 min"
 excerpt: "One line shown on the card"
 description: "Search-result description"
 icon: "automation"   # automation, integration, ai, private-ai, sign-off, leads, software, cto, managed-it
-order: 10            # position on the Insights page
+order: 10            # tie-breaker for undated drafts (dated articles show newest first)
 cta: "Closing line shown above the Book a call button."
 ```
 

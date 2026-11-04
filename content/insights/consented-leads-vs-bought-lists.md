@@ -1,7 +1,7 @@
 ---
 title: "Consented leads vs. bought lists"
 category: "Automation"
-date: ""
+date: "2026-08-27"
 readTime: "5 min"
 excerpt: "A cheap list costs more than it looks. Why opted-in, scored leads work better."
 description: "Bought lead lists are cold and risky. Why opted-in, scored leads are better for SA sales teams, and how to build a lead flow people actually agree to."

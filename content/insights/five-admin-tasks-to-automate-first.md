@@ -1,7 +1,7 @@
 ---
 title: "Five admin tasks to automate first"
 category: "Automation"
-date: ""
+date: "2026-06-16"
 readTime: "5 min"
 excerpt: "Start where the hours leak: the repeated, rules-based work your team does every day."
 description: "The five admin tasks growing SA businesses should automate first, from lead follow-ups to invoice reminders, and how to start without breaking anything."
