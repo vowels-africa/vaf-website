@@ -87,7 +87,7 @@ export default function CareersPage() {
                   </span>
                   <h3 className="ctitle">{role.title}</h3>
                   <p className="role-meta mono">
-                    South Africa · <span className="ph">[Office / hybrid / remote]</span>
+                    Hybrid · Cape Town, South Africa
                   </p>
                 </div>
                 <div className="cn-b">
