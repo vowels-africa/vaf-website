@@ -5,8 +5,8 @@ const LOGOS = [
   { file: "client-uzum.webp", alt: "UZUM", w: 128, h: 128, sq: true },
   { file: "client-ryyva.webp", alt: "Ryyva", w: 256, h: 84 },
   { file: "client-invnt.webp", alt: "INVNT Group", w: 117, h: 128, sq: true },
-  { file: "client-sam_co.webp", alt: "Client logo", w: 94, h: 128, sq: true },
-  { file: "client-samsguide.webp", alt: "Client logo", w: 110, h: 128, sq: true },
+  { file: "client-sam_co.webp", alt: "Sam & Co", w: 94, h: 128, sq: true },
+  { file: "client-samsguide.webp", alt: "Sams Guide", w: 110, h: 128, sq: true },
 ];
 
 export function ClientLogos() {
