@@ -74,25 +74,3 @@ export const SERVICES = [
   { id: "fractional-cto", label: "Fractional CTO & CPO" },
   { id: "ai", label: "Private AI agents" },
 ];
-
-/** Search and ad landing pages, served at /<slug> with the homepage content. */
-export const LANDING_SLUGS = [
-  "workflow-automation-agency",
-  "workflow-automation-company",
-  "business-automation",
-  "business-automation-software",
-  "workflow-automation",
-  "workflow-automation-implementation",
-  "automate-business-processes",
-  "business-automation-solutions",
-  "process-automation-consulting-services",
-  "business-process-improvement-services",
-  "ai-powered-business-tools",
-  "it-operation-management",
-  "make-com-automation-agency",
-  "ai-for-automating-processes",
-  "automation-services-for-business",
-  "workflow-automation-companies",
-  "workflow-automation-software-pricing",
-  "ai-workflow-automation-platform",
-];

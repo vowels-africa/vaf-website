@@ -109,22 +109,3 @@ export function Footer() {
     </footer>
   );
 }
-
-/** Minimal footer for the search and ad landing pages. */
-export function LandingFooter() {
-  return (
-    <footer className="ftr" style={{ paddingTop: "32px" }}>
-      <div className="wrap">
-        <div className="ftr-b" style={{ marginTop: 0, borderTop: 0, paddingTop: 0 }}>
-          <span>
-            © {new Date().getFullYear()} {COMPANY.legalName} · Reg. {COMPANY.registrationNumber}
-          </span>
-          <span>
-            <Link href="/">vowels.africa</Link> ·{" "}
-            <Link href="/privacy">Privacy policy (POPIA)</Link>
-          </span>
-        </div>
-      </div>
-    </footer>
-  );
-}

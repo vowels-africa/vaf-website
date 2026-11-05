@@ -62,19 +62,3 @@ export function Header() {
     </header>
   );
 }
-
-/** Slim header for the search and ad landing pages: logo and booking button only. */
-export function LandingHeader() {
-  return (
-    <header className="hdr">
-      <div className="wrap">
-        <Link className="logo" href="/" aria-label="Vowels Africa home">
-          <img src="/assets/img/vowels-logo.svg" alt="Vowels" width={107} height={30} />
-        </Link>
-        <Link className="btn btn-p btn-sm" href={BOOK_PATH} style={{ marginLeft: "auto" }}>
-          Book a 20-min call <span className="arr" aria-hidden="true">→</span>
-        </Link>
-      </div>
-    </header>
-  );
-}

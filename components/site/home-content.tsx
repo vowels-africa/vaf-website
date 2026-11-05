@@ -3,7 +3,7 @@ import { CtaSection } from "@/components/site/cta-section";
 import { ClientLogos } from "@/components/site/client-logos";
 import { Testimonial } from "@/components/site/testimonial";
 
-/** Homepage sections. Also used by the search and ad landing pages. */
+/** Homepage sections. */
 export function HomeContent() {
   return (
     <>

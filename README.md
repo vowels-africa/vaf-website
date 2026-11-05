@@ -24,7 +24,6 @@ Then open http://localhost:3000. Copy the team's `.env` file into the project ro
 - **Styles**: `styles/site.css` is the design file as delivered. Put changes in `styles/additions.css` so a new design file can replace `site.css` cleanly.
 - **Contact details** in the footer are set in `CONTACT` in `lib/site.ts`. Empty values show a yellow placeholder.
 - **Booking form**: the Book page embeds the Tally form. How the lead conversion works, and the Tally settings that make the form match the site, are in [docs/tally-form-styling.md](docs/tally-form-styling.md).
-- **Search and ad landing pages** show the homepage with a slim header. Their URLs are listed in `LANDING_SLUGS` in `lib/site.ts`.
 
 ## Adding or editing an Insights article
 
