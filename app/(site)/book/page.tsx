@@ -22,7 +22,7 @@ export default function BookPage() {
     <>
       <section className="sec" style={{ paddingTop: "clamp(48px,6vw,88px)" }}>
         <div className="wrap book">
-          <div>
+          <div className="book-copy">
             <span className="kicker">Book a call</span>
             <h1 className="display" style={{ margin: "20px 0 22px" }}>
               20 minutes to clarity.

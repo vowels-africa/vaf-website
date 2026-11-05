@@ -49,6 +49,11 @@
 /* Footer: give plain-text contact rows the same rhythm as links */
 .ftr li>span{display:inline-block;padding:10px 0}
 
+/* Book page: keep the intro in view while the form scrolls. Mobile stays stacked. */
+@media(min-width:981px){
+  .book-copy{position:sticky;top:88px;align-self:start}
+}
+
 /* Book page: dark card holding the embedded Tally form */
 .form-card{background:var(--ink);border-color:var(--ink-3);color:#fff;box-shadow:0 30px 60px -40px rgba(2,13,36,.6)}
 .form-card .sched-h{border-color:var(--line-d);color:var(--muted-d)}

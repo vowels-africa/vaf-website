@@ -33,8 +33,7 @@ These are Tally settings, not website code. Open the form in Tally, then **Desig
 **Advanced:** input width *Full width*, input height `48`, input border radius `10`,
 button border radius `24`, button height `48`.
 
-**Custom CSS:** paste the contents of [`tally-form.css`](tally-form.css). It sets the font, fields,
-button and consent tick to the site's style, and hides the large logo only inside the website embed.
+**Custom CSS:** paste the contents of [`tally-form.css`](tally-form.css) into Tally again after it changes. It sets the font, fields, button and consent tick, hides the large logo inside the website embed, removes the gap above the first field, and keeps the orange on the tick rather than the whole consent label.
 
 ## Services dropdown
 
