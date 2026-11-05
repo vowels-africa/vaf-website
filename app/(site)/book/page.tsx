@@ -49,7 +49,7 @@ export default function BookPage() {
             (TALLY_FORM_ID in lib/site.ts). Its look inside the frame is set in Tally:
             see docs/tally-form-styling.md.
           */}
-          <div className="sched form-card">
+          <div className="sched form-card book-form">
             <div className="sched-h">
               <div>
                 <b>20-min clarity call</b>
