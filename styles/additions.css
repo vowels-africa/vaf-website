@@ -35,6 +35,17 @@
 .article-cta p{font-family:var(--serif);font-size:clamp(24px,2.4vw,30px);line-height:1.2}
 
 
+/* Client logos: a fixed height plus the cell width was squashing the wide wordmarks.
+   Keep each artwork's proportions, and use two rows of four on desktop so that
+   height still fits. */
+.lgrid img{width:auto;height:auto;object-fit:contain}
+@media(min-width:981px){
+  .lgrid{grid-template-columns:repeat(4,1fr)}
+  .lgrid li:nth-child(4n){border-right:0}
+  .lgrid li{border-bottom:1px solid var(--line)}
+  .lgrid li:nth-last-child(-n+4){border-bottom:0}
+}
+
 /* Footer: give plain-text contact rows the same rhythm as links */
 .ftr li>span{display:inline-block;padding:10px 0}
 
