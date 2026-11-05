@@ -6,9 +6,9 @@ const TESTIMONIALS = {
     quote:
       "Vowels developed a bespoke lead generation tool, which helped us improve our lead qualification processing time by 50%. I would recommend Vowels.Africa for any sales call center.",
     logo: "client-starfish.webp",
-    logoAlt: "Starfish Solutions",
+    logoAlt: "Starfish Debt Consultants",
     name: "Faaiz Abrahams",
-    role: "CEO, Starfish Solutions",
+    role: "CEO, Starfish Debt Consultants",
   },
   oldmutual: {
     big: "40%+",

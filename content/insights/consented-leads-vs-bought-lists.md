@@ -49,7 +49,7 @@ The platform secured a proof of concept, in principle, with the mass-market dist
 
 Even with good leads, the order you call them in matters. A score turns a list into a queue.
 
-Our bespoke lead generation tool for Starfish Solutions, a sales call centre, helped cut lead qualification processing time by 50%. Qualifying faster means your best people spend their time on the leads most likely to convert.
+Our bespoke lead generation tool for Starfish Debt Consultants, a sales call centre, helped cut lead qualification processing time by 50%. Qualifying faster means your best people spend their time on the leads most likely to convert.
 
 ## Building your own consented lead flow
 

@@ -50,7 +50,7 @@ This keeps the expensive decisions until you have evidence. In short: validate f
 
 ## What it looks like when it works
 
-For Starfish Solutions, a sales call centre, we built a bespoke lead generation tool that helped cut lead qualification processing time by 50%. No off-the-shelf product fitted how their team actually worked. The tool was built around their process, not the other way round.
+For Starfish Debt Consultants, a sales call centre, we built a bespoke lead generation tool that helped cut lead qualification processing time by 50%. No off-the-shelf product fitted how their team actually worked. The tool was built around their process, not the other way round.
 
 Appi started the same way. It began as a routing bot for one insurance broker network and became a white-label WhatsApp AI teammate any field team can use. That's prototype, validate, scale, all the way to a product.
 

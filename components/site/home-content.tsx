@@ -121,7 +121,7 @@ export function HomeContent() {
             <div className="stat">
               <b>50%</b>
               <span>Faster lead qualification</span>
-              <small>Starfish Solutions</small>
+              <small>Starfish Debt Consultants</small>
             </div>
             <div className="stat">
               <b>25 hrs</b>

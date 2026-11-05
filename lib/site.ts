@@ -35,7 +35,7 @@ export const CONTACT = {
   email: "discover@vowels.africa", // the reply-to address on the Tally lead forms
   phone: "", // left out for now; when set, shown as written, e.g. "+27 21 000 0000"
   whatsapp: "", // international digits only, e.g. "27210000000"; adds a WhatsApp link
-  linkedin: "https://www.linkedin.com/company/commhub/", // full URL
+  linkedin: "https://www.linkedin.com/company/vowels-africa", // full URL
   location: "Cape Town, South Africa", // headquarters; more locations can be added later
 };
 

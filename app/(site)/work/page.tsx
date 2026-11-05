@@ -8,12 +8,12 @@ import { OpenDetailsFromHash } from "@/components/site/reveal";
 export const metadata: Metadata = {
   title: "Work & Case Studies | Vowels Africa",
   description:
-    "40%+ response-rate improvement for Old Mutual MFC, 50% faster lead qualification for Starfish Solutions, 25 hours a week reclaimed on average.",
+    "40%+ response-rate improvement for Old Mutual MFC, 50% faster lead qualification for Starfish Debt Consultants, 25 hours a week reclaimed on average.",
   alternates: { canonical: "/work" },
   openGraph: {
     title: "Work & Case Studies | Vowels Africa",
     description:
-      "40%+ response-rate improvement for Old Mutual MFC, 50% faster lead qualification for Starfish Solutions, 25 hours a week reclaimed on average.",
+      "40%+ response-rate improvement for Old Mutual MFC, 50% faster lead qualification for Starfish Debt Consultants, 25 hours a week reclaimed on average.",
     url: "/work",
   },
 };
@@ -56,7 +56,7 @@ const CASE_NOTES: {
   },
   {
     label: "Lead generation tool",
-    title: "Starfish Solutions · Lead qualification",
+    title: "Starfish Debt Consultants · Lead qualification",
     note: "Their sales team now qualifies leads in half the time, using a tool built around how they actually work.",
   },
   {
@@ -115,7 +115,7 @@ export default function WorkPage() {
               <div className="stat">
                 <b>50%</b>
                 <span>Faster lead qualification</span>
-                <small>Starfish Solutions</small>
+                <small>Starfish Debt Consultants</small>
               </div>
               <div className="stat">
                 <b>25 hrs</b>
