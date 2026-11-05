@@ -8,8 +8,9 @@ shows the form inside a dark card.
 
 1. The visitor submits the form on `/book`.
 2. Tally's **Redirect on completion** sends the whole page to `https://vowels.africa/thank-you`.
-3. Google Tag Manager (`GTM-5FHWNB7K`) fires the GA4 event `generate_lead_25/02/26` on any page
-   whose URL contains `thank-you`.
+3. Google Tag Manager (`GTM-5FHWNB7K`) fires the GA4 event `manual_event_SUBMIT_LEAD_FORM` on any page
+   whose URL contains `thank-you`. The older name `generate_lead_25/02/26` is no longer used.
+   The Google Ads tag is a base tag only; import this GA4 event in Ads rather than adding a new conversion tag.
 
 Keep the redirect on in Tally and keep the `/thank-you` page, or the conversion stops.
 The embed must use the `tally.so/embed/...` address (set by `TALLY_FORM_ID` in `lib/site.ts`):
