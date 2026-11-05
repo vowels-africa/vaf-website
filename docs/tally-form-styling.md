@@ -33,7 +33,7 @@ These are Tally settings, not website code. Open the form in Tally, then **Desig
 **Advanced:** input width *Full width*, input height `48`, input border radius `10`,
 button border radius `24`, button height `48`.
 
-**Custom CSS:** paste the contents of [`tally-form.css`](tally-form.css) into Tally again after it changes. It sets the font, fields, button and consent tick, hides the large logo inside the website embed, removes the gap above the first field, and keeps the orange on the tick rather than the whole consent label.
+**Custom CSS:** paste the contents of [`tally-form.css`](tally-form.css) into Tally again after it changes. It sets the font, fields, button and consent tick, and keeps the orange on the tick rather than the whole consent label. The logo and the top space are hidden only in the website embed (`hideTitle`). The direct form at `tally.so/r/…` keeps its logo, top spacing, and “Request a Call” title. Do not hide `.tally-form-logo` with `body[data-iframe-size]`: that attribute is on the direct form too.
 
 ## Services dropdown
 
