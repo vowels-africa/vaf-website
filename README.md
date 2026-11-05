@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Vowels Africa website
 
-## Getting Started
+Marketing site for [Vowels Africa](https://vowels.africa): managed IT, automation, integration and AI agents for growing businesses. Built with Next.js and deployed on Netlify.
 
-First, run the development server:
+## Run it locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open http://localhost:3000. Copy the team's `.env` file into the project root first so the booking link works.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Variable | What it does |
+|---|---|
+| `NEXT_PUBLIC_LEAD_FORM_URL` | The standalone booking form, used if the embedded form can't load |
+| `NEXT_PUBLIC_GTM_ID` | Google Tag Manager container (`GTM-5FHWNB7K`, set in Netlify environment variables). Analytics stay off when empty |
+| `NEXT_PUBLIC_APP_URL` | Public site URL for social previews and the sitemap. Defaults to vowels.africa |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Where things live
 
-## Learn More
+- **Pages** are in `app/(site)/`, one folder per URL.
+- **Shared pieces** (header, footer, call-to-action block, client logos, testimonials) are in `components/site/`.
+- **Styles**: `styles/site.css` is the design file as delivered. Put changes in `styles/additions.css` so a new design file can replace `site.css` cleanly.
+- **Contact details** in the footer are set in `CONTACT` in `lib/site.ts`. Empty values show a yellow placeholder.
+- **Booking form**: the Book page embeds the Tally form. How the lead conversion works, and the Tally settings that make the form match the site, are in [docs/tally-form-styling.md](docs/tally-form-styling.md).
 
-To learn more about Next.js, take a look at the following resources:
+## Adding or editing an Insights article
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Articles are Markdown files in `content/insights/`. Copy an existing file, rename it (the file name becomes the URL) and edit the front matter:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```yaml
+title: "Article title"
+category: "Automation"
+date: "2026-11-04"   # leave "" to show a [Date] placeholder
+readTime: "5 min"
+excerpt: "One line shown on the card"
+description: "Search-result description"
+icon: "automation"   # automation, integration, ai, private-ai, sign-off, leads, software, cto, managed-it
+order: 10            # tie-breaker for undated drafts (dated articles show newest first)
+cta: "Closing line shown above the Book a call button."
+```
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The yellow draft banner on the Insights page disappears once every article has a date.
